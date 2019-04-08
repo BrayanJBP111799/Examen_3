@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BoxGamesModelStoreContainer" CdmEntityContainer="BoxGamesEntities">
+    <EntitySetMapping Name="CarritoCompra">
+      <EntityTypeMapping TypeName="BoxGamesModel.CarritoCompra">
+        <MappingFragment StoreEntitySet="CarritoCompra">
+          <ScalarProperty Name="ID_CarritoCompra" ColumnName="ID_CarritoCompra" />
+          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+          <ScalarProperty Name="ID_JuegoMesa" ColumnName="ID_JuegoMesa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JuegosMesa">
+      <EntityTypeMapping TypeName="BoxGamesModel.JuegosMesa">
+        <MappingFragment StoreEntitySet="JuegosMesa">
+          <ScalarProperty Name="ID_JuegoMesa" ColumnName="ID_JuegoMesa" />
+          <ScalarProperty Name="NombreJuego" ColumnName="NombreJuego" />
+          <ScalarProperty Name="TipoJuego" ColumnName="TipoJuego" />
+          <ScalarProperty Name="PrecioJuego" ColumnName="PrecioJuego" />
+          <ScalarProperty Name="DescripcionJuego" ColumnName="DescripcionJuego" />
+          <ScalarProperty Name="ImagenJuego" ColumnName="ImagenJuego" />
+          <ScalarProperty Name="CantidadJuego" ColumnName="CantidadJuego" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
