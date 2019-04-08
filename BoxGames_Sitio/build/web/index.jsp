@@ -1,0 +1,153 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Box-Games</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <link rel="icon" href="img/logos/dice.png">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logoimg"></div>
+                <input type="checkbox" id="chk">
+                <label for="chk" class="show-menu-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </label>
+
+                <ul class="menu">
+                    <li>
+                        <label for="chk" class="hide-menu-btn">
+                            <i class="fas fa-times"></i>
+                        </label>
+                    </li>                    
+                    <li><a href="login.jsp">Ingresar</a></li>
+                    <li><a href="nosotros.jsp">Nosotros</a></li>
+                    <li><a href="contacto.jsp">Contáctenos</a></li>
+                    <li><a href="index.jsp#contenedor3">Juegos</a></li>
+                    <li><a href="index.jsp">Inicio</a></li>
+                </ul>
+            </div>
+
+            <div class="slider"></div>
+        </header>
+        <button id="topBtn"><i class="fas fa-chevron-circle-up"></i></button>
+        <section class="contenedor-obj" id="contenedor2">
+            <div class="space15"></div>
+
+            <div class="titulo">
+                <h1>¿Buscas diversión? <br>Tenemos la solución <i class="far fa-thumbs-up"></i></h1>
+            </div>
+
+            <div class="obj-general">
+                <div class="columna-obj obj-text">
+                    <p>Nuestro negocio se especializa en la obtención, búsqueda y entrega de juegos de mesa. Todos aquellos interesados en tener alguna experiencia tradicional de entrenimiento en familia o amigos, han llegado al lugar correcto.</p>
+                </div>
+                <div class="columna-obj img-obj1"></div>
+                <div class="columna-obj img-obj2"></div>
+                <div class="columna-obj obj-text">
+                    <p>Queremos mantener tu felicidad creando nuevas amistades, pasando el tiempo con tus seres más queridos. Anímate y busca algo que te guste de los distintos juegos de mesa, luego continua con la diversión.</p>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor-pasos">
+            <div class="space15"></div>
+            <div>
+                <center><i class="fas fa-dice-d20"></i><i><span class="c-red">PASOS</span></i><i class="fas fa-dice-d20"></i></center>
+            </div>
+            <div class="pasos-general">
+                <div class="columna-pasos bgc-green">
+                    <div class="img-pasos img-regala"></div>
+                    <h2>Regala</h2>
+                    <h3>El juego que ya no quieras puede ser de interés para otros. Envía su información y dona el juego al negocio.</h3>
+                </div>
+                <div class="columna-pasos bgc-green">
+                    <div class="img-pasos img-busca"></div>
+                    <h2>Busca</h2>
+                    <h3>Puedes buscar algún otro juego que te interese. Tenemos distintos juegos para todas las personas.</h3>
+                </div>
+                <div class="columna-pasos bgc-green">
+                    <div class="img-pasos img-juega"></div>
+                    <h2>Juega</h2>
+                    <h3>Diviertete y pasa el rato en compañía con tus seres queridos. Vive una experiencia única y obtén nuevos recuerdos.</h3>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor-juegos" id="contenedor3">
+            <div class="space15"></div>
+            <center>
+                <i class="fab fa-critical-role c-red" style="margin-left: 4%;"></i><i><span class="c-green"> Artículos Destacados</span></i><i class="fab fa-critical-role c-red"></i>
+                <p style="margin-left: 4%; font-size: 17px; padding: 20px 0;">Observa los juegos de mesa más buscados.</p>
+            </center>
+            <div class="row-masjuegos">
+                <div class="masjuegos"></div>
+                <div class="masjuegos">
+                    <h3>Busca y conoce más juegos.</h3>
+                    <a href="juegos.jsp"><span class="c-gray">Juegos</span></a>
+                </div>
+                <div class="masjuegos"></div>
+            </div>
+            <br>
+            <div class="juegos-general">
+                <div class="columna-juegos">
+                    <div class="table-juegos">
+                        <h2>Monopoly</h2>
+                        <div class="border-juegos"></div>
+                        <div class="img-juego-des imgmonopoly"></div>
+                        <h3>"Para disfrutar en familia."</h3>
+                        <a href="#">Usar</a>
+                    </div>
+                </div>
+                <div class="columna-juegos">
+                    <div class="table-juegos">
+                        <h2>Ajedrez</h2>
+                        <div class="border-juegos"></div>
+                        <div class="img-juego-des imgajedrez"></div>
+                        <h3>"Para pasar el rato."</h3>
+                        <a href="#">Usar</a>
+                    </div>
+                </div>
+                <div class="columna-juegos">
+                    <div class="table-juegos">
+                        <h2>Jenga</h2>
+                        <div class="border-juegos"></div>
+                        <div class="img-juego-des imgjenga"></div>
+                        <h3>"Para ganar nuevas experiencias."</h3>
+                        <a href="#">Usar</a>
+                    </div>
+                </div>
+                <div class="columna-juegos">
+                    <div class="table-juegos">
+                        <h2>Clue</h2>
+                        <div class="border-juegos"></div>
+                        <div class="img-juego-des imgclue"></div>
+                        <h3>"Para pasar largas horas de diversión."</h3>
+                        <a href="#">Usar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="space15"></div>
+
+        </section>
+        <br>
+
+        <footer>
+            <center>
+                <br><p >Proyecto Final - Programación V</p>
+                <h2 class="text-muted small">&copy; JBS 2019. All Rights Reserved.</h2>
+            </center>
+        </footer>
+
+        <script type="text/javascript" src="js/animation.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

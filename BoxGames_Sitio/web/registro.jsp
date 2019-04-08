@@ -1,0 +1,141 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%> 
+<!DOCTYPE html>
+<html>
+    <head>
+         <meta charset="utf-8">
+        <title>Box-Games</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+        <link rel="icon" href="img/logos/dice.png">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="logoimg"></div>
+                <input type="checkbox" id="chk">
+                <label for="chk" class="show-menu-btn">
+                    <i class="fas fa-ellipsis-v"></i>
+                </label>
+
+                <ul class="menu">
+                    <li>
+                        <label for="chk" class="hide-menu-btn">
+                            <i class="fas fa-times"></i>
+                        </label>
+                    </li>                    
+                    <li><a href="login.jsp">Ingresar</a></li>
+                    <li><a href="nosotros.jsp">Nosotros</a></li>
+                    <li><a href="contacto.jsp">Contáctenos</a></li>
+                    <li><a href="index.jsp#contenedor3">Juegos</a></li>
+                    <li><a href="index.jsp">Inicio</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="contenedor-reg" id="contenedorRegistro">
+            <div class="titulo">
+                <h1 class="pt-4 pb-3">Registro de usuarios</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form>
+                            <div class="card">
+                                <div class="card-header bgc-blue text-white">
+                                    <h5>Ingrese la información solicitada</h5>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="cedula">Cédula</label>
+                                                <input type="text" name="cedula" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="nombre">Nombre Completo</label>
+                                                <input type="text" name="nombre" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="telefono">Télefono</label>
+                                                <input type="text" name="telefono" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="correo">Correo electrónico</label>
+                                                <input type="text" name="correo" class="form-control" placeholder="boxgames@correo.com">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="pass">Contraseña</label>
+                                                <input type="password" name="pass" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="fechanac">Fecha de nacimiento</label>
+                                                <input type="text" name="fechanac" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row navbar-right">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="passrepeat">Repetir contraseña</label>
+                                                <input type="password" name="passrepeat" class="form-control" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-md-6">
+                                            <button type="submit" name="registrar" class="btn btn-fill btn-primary">Registrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <script type="text/javascript">
+            $('input[name="fechanac"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                opens: 'center'
+            });
+        </script>
+
+        <br>
+        <footer class="mt-3">
+            <center>
+                <br><p >Proyecto Final - Programación V</p>
+                <h2 class="text-muted small">&copy; JBS 2019. All Rights Reserved.</h2>
+            </center>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
