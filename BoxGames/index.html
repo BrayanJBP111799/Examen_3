@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 </head>
 <body>
 	<header>
@@ -38,8 +39,9 @@
 	<button id="topBtn"><i class="fas fa-chevron-circle-up"></i></button>
 	<section class="contenedor-obj" id="contenedor2">
 		<div class="space15"></div>
+		
 		<div class="titulo">
-			<h1>¿Qué somos?</h1>
+			<h1>¿Buscas diversión? <br>Tenemos la solución <i class="far fa-thumbs-up"></i></h1>
 		</div>
 
 		<div class="obj-general">
@@ -56,7 +58,7 @@
 	<section class="contenedor-pasos">
 		<div class="space15"></div>
 		<div>
-			<center><i class="fas fa-dice-d20"></i><i><span>PASOS</span></i><i class="fas fa-dice-d20"></i></center>
+			<center><i class="fas fa-dice-d20"></i><i><span class="c-red">PASOS</span></i><i class="fas fa-dice-d20"></i></center>
 		</div>
 		<div class="pasos-general">
 			<div class="columna-pasos bgc-green">
@@ -78,8 +80,19 @@
 	</section>
 	<section class="contenedor-juegos" id="contenedor3">
 		<div class="space15"></div>
-		<i class="fab fa-critical-role c-red" style="margin-left: 4%;"></i><i><span class="c-red">Destacados</span></i><i class="fab fa-critical-role c-red"></i>
-		<p style="margin-left: 4%; font-size: 17px; padding: 20px 0;">Observa los juegos de mesa más buscados.</p>
+		<center>
+			<i class="fab fa-critical-role c-red" style="margin-left: 4%;"></i><i><span class="c-green"> Artículos Destacados</span></i><i class="fab fa-critical-role c-red"></i>
+			<p style="margin-left: 4%; font-size: 17px; padding: 20px 0;">Observa los juegos de mesa más buscados.</p>
+		</center>
+		<div class="row-masjuegos">
+			<div class="masjuegos"></div>
+			<div class="masjuegos">
+				<h3>Busca y conoce más juegos.</h3>
+				<a href="juegos.html"><span class="c-gray">Juegos</span></a>
+			</div>
+			<div class="masjuegos"></div>
+		</div>
+		<br>
 		<div class="juegos-general">
 			<div class="columna-juegos">
 				<div class="table-juegos">
@@ -119,18 +132,15 @@
 			</div>
 		</div>
 		<div class="space15"></div>
-		<div class="row-masjuegos">
-			<div class="masjuegos"></div>
-			<div class="masjuegos">
-				<h3>Busca y conoce más juegos.</h3>
-				<a href="juegos.html"><span class="c-gray">Juegos</span></a>
-			</div>
-			<div class="masjuegos"></div>
-		</div>
+		
 	</section>
-	
+	<br>
+
 	<footer>
-		<center><h3>Brayan Brenes - Programación V</h3></center>
+		<center>
+			<br><p >Proyecto Final - Programación V</p>
+			<h2 class="text-muted small">&copy; JBS 2019. All Rights Reserved.</h2>
+			</center>
 	</footer>
 	
 	<script type="text/javascript" src="js/animation.js"></script>

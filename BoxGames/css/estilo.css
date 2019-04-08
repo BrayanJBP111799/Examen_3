@@ -19,9 +19,20 @@ span{
 footer{
 	/*	margin-top: 20px;*/
 	background-color: #282828;
-	height: 30px;
+	height: 100px;
 	padding: 2px 0;
 	color: #fff;
+
+}
+
+.footer_login{
+	position: fixed;
+	padding: 0;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
 footer h3{
@@ -33,7 +44,7 @@ footer h3{
 /*---------------------------------------GENERAL-----------------------------------------*/
 
 .titulo{
-	width: 25%;
+	width: 60%;
 	margin: 0 auto;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -42,8 +53,8 @@ footer h3{
 
 .titulo h1{
 	color: #000;
-	font-size: 25px;
 	padding: 5px 0;
+	color: #328BC3;
 }
 
 .titulo:link, .titulo:visited{
@@ -85,11 +96,11 @@ footer h3{
 /*---------------------------------------COLORES-----------------------------------------*/
 
 .bgc-green{
-	background-color: #00ADB5;
+	background-color: #328BC3;
 }
 
 .c-green{
-	color: #00ADB5;
+	color: #328BC3;
 }
 
 .bgc-gray{
@@ -136,8 +147,8 @@ footer h3{
 	height: 100px;
 	background-image: url("../img/logos/logo2_blanco_peq.png");
 	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: auto;
+	background-position: center;
+	background-size: auto;
 }
 
 .logoimg_blk{
@@ -146,8 +157,8 @@ footer h3{
 	height: 100px;
 	background-image: url("../img/logos/logo2_negro_peq.png");
 	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: auto;
+	background-position: center;
+	background-size: auto;
 }
 
 .menu{
@@ -254,7 +265,7 @@ footer h3{
 .slider{
 	width: 100%;
 	height: 500px;
-	background-image: url("../img/background-img/bchess.jpg");
+	background-image: url("../img/background-img/bgmonopoly.jpg");
 	background-repeat: no-repeat; 
 	background-position: center;
 	background-size: cover;
@@ -281,7 +292,7 @@ footer h3{
 		background-size: cover;
 	}
 	100%{
-		background: url("../img/background-img/bchess.jpg");
+		background: url("../img/background-img/bgmonopoly.jpg");
 		background-repeat: no-repeat; 
 		background-position: center;
 		background-size: cover;
@@ -460,7 +471,7 @@ footer h3{
 
 .contenedor-pasos{
 	width: 100%;
-	background-image:url("../img/background-img/chesscolorbig.jpg");
+	/*background-image:url("../img/background-img/chesscolorbig.jpg");*/
 	background-repeat: no-repeat; 
 	background-position: center;
 	background-attachment: fixed;
@@ -471,7 +482,7 @@ footer h3{
 .contenedor-pasos i{
 	font-size: 40px;
 	margin-top: 40px;
-	background-color: rgba(0,173,181,0.70);
+	color: #328BC3;
 }
 
 .pasos-general{
@@ -1014,7 +1025,7 @@ textarea .contact-form-text{
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #328BC3;
+	background-color: #328BC3;
 }
 
 
@@ -1105,3 +1116,51 @@ textarea .contact-form-text{
 	}
 }
 
+
+/*------------------------------------LOG IN--------------------------------------------*/
+
+.login_container{
+	width:100%;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background-color: #fff;
+}
+
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .checkbox {
+	font-weight: 400;
+}
+.form-signin .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}

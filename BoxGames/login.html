@@ -14,5 +14,53 @@
 </head>
 <body>
 
+	<header>
+		<div class="header">
+			<div class="logoimg"></div>
+			<input type="checkbox" id="chk">
+			<label for="chk" class="show-menu-btn">
+				<i class="fas fa-ellipsis-v"></i>
+			</label>
+
+			<ul class="menu">
+				<a href="index.html">Inicio</a>
+				<a href="index.html#contenedor3">Juegos</a>
+				<a href="contacto.html">Contáctenos</a>
+				<a href="nosotros.html">Nosotros</a>
+				<a href="login.html">Ingresar</a>
+				<label for="chk" class="hide-menu-btn">
+					<i class="fas fa-times"></i>
+				</label>
+			</ul>
+		</div>
+	</header>
+
+	<div class="login_container text-center">
+		<form class="form-signin">
+			<img class="mb-4" src="img/logos/logo2.png" width="300" alt="" >
+			<h1 class="h3 mb-3 font-weight-normal">Iniciar Sesión</h1>
+			<label for="inputEmail" class="sr-only">Correo Electrónico</label>
+			<input type="email" id="email" class="form-control" placeholder="Correo Electrónico" required autofocus><br>
+			<label for="inputPassword" class="sr-only">Contraseña</label>
+			<input type="password" id="pass" class="form-control" placeholder="Contraseña" required><br>
+			<div class="checkbox mb-3">
+				<label>
+					<a href="#">¿Olvidó su contraseña?</a>
+				</label><br>
+				<label>
+					<a href="registro.html">Registrarse</a>
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+		</form>
+	</div>
+
+	<footer>
+		<center>
+			<br><p >Proyecto Final - Programación V</p>
+			<h2 class="text-muted small">&copy; JBS 2019. All Rights Reserved.</h2>
+			</center>
+	</footer>
+
 </body>
 </html>
