@@ -21,7 +21,13 @@ footer{
 	background-color: #282828;
 	height: 30px;
 	padding: 2px 0;
-	color: #fff
+	color: #fff;
+}
+
+footer h3{
+	margin-bottom: 0px;
+	font-size: 18px;
+	font-weight: 700;
 }
 
 /*---------------------------------------GENERAL-----------------------------------------*/
@@ -43,11 +49,6 @@ footer{
 .titulo:link, .titulo:visited{
 	text-decoration: none;
 	color:#000; 
-}
-
-.titulo:hover{
-	box-shadow: inset 0 0 0 5px #00A4BC;
-	transition: all ease .9s;
 }
 
 .descripcion{
@@ -443,6 +444,9 @@ footer{
 	color: #fff;
 	text-align: center;
 	line-height: 35px;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 0 10px;
 }
 
 .img-pasos{
