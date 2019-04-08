@@ -7,12 +7,75 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
 
-	<link rel="icon" href="img/background-img/logo.png">
+	<link rel="icon" href="img/logos/dice.png">
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+	<header>
+		<div class="header">
+			<div class="logoimg"></div>
+			<input type="checkbox" id="chk">
+			<label for="chk" class="show-menu-btn">
+				<i class="fas fa-ellipsis-v"></i>
+			</label>
+
+			<ul class="menu">
+				<a href="index.html">Inicio</a>
+				<a href="index.html#contenedor3">Juegos</a>
+				<a href="contacto.html">Contáctenos</a>
+				<a href="nosotros.html">Nosotros</a>
+				<a href="login.html">Ingresar</a>
+				<label for="chk" class="hide-menu-btn">
+					<i class="fas fa-times"></i>
+				</label>
+			</ul>
+		</div>
+
+	</header>
+	<br>
+	<div class="mx-auto" align="center">
+		<h1 style="color:#328BC3; text-align: center">Contáctanos</h1>
+	</div>
+	
+
+	<section class="contenedor-contacto" id="contenedor4">
+		<center><h2 style="color:#FFF; text-align: center">Envíanos un mensaje</h2></center>
+		<div class="borde"></div>
+		<form class="contact-form" action="index.html" method="post">
+			<input type="text" class="contact-form-text" placeholder="Nombre"></input>
+			<input type="text" class="contact-form-text" placeholder="Teléfono"></input>
+			<input type="text" class="contact-form-text" placeholder="Correo electónico"></input>
+			<textarea class="contact-form-text" placeholder="Mensaje"></textarea>
+			<input type="text" class="contact-form-btn" value="Enviar"></input>
+		</form>
+	</section>
+	<section class="contenedor-nosotros" id="contenedor5">
+		<center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
+		<div class="nosotros-general">
+			<div class="columna-nosotros">
+				<i class="fas fa-map-marker-alt"></i><span>Dirección</span>
+				<p>500 Oeste y 75 Sur de la Embajada Americana, Pavas, San José.</p>
+			</div>
+			<div class="columna-nosotros">
+				<h2>Síguenos en:</h2>
+				<a href="#"><i class="fab fa-facebook rs"></i></a>
+				<a href="#"><i class="fab fa-twitter-square rs"></i></a>
+				<a href="#"><i class="fab fa-instagram rs"></i></a>
+			</div>
+			<div class="columna-nosotros">
+				<i class="fas fa-envelope"></i><span>Correo</span>
+				<p>info@boxgames.org</p>
+				<i class="fas fa-phone"></i><span>Teléfono</span>
+				<p>8547-2209</p>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<center><h3>Brayan Brenes - Programación V</h3></center>
+	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
