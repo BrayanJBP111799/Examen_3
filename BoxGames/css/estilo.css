@@ -108,6 +108,10 @@ footer h3{
 	background-color: #F8B500;
 }
 
+.bgc-blue{
+	background-color: #328BC3;
+}
+
 /*---------------------------------DIVS DE ESPACIOS----------------------------------------*/
 .space40{
 	height: 40px;
@@ -208,6 +212,7 @@ footer h3{
 		padding: 80px 0;
 		line-height: normal;
 		transition: 0.7s;
+		z-index: 1000;
 	}
 
 	.menu a{
@@ -343,7 +348,7 @@ footer h3{
 
 .obj-text{
 	text-align: center;
-	padding-top: 100px;
+	padding: 100px 20px 0px 20px;
 	margin: 0 auto;
 	font-size: 20px;
 	line-height: 50px;
