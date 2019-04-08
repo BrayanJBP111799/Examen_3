@@ -48,13 +48,14 @@
         <section class="contenedor-contacto" id="contenedor4">
             <center><h2 style="color:#FFF; text-align: center">Envíanos un mensaje</h2></center>
             <div class="borde"></div>
-            <form class="contact-form" action="index.html" method="post">
-                <input type="text" class="contact-form-text" placeholder="Nombre">
-                <input type="text" class="contact-form-text" placeholder="Teléfono">
-                <input type="text" class="contact-form-text" placeholder="Correo electónico">
-                <textarea class="contact-form-text" placeholder="Mensaje"></textarea>
-                <input type="text" class="contact-form-btn" value="Enviar">
-            </form>
+            <s:head/>
+            <s:form cssClass="contact-form" action="contactar" method="post">
+                <s:textfield name="ct.name" type="text" maxlength="45" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Nombre"></s:textfield>
+                <s:textfield name="ct.phone" type="number" maxlength="45" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Teléfono"></s:textfield>
+                <s:textfield name="ct.email" type="text" maxlength="45" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Correo electónico"></s:textfield>
+                <s:textarea name="ct.msj" type="text" maxlength="1000" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Mensaje"></s:textarea>
+                <s:submit cssClass="contact-form-btn" value="Enviar"></s:submit>
+            </s:form>
         </section>
         <section class="contenedor-nosotros" id="contenedor5">
             <center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
