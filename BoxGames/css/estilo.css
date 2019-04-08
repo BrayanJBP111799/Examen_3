@@ -17,7 +17,7 @@ span{
 }
 
 footer{
-	margin-top: 20px;
+	/*	margin-top: 20px;*/
 	background-color: #282828;
 	height: 30px;
 	padding: 2px 0;
@@ -132,8 +132,8 @@ footer h3{
 	height: 100px;
 	background-image: url("../img/background-img/logo.png");
 	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+	background-position: center;
+	background-size: cover;
 }
 
 .menu{
@@ -184,7 +184,7 @@ footer h3{
 
 @media screen and (max-width: 950px){
 	.show-menu-btn,.hide-menu-btn{
-	 	display: block;
+		display: block;
 	}
 
 	.menu{
@@ -241,8 +241,8 @@ footer h3{
 	height: 500px;
 	background-image: url("../img/background-img/bchess.jpg");
 	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+	background-position: center;
+	background-size: cover;
 	animation: slide 20s infinite;
 }
 
@@ -250,31 +250,67 @@ footer h3{
 	25%{
 		background: url("../img/background-img/blackjack.jpg");
 		background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+		background-position: center;
+		background-size: cover;
 	}
 	50%{
 		background: url("../img/background-img/puzzle.jpg");
 		background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+		background-position: center;
+		background-size: cover;
 	}
 	75%{
 		background: url("../img/background-img/jenga2.jpg");
 		background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+		background-position: center;
+		background-size: cover;
 	}
 	100%{
 		background: url("../img/background-img/bchess.jpg");
 		background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+		background-position: center;
+		background-size: cover;
 	}
 }
 
 
 /*------------------------------------OBJETIVOS--------------------------------------------*/
+
+.topobjetivos{
+	width: 100%;
+	height: 500px;
+	background-image: url("../img/background-img/blackjack.jpg");
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover;
+}
+
+.fondotopobjetivos{
+	background-color: rgba(50,139,195,0.90);
+	margin: 0 auto;
+	margin-top: 150px;
+	width: 50%;
+	height: 20%;
+	text-align: center;
+	color: #282828;
+}
+
+.fondotopobjetivos h2{
+	font-weight: 700;
+	padding-top: 25px; 
+}
+
+@media screen and (max-width: 600px){
+	.fondotopobjetivos{
+		height: 22%;
+		width: 80%;
+	}
+
+	.fondotopobjetivos h2{
+		padding-top: 0px;
+		font-size: 30px;
+	}
+}
 
 .contenedor-obj{
 	width: 100%;
@@ -306,9 +342,9 @@ footer h3{
 .img-obj1, .img-obj2, .img-obj3, .img-obj4{
 	width: 50%;
 	height: 500px;
-  	background-repeat: no-repeat; 
-  	background-position: center;
-  	border-radius: 50%;
+	background-repeat: no-repeat; 
+	background-position: center;
+	border-radius: 50%;
 }
 
 .img-obj1{
@@ -331,7 +367,7 @@ footer h3{
 @media screen and (max-width: 1150px){
 	.obj-text,.img-obj1, .img-obj3{
 		width: 100%;
-		padding-top: 5px;
+		padding-top: 10px;
 	}
 
 	.img-obj2, .img-obj4{
@@ -342,6 +378,10 @@ footer h3{
 @media screen and (max-width: 600px){
 	.img-obj3{
 		background-position: right;
+	}
+	.obj-text{
+		font-size: 16px;
+		line-height: 35px;
 	}
 }
 
@@ -354,30 +394,30 @@ footer h3{
 }
 
 .tablink {
-  background-color: #1A4561;
-  color: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  margin: 0 auto;
-  width: 25%;
+	background-color: #1A4561;
+	color: white;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	margin: 0 auto;
+	width: 25%;
 }
 
 .tablink:hover {
-  background-color: #166A8F;
+	background-color: #166A8F;
 }
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent{
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 20%;
-  margin: 2% 2% 0% 2%; 
-  text-align: center;
-  line-height: 30px;
+	color: white;
+	display: none;
+	padding: 100px 20px;
+	height: 20%;
+	margin: 2% 2% 0% 2%; 
+	text-align: center;
+	line-height: 30px;
 }
 
 @media screen and (max-width: 600px){
@@ -392,11 +432,13 @@ footer h3{
 }
 
 #News {
-	background-color: #16B292;
+	/*	background-color: #16B292;*/
+	background-color: #328BC3;
 }
 
 #Contact{
-	background-color: #2C8F5D;
+	/*	background-color: #2C8F5D;*/
+	background-color: #328BC3;
 }
 
 /*------------------------------------PASOS--------------------------------------------*/
@@ -404,11 +446,11 @@ footer h3{
 .contenedor-pasos{
 	width: 100%;
 	background-image:url("../img/background-img/chesscolorbig.jpg");
-  	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-attachment: fixed;
-  	background-size: cover;
-  	padding-bottom: 20px; 
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-bottom: 20px; 
 }
 
 .contenedor-pasos i{
@@ -525,9 +567,9 @@ footer h3{
 	margin: 0 auto;
 	width: 300px;
 	height: 250px;
-  	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover;
 }
 
 .row-masjuegos{
@@ -600,8 +642,8 @@ footer h3{
 	line-height: 2;
 	text-align: center;
 	text-transform: uppercase;
-    border-radius: 6px;
-    transition: .3s;
+	border-radius: 6px;
+	transition: .3s;
 }
 
 .masjuegos a span, .masjuegos a{
@@ -614,8 +656,8 @@ footer h3{
 	line-height: 2;
 	text-align: center;
 	text-transform: uppercase;
-    border-radius: 6px;
-    transition: .3s;
+	border-radius: 6px;
+	transition: .3s;
 }
 
 .masjuegos a span:hover{
@@ -636,8 +678,8 @@ footer h3{
 .contenedor-contacto{
 	background-image: url("../img/background-img/fondonegro.jpg");
 	background-repeat: no-repeat; 
-  	background-position: right;
-  	background-attachment: fixed;
+	background-position: right;
+	background-attachment: fixed;
 	padding: 40px 0;
 	margin-top: 35px;
 }
@@ -772,8 +814,8 @@ textarea .contact-form-text{
 	height: 500px;
 	background-image: url("../img/background-img/playtop.jpg");
 	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
+	background-position: center;
+	background-size: cover;
 }
 
 .fondotopjuegos{
@@ -842,10 +884,10 @@ textarea .contact-form-text{
 	margin: 0 auto;
 	width: 50%;
 	height: 45%;
-  	background-repeat: no-repeat; 
-  	background-position: center;
-  	background-size: cover;
-  	margin-bottom: 25px;
+	background-repeat: no-repeat; 
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 25px;
 }
 
 .imgcolones{
@@ -936,7 +978,7 @@ textarea .contact-form-text{
 
 /* The "show" class is added to the filtered elements */
 .show {
-  	display: block;
+	display: block;
 }
 
 .botonesfiltro{
@@ -945,26 +987,26 @@ textarea .contact-form-text{
 
 /* Style the buttons */
 .btn {
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  padding: 12px 20px;
-  margin-right: 10px;
-  background-color: #328BC3;
-  color: #fff;
-  cursor: pointer;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 12px 20px;
+	margin-right: 10px;
+	background-color: #328BC3;
+	color: #fff;
+	cursor: pointer;
 }
 
 /* Add a light grey background on mouse-over */
 .btn:hover {
-  background-color: #166A8F;
+	background-color: #166A8F;
 }
 
 
 /* Add a dark background to the active button */
 .btn.active {
-  background-color: #0A3B5C;
-  color: #fff;
+	background-color: #0A3B5C;
+	color: #fff;
 }
 
 @media screen and (max-width: 900px){
