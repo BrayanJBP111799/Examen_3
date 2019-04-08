@@ -19,7 +19,7 @@ span{
 footer{
 	/*	margin-top: 20px;*/
 	background-color: #282828;
-	height: 50px;
+	height: 100px;
 	padding: 2px 0;
 	color: #fff;
 
@@ -44,7 +44,7 @@ footer h3{
 /*---------------------------------------GENERAL-----------------------------------------*/
 
 .titulo{
-	width: 25%;
+	width: 60%;
 	margin: 0 auto;
 	-moz-border-radius:6px;
 	-webkit-border-radius:6px;
@@ -53,8 +53,8 @@ footer h3{
 
 .titulo h1{
 	color: #000;
-	font-size: 25px;
 	padding: 5px 0;
+	color: #328BC3;
 }
 
 .titulo:link, .titulo:visited{
@@ -96,11 +96,11 @@ footer h3{
 /*---------------------------------------COLORES-----------------------------------------*/
 
 .bgc-green{
-	background-color: #00ADB5;
+	background-color: #328BC3;
 }
 
 .c-green{
-	color: #00ADB5;
+	color: #328BC3;
 }
 
 .bgc-gray{
@@ -466,7 +466,7 @@ footer h3{
 
 .contenedor-pasos{
 	width: 100%;
-	background-image:url("../img/background-img/chesscolorbig.jpg");
+	/*background-image:url("../img/background-img/chesscolorbig.jpg");*/
 	background-repeat: no-repeat; 
 	background-position: center;
 	background-attachment: fixed;
@@ -477,7 +477,7 @@ footer h3{
 .contenedor-pasos i{
 	font-size: 40px;
 	margin-top: 40px;
-	background-color: rgba(0,173,181,0.70);
+	color: #328BC3;
 }
 
 .pasos-general{
