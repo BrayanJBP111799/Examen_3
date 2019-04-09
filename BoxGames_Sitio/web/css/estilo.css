@@ -11,7 +11,7 @@ h1, span{
 }
 
 span{
-    font-size: 40px;
+    font-size: 25px;
     padding: 0 30px;
     color: #000;
 }
@@ -129,7 +129,7 @@ footer h3{
 }
 
 .space15{
-    height: 15px;
+    height: 20px;
 }
 
 /*----------------------------MENU---------------------------*/
@@ -511,7 +511,7 @@ footer h3{
 
 .columna-pasos{
     width: 360px;
-    height: 420px;
+    height: 300px;
     margin: 0px auto;
     border-radius: 10px;
 }
@@ -542,8 +542,8 @@ footer h3{
     background-image: url("../img/pasos/board-game.png")
 }
 
-.img-regala{
-    background-image: url("../img/pasos/giving-present.png")
+.img-compra{
+    background-image: url("../img/pasos/cart.png")
 }
 
 .img-busca{
@@ -589,16 +589,16 @@ footer h3{
     margin: 0px auto;*/
     margin: 0 10px;
     border-radius: 10px;
-    flex: 25%;
+    flex: 20%;
     padding: 10px;
-    max-width: 320px;
+    max-width: 300px;
     box-sizing: border-box;
     border: 2px solid #0A3B5C;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 
 .border-juegos{
-    width: 100px;
+    width: 90px;
     height: 10px;
     background: #FC3C3C;
     margin: 10px auto;
@@ -606,8 +606,8 @@ footer h3{
 
 .img-juego-des{
     margin: 0 auto;
-    width: 300px;
-    height: 250px;
+    width: 250px;
+    height: 200px;
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
@@ -663,14 +663,9 @@ footer h3{
 
 .masjuegos{
     margin: 0 auto;
-    width: 30%;
+    width: 60%;
     height: 100%;
-    border: 1px solid black;
     text-align: center;
-}
-
-.masjuegos h3{
-    text-transform: uppercase;
 }
 
 .masjuegos a span{
@@ -825,7 +820,6 @@ textarea .contact-form-text{
     background-color: #328BC3;
     padding: 20px 20px;
     text-align: center;
-    font-size: 25px;
 }
 
 .columna-nosotros p{
@@ -835,11 +829,11 @@ textarea .contact-form-text{
 }
 
 .columna-nosotros h2{
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .columna-nosotros i{
-    font-size: 35px;
+    font-size: 20px;
     color: #ddd;
 }
 

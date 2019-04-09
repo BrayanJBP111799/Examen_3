@@ -62,39 +62,41 @@
         <section class="contenedor-pasos">
             <div class="space15"></div>
             <div>
-                <center><i class="fas fa-dice-d20"></i><i><span class="c-red">PASOS</span></i><i class="fas fa-dice-d20"></i></center>
+                <center>
+                    <h2 class="c-red"><i class="fas fa-dice-d20"></i> PASOS <i class="fas fa-dice-d20"></i></h2>
+                    <h3 class="c-green" style="padding: 20px 0;">¿Qué debes hacer?</h3>
+                </center>
             </div>
             <div class="pasos-general">
                 <div class="columna-pasos bgc-green">
-                    <div class="img-pasos img-regala"></div>
-                    <h2>Regala</h2>
-                    <h3>El juego que ya no quieras puede ser de interés para otros. Envía su información y dona el juego al negocio.</h3>
-                </div>
-                <div class="columna-pasos bgc-green">
                     <div class="img-pasos img-busca"></div>
                     <h2>Busca</h2>
-                    <h3>Puedes buscar algún otro juego que te interese. Tenemos distintos juegos para todas las personas.</h3>
+                    <h3>Tenemos juegos para todos los gustos y edades.</h3>
+                </div>
+                <div class="columna-pasos bgc-green">
+                    <div class="img-pasos img-compra"></div>
+                    <h2>Compra</h2>
+                    <h3>Elige el juego que quieras, añadelo a tu carrito y realiza tu pago.</h3>
                 </div>
                 <div class="columna-pasos bgc-green">
                     <div class="img-pasos img-juega"></div>
                     <h2>Juega</h2>
-                    <h3>Diviertete y pasa el rato en compañía con tus seres queridos. Vive una experiencia única y obtén nuevos recuerdos.</h3>
+                    <h3>Diviertete y pasa el rato en compañía con tus seres queridos.</h3>
                 </div>
             </div>
         </section>
+        <hr>
         <section class="contenedor-juegos" id="contenedor3">
             <div class="space15"></div>
             <center>
-                <i class="fab fa-critical-role c-red" style="margin-left: 4%;"></i><i><span class="c-green"> Artículos Destacados</span></i><i class="fab fa-critical-role c-red"></i>
-                <p style="margin-left: 4%; font-size: 17px; padding: 20px 0;">Observa los juegos de mesa más buscados.</p>
+                <h2 class="c-green"> <i class="fab fa-critical-role c-red"></i> Artículos Destacados <i class="fab fa-critical-role c-red"></i></h2>
+                <h3 class="c-red" style="padding: 20px 0;">Observa los juegos de mesa más buscados.</h3>
             </center>
             <div class="row-masjuegos">
-                <div class="masjuegos"></div>
                 <div class="masjuegos">
                     <h3>Busca y conoce más juegos.</h3>
                     <a href="juegos.jsp"><span class="c-gray">Juegos</span></a>
                 </div>
-                <div class="masjuegos"></div>
             </div>
             <br>
             <div class="juegos-general">
@@ -103,8 +105,8 @@
                         <h2>Monopoly</h2>
                         <div class="border-juegos"></div>
                         <div class="img-juego-des imgmonopoly"></div>
-                        <h3>"Para disfrutar en familia."</h3>
-                        <a href="#">Usar</a>
+                        <p class="mt-3">"Para disfrutar en familia."</p>
+                        <a href="#">Comprar</a>
                     </div>
                 </div>
                 <div class="columna-juegos">
@@ -112,8 +114,8 @@
                         <h2>Ajedrez</h2>
                         <div class="border-juegos"></div>
                         <div class="img-juego-des imgajedrez"></div>
-                        <h3>"Para pasar el rato."</h3>
-                        <a href="#">Usar</a>
+                        <p class="mt-3">"Para pasar el rato."</p>
+                        <a href="#">Comprar</a>
                     </div>
                 </div>
                 <div class="columna-juegos">
@@ -121,8 +123,8 @@
                         <h2>Jenga</h2>
                         <div class="border-juegos"></div>
                         <div class="img-juego-des imgjenga"></div>
-                        <h3>"Para ganar nuevas experiencias."</h3>
-                        <a href="#">Usar</a>
+                        <p class="mt-3">"Para ganar nuevas experiencias."</p>
+                        <a href="#">Comprar</a>
                     </div>
                 </div>
                 <div class="columna-juegos">
@@ -130,14 +132,15 @@
                         <h2>Clue</h2>
                         <div class="border-juegos"></div>
                         <div class="img-juego-des imgclue"></div>
-                        <h3>"Para pasar largas horas de diversión."</h3>
-                        <a href="#">Usar</a>
+                        <p class="mt-3">"Para pasar largas horas de diversión."</p>
+                        <a href="#">Comprar</a>
                     </div>
                 </div>
             </div>
             <div class="space15"></div>
 
         </section>
+        <hr>
         <br>
 
         <footer>
