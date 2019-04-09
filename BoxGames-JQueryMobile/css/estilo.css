@@ -856,7 +856,7 @@ textarea .contact-form-text{
 
 .topjuegos{
 	width: 100%;
-	height: 500px;
+	height: 250px;
 	background-image: url("../img/background-img/playtop.jpg");
 	background-repeat: no-repeat; 
 	background-position: center;
@@ -866,7 +866,7 @@ textarea .contact-form-text{
 .fondotopjuegos{
 	background-color: rgba(50,139,195,0.90);
 	margin: 0 auto;
-	margin-top: 150px;
+	margin-top: 75px;
 	width: 50%;
 	height: 20%;
 	text-align: center;
