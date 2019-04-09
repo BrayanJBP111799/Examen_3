@@ -1069,7 +1069,7 @@ textarea .contact-form-text{
 
 /*------------------------------------MODALS--------------------------------------------*/
 
-.modal{
+/*.modal{
     display: none;
     position: fixed;
     z-index: 1;
@@ -1079,16 +1079,10 @@ textarea .contact-form-text{
     height: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
-}
+}*/
 
 .modal-content{
     background-color: #fff;
-    margin: 20% auto;
-    /*padding: 20px;*/
-    width: 70%;
-    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2), 0 7px 20px 0 rgba(0,0,0,0.17); 
-    animation-name: modalopen;
-    animation-duration: 1s;  
 }
 
 .modal-header{
@@ -1114,7 +1108,7 @@ textarea .contact-form-text{
     text-align: center;
 }
 
-.closeBtn{
+/*.closeBtn{
     color: #fff;
     float: right;
     font-size: 30px;
@@ -1135,7 +1129,7 @@ textarea .contact-form-text{
         opacity: 1;
     }
 }
-
+*/
 
 /*------------------------------------LOG IN--------------------------------------------*/
 
