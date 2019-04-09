@@ -884,9 +884,11 @@ textarea .contact-form-text{
 }
 
 .txtfiltro{
-    font-size: 18px;
+    width: 300px;
+    font-size: 14px;
     border: 1px solid #2c3e50;
-    padding: 5px 10px
+    padding: 5px 5px;
+    text-align: center;
 }
 
 .txtfiltro:focus{
@@ -912,26 +914,22 @@ textarea .contact-form-text{
     margin: 0 auto;
 }
 
-.juegosall-general .txtfiltro{
-    margin-top: 30px;
-}
-
 .columnas-juegos{
     /*width: 20%;
     height: 100%;
     margin: 0px auto;*/
     margin: 0 10px;
     border-radius: 10px;
-    flex: 25%;
+    flex: 20%;
     padding: 10px;
-    max-width: 320px;
+    max-width: 250px;
     box-sizing: border-box;
 }
 
 .img-mini-juego{
     margin: 0 auto;
-    width: 50%;
-    height: 45%;
+    width: 150px;
+    height: 100px;
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;
@@ -1030,7 +1028,7 @@ textarea .contact-form-text{
 }
 
 .botonesfiltro{
-    margin: 30px 0px;
+    margin: 0px 5px;
 }
 
 /* Style the buttons */

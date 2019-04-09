@@ -49,16 +49,17 @@
 
         <button id="topBtn"><i class="fas fa-chevron-circle-up"></i></button>
         <section class="contenedor-allgames">
-            <center><i class="fas fa-dice-d20"></i><i><span>Juegos</span></i><i class="fas fa-dice-d20"></i></center>
-            <p style="margin-left: 4%; font-size: 17px; padding: 20px 0;">Busca y elige algún juegos que te guste.</p>
-
+            <center>
+                <h2 class="c-red"><i class="fas fa-dice-d20"></i> Juegos <i class="fas fa-dice-d20"></i></h2>
+                <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">Busca y elige algún juego que te guste.</p>
+            </center>
+            
             <!-- Control buttons -->
             <div class="juegosall-general">
-                <div class="space15"></div>
                 <center>
-                    <h3>Introduce el nombre del juego:</h3>
-                    <input type="text" id="myInput" class="txtfiltro" onkeyup="myFunction()" placeholder="Nombre del juego">
-                </center>
+                    <input type="text" id="myInput" class="txtfiltro" onkeyup="myFunction()" placeholder="Introduce el nombre del juego">
+                <br>
+                <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">O selecciona alguna de las siguientes categorías.</p>
                 <div id="myBtnContainer" class="botonesfiltro">
                     <button class="btn active" onclick="filterSelection('all')">Todos</button>
                     <button class="btn" onclick="filterSelection('cartas')"> Cartas</button>
@@ -67,97 +68,98 @@
                     <button class="btn" onclick="filterSelection('cuatroj')">4 o más jugadores</button>
                     <button class="btn" onclick="filterSelection('estrategia')">Estrategía</button>
                 </div>
-
+                </center>
+                <hr>
                 <div id="myUL">
                     <div class="juegos-general">
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv dados cuatroj">
-                                <h2>Colones de Catán</h2>
+                                <h4>Colones de Catán</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgcolones"></div>
                                 <button id="modalBtncolon">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h2>Escaleras y serpientes</h2>
+                                <h4>Escaleras y serpientes</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imges"></div>
                                 <button id="modalBtnes">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv estrategia rol cuatroj">
-                                <h2>Risk</h2>
+                                <h4>Risk</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgrisk"></div>
                                 <button id="modalBtnrisk">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h2>Scrabble</h2>
+                                <h4>Scrabble</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgscrabble"></div>
                                 <button id="modalBtnscrabble">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
-                    </div>
-                    <div class="juegos-general">
+<!--                    </div>
+                    <div class="juegos-general">-->
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj">
-                                <h2>Ajedrez</h2>
+                                <h4>Ajedrez</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgajedrez"></div>
                                 <button id="modalBtnajedrez">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj">
-                                <h2>Monopoly</h2>
+                                <h4>Monopoly</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgmonopoly"></div>
                                 <button id="modalBtnmono">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h2>Dominó</h2>
+                                <h4>Dominó</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgdomino"></div>
                                 <button id="modalBtndomino">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h2>Jenga</h2>
+                                <h4>Jenga</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgjenga"></div>
                                 <button id="modalBtnjenga">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
-                    </div>
-                    <div class="juegos-general">
+<!--                    </div>
+                    <div class="juegos-general">-->
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv cartas rol cuatroj">
-                                <h2>Clue</h2>
+                                <h4>Clue</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgclue"></div>
                                 <button id="modalBtnclue">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv dosj">
-                                <h2>Damas</h2>
+                                <h4>Damas</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgdamas"></div>
                                 <button id="modalBtndamas">Descripción</button>
@@ -166,27 +168,26 @@
                         </li>
                         <li>	
                             <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj">
-                                <h2>Naipes</h2>
+                                <h4>Naipes</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgnaipes"></div>
                                 <button id="modalBtnnaipes">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                         <li>
                             <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj">
-                                <h2>Batalla naval</h2>
+                                <h4>Batalla naval</h4>
                                 <div class="border-alljuegos"></div>
                                 <div class="img-mini-juego imgbn"></div>
                                 <button id="modalBtnbn">Descripción</button>
-                                <button>Usar</button>
+                                <button>Comprar</button>
                             </div>
                         </li>
                     </div>
                 </div>
             </div>
-
-
+            <hr><br>
             <script>
                 filterSelection("all")
                 function filterSelection(c) {
