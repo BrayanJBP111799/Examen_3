@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +15,6 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
 	<script src="jqmobile/demos/js/jquery.js"></script>
 	<script src="jqmobile/demos/_assets/js/index.js"></script>
@@ -26,60 +27,31 @@
 
 		<!------------------------------------------------- HEADER ------------------------------------------------------>
 		<div data-role="header" data-theme="b">
-			<img src="img/logos/logo2_blanco_peq.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
+			<img src="img/logos/logo2_blanco_peq.png" alt="Logo" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
 			<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
 			<a href="#" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
 		</div>
 
 		<!------------------------------------------------- BODY ------------------------------------------------------>
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-			<h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Contáctenos</h2>
+			<h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Iniciar Sesión</h2>
 
-			<div class="ui-corner-all custom-corners">
-				<div class="ui-bar ui-bar-a text-center">
-					<h3>Envíanos tu mensaje.</h3>
-				</div>
-				<div class="ui-body ui-body-a">
-					<form>
-						<div class="mt-3">
-							<label for="nombre">Nombre Completo</label>
-							<input type="text" name="nombre" class="form-control" required>
-						</div>
-						<div class="mt-3">
-							<label for="telefono">Teléfono</label>
-							<input type="text" name="telefono" class="form-control" required>
-						</div>
-						<div class="mt-3">
-							<label for="correo">Correo electrónico</label>
-							<input type="text" name="correo" class="form-control" placeholder="boxgames@correo.com">
-						</div>
-						<div class="mt-3">
-							<label for="correo">Mensaje</label>
-							<textarea class="contact-form-text"></textarea>
-						</div>
-						
-						<a class="float-right bgc-blue ui-btn ui-btn-inline btn-formato" value="Enviar" type="submit" href="#">Enviar</a>
-					</form>
-				</div>
-
-				<center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
-				<div class="nosotros-general">
-					<div class="columna-nosotros">
-						<i class="fas fa-map-marker-alt"></i><h4>Dirección</h4>
-						<p>500 Oeste y 75 Sur de la Embajada Americana, Pavas, San José.</p>
-					</div>
-					<div class="columna-nosotros">
-						<h1>Síguenos en:</h1>
-						<a href="#"><i class="fab fa-facebook rs"></i></a>
-						<a href="#"><i class="fab fa-twitter-square rs"></i></a>
-						<a href="#"><i class="fab fa-instagram rs"></i></a>
-					</div>
-					<div class="columna-nosotros">
-						<i class="fas fa-envelope"></i><h4>Correo</h4>
-						<p>info@boxgames.org</p>
-						<i class="fas fa-phone"></i><h4>Teléfono</h4>
-						<p>8547-2209</p>
-					</div>
+			<div class="ui-body ui-body-a">
+				<form class="mb-3">
+					<img class="mb-4" src="img/logos/logo2.png" width="300" alt="Logo" >
+					<label for="inputEmail" class="sr-only">Correo Electrónico</label>
+					<input type="email" id="email" placeholder="Correo Electrónico" required><br>
+					<label for="inputPassword" class="sr-only">Contraseña</label>
+					<input type="password" id="pass" placeholder="Contraseña" required><br>
+					<button type="submit" style="color:#fff;" name="registrar" class="bgc-blue">Ingresar</button>
+				</form>
+				<div class="checkbox mb-2 text-center">
+					<label>
+						<a href="#">¿Olvidó su contraseña?</a>
+					</label><br>
+					<label>
+						<a href="registro.html">Registrarse</a>
+					</label>
 				</div>
 			</div>
 		</div>
@@ -91,20 +63,20 @@
 					<a href="#" data-rel="close">Cerrar Menú</a>
 				</li>
 				<li>
-					<a rel="external" href="index.html">Inicio</a>
+					<a rel="external" href="index.jsp">Inicio</a>
 				</li>
 				<li>
-					<a rel="external" href="juegos.html">Juegos</a>
+					<a rel="external" href="juegos.jsp">Juegos</a>
 				</li>
 				<li>
-					<a href="contacto.html" rel="external">Contáctenos</a>
+					<a href="contacto.jsp" rel="external">Contáctenos</a>
 				</li>
 				<li>
-					<a href="nosotros.html" rel="external">Nosotros</a>
+					<a href="nosotros.jsp" rel="external">Nosotros</a>
 				</li>
 				<div class="ui-panel-inner"></div>
 				<li>
-					<a href="login.html" rel="external">Ingresar</a>
+					<a href="login.jsp" rel="external">Ingresar</a>
 				</li>
 			</ul>
 		</div>

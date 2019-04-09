@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,34 +31,37 @@
 			<a href="#" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
 		</div>
 
+                <!------------------------------------------------- BODY ------------------------------------------------------>
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
 
 		</div>
 
+                <!------------------------------------------------- MENU ------------------------------------------------------>
 		<div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
 			<ul data-role="listview">
 				<li data-icon="delete">
 					<a href="#" data-rel="close">Cerrar Menú</a>
 				</li>
 				<li>
-					<a rel="external" href="login.jsp">Inicio</a>
+					<a rel="external" href="index.jsp">Inicio</a>
 				</li>
 				<li>
-					<a rel="external" href="logout">Juegos</a>
+					<a rel="external" href="juegos.jsp">Juegos</a>
 				</li>
 				<li>
-					<a href="index.jsp" rel="external">Contáctenos</a>
+					<a href="contacto.jsp" rel="external">Contáctenos</a>
 				</li>
 				<li>
-					<a href="tipo_cambio.jsp" rel="external">Nosotros</a>
+					<a href="nosotros.jsp" rel="external">Nosotros</a>
 				</li>
 				<div class="ui-panel-inner"></div>
 				<li>
-					<a href="ayuda.jsp" rel="external">Ingresar</a>
+					<a href="login.jsp" rel="external">Ingresar</a>
 				</li>
 			</ul>
 		</div>
 
+                <!------------------------------------------------- FOOTER ------------------------------------------------------>
 		<div data-role="footer" data-theme="b" class="ui-footer ui-bar-a" role="contentinfo">
 			<center>
 				<img src="img/logos/logo2_negro_peq.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:150px;"><br>

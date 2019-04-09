@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -83,20 +85,20 @@
 					<a href="#" data-rel="close">Cerrar Menú</a>
 				</li>
 				<li>
-					<a rel="external" href="index.html">Inicio</a>
+					<a rel="external" href="index.jsp">Inicio</a>
 				</li>
 				<li>
-					<a rel="external" href="juegos.html">Juegos</a>
+					<a rel="external" href="juegos.jsp">Juegos</a>
 				</li>
 				<li>
-					<a href="contacto.html" rel="external">Contáctenos</a>
+					<a href="contacto.jsp" rel="external">Contáctenos</a>
 				</li>
 				<li>
-					<a href="nosotros.html" rel="external">Nosotros</a>
+					<a href="nosotros.jsp" rel="external">Nosotros</a>
 				</li>
 				<div class="ui-panel-inner"></div>
 				<li>
-					<a href="login.html" rel="external">Ingresar</a>
+					<a href="login.jsp" rel="external">Ingresar</a>
 				</li>
 			</ul>
 		</div>

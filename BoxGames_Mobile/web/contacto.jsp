@@ -1,3 +1,5 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s"%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +15,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
 	<script src="jqmobile/demos/js/jquery.js"></script>
 	<script src="jqmobile/demos/_assets/js/index.js"></script>
@@ -32,48 +35,52 @@
 
 		<!------------------------------------------------- BODY ------------------------------------------------------>
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-			<h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Conoce más del negocio</h2>
+			<h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Contáctenos</h2>
 
 			<div class="ui-corner-all custom-corners">
 				<div class="ui-bar ui-bar-a text-center">
-					<h3>Nuestros Objetivos</h3>
+					<h3>Envíanos tu mensaje.</h3>
 				</div>
-				<div class="space15"></div>
-				<div class="flextab" id="objetivos">
-					<button class="tablink ui-btn ui-mini" id="btn-w" onclick="openPage('Home', this, '#328BC3')">Promover</button>
-					<button class="tablink ui-btn ui-mini" onclick="openPage('News', this, '#328BC3')" id="defaultOpen">Ayudar</button>
-					<button class="tablink ui-btn ui-mini" onclick="openPage('Contact', this, '#328BC3')">Cuidar</button>
-				</div>
-
-				<div id="Home" class="tabcontent">
-					<h3>Promover</h3>
-					<p>las actividades familiares y entre amigos para pasar el rato en compañía con tus seres queridos,<br> esto con el fin de ganar nuevas experiencias en conjunto.</p>
-				</div>
-
-				<div id="News" class="tabcontent">
-					<h3>Ayudar</h3>
-					<p>a aquellos que quieran tener nuevas experiencias y recuerdos con sus seres queridos.</p> 
-				</div>
-
-				<div id="Contact" class="tabcontent">
-					<h3>Cuidar</h3>
-					<p>los juegos de mesa que se encuentran en condiciones no tan adecuadas.</p>
-				</div>
-
-				<div class="obj-general">
-					<div class="columna-obj obj-text">
-						<div class="ui-bar ui-bar-a text-center mb-3">
-							<h3 class="mision">Nuestra Misión</h3>
+				<div class="ui-body ui-body-a">
+					<form>
+						<div class="mt-3">
+							<label for="nombre">Nombre Completo</label>
+							<input type="text" name="nombre" class="form-control" required>
 						</div>
-						<p class="mision-des">Mantener las costumbres y tradiciones pasadas por medio de una fuerte relación con tus seres queridos (familia, amigos o gente de confianza), mediante la incorporación de juegos de mesa para la promoción de nuevas experiencias y recuerdos.</p>
+						<div class="mt-3">
+							<label for="telefono">Teléfono</label>
+							<input type="text" name="telefono" class="form-control" required>
+						</div>
+						<div class="mt-3">
+							<label for="correo">Correo electrónico</label>
+							<input type="text" name="correo" class="form-control" placeholder="boxgames@correo.com">
+						</div>
+						<div class="mt-3">
+							<label for="correo">Mensaje</label>
+							<textarea class="contact-form-text"></textarea>
+						</div>
+						
+						<a class="float-right bgc-blue ui-btn ui-btn-inline btn-formato" value="Enviar" type="submit" href="#">Enviar</a>
+					</form>
+				</div>
+
+				<center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
+				<div class="nosotros-general">
+					<div class="columna-nosotros">
+						<i class="fas fa-map-marker-alt"></i><h4>Dirección</h4>
+						<p>500 Oeste y 75 Sur de la Embajada Americana, Pavas, San José.</p>
 					</div>
-					<div class="columna-obj img-obj4"></div>
-					<div class="columna-obj img-obj3"></div>
-					<div class="columna-obj obj-text">
-						<div class="ui-bar ui-bar-a text-center mb-3">
-							<h3 class="vision">Nuestra Visión</h3>
-						</div>
-						<p class="vision-des">Ser un apoyo para la búsqueda de juegos de mesa de cualquier tipo, donde las personas puedan buscar y comprar lo que más necesiten de acuerdo a sus gustos y necesidades, esto con el fin de cada uno pueda divertirse y estar acompañado de los seres que más quiere en la vida.</p>
+					<div class="columna-nosotros">
+						<h1>Síguenos en:</h1>
+						<a href="#"><i class="fab fa-facebook rs"></i></a>
+						<a href="#"><i class="fab fa-twitter-square rs"></i></a>
+						<a href="#"><i class="fab fa-instagram rs"></i></a>
+					</div>
+					<div class="columna-nosotros">
+						<i class="fas fa-envelope"></i><h4>Correo</h4>
+						<p>info@boxgames.org</p>
+						<i class="fas fa-phone"></i><h4>Teléfono</h4>
+						<p>8547-2209</p>
 					</div>
 				</div>
 			</div>
@@ -86,20 +93,20 @@
 					<a href="#" data-rel="close">Cerrar Menú</a>
 				</li>
 				<li>
-					<a rel="external" href="index.html">Inicio</a>
+					<a rel="external" href="index.jsp">Inicio</a>
 				</li>
 				<li>
-					<a rel="external" href="juegos.html">Juegos</a>
+					<a rel="external" href="juegos.jsp">Juegos</a>
 				</li>
 				<li>
-					<a href="contacto.html" rel="external">Contáctenos</a>
+					<a href="contacto.jsp" rel="external">Contáctenos</a>
 				</li>
 				<li>
-					<a href="nosotros.html" rel="external">Nosotros</a>
+					<a href="nosotros.jsp" rel="external">Nosotros</a>
 				</li>
 				<div class="ui-panel-inner"></div>
 				<li>
-					<a href="login.html" rel="external">Ingresar</a>
+					<a href="login.jsp" rel="external">Ingresar</a>
 				</li>
 			</ul>
 		</div>
@@ -112,7 +119,5 @@
 			</center>
 		</div>
 	</div>
-
-	<script type="text/javascript" src="js/animation.js"></script>
 </body>
 </html>
