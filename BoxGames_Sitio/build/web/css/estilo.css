@@ -454,11 +454,12 @@ footer h3{
 .tabcontent{
     color: white;
     display: none;
-    padding: 100px 20px;
+    padding: 50px 20px;
     height: 20%;
     margin: 2% 2% 0% 2%; 
     text-align: center;
     line-height: 30px;
+    width:90%;
 }
 
 @media screen and (max-width: 600px){

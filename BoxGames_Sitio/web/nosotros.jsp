@@ -59,22 +59,22 @@
             <div class="flextab" id="objetivos">
                 <button class="tablink" onclick="openPage('Home', this, '#328BC3')">Promover</button>
                 <button class="tablink" onclick="openPage('News', this, '#328BC3')" id="defaultOpen">Ayudar</button>
-                <button class="tablink" onclick="openPage('Contact', this, '#328BC3')">Cuidar</button>
+                <button class="tablink" onclick="openPage('Contact', this, '#328BC3')">Brindar</button>
             </div>
 
-            <div id="Home" class="tabcontent">
+            <div id="Home" class="tabcontent mx-auto">
                 <h3>Promover</h3>
                 <p>las actividades familiares y entre amigos para pasar el rato en compañía.</p>
             </div>
 
-            <div id="News" class="tabcontent">
+            <div id="News" class="tabcontent mx-auto">
                 <h3>Ayudar</h3>
                 <p>a aquellos que quieran tener nuevas experiencias y recuerdos con sus seres queridos.</p> 
             </div>
 
-            <div id="Contact" class="tabcontent">
-                <h3>Cuidar</h3>
-                <p>los juegos de mesa que se encuentran en condiciones no tan adecuadas.</p>
+            <div id="Contact" class="tabcontent mx-auto">
+                <h3>Brindar</h3>
+                <p>una plataforma para la compra de juegos de una manera rápida y sencilla.</p>
             </div>
 
             <div class="obj-general">
