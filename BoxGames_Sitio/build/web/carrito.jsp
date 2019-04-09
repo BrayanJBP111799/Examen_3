@@ -29,7 +29,12 @@
                         <i class="fas fa-times"></i>
                     </label>
                 </li>                    
-                <li><a href="login.jsp">Ingresar</a></li>
+                <s:if test="%{#session.session_correo == null}">
+                    <li><a href="login.jsp">Ingresar</a></li>
+                </s:if>
+                <s:elseif test="%{#session.session_correo != null}">
+                    <li><a href="logout">Salir</a></li>
+                </s:elseif>
                 <li><a href="nosotros.jsp">Nosotros</a></li>
                 <li><a href="contacto.jsp">Contáctenos</a></li>
                 <li><a href="index.jsp#contenedor3">Juegos</a></li>

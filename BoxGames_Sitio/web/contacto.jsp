@@ -30,7 +30,12 @@
                             <i class="fas fa-times"></i>
                         </label>
                     </li>                    
-                    <li><a href="login.jsp">Ingresar</a></li>
+                    <s:if test="%{#session.session_correo == null}">
+                        <li><a href="login.jsp">Ingresar</a></li>
+                    </s:if>
+                    <s:elseif test="%{#session.session_correo != null}">
+                        <li><a href="logout">Salir</a></li>
+                    </s:elseif>
                     <li><a href="nosotros.jsp">Nosotros</a></li>
                     <li><a href="contacto.jsp">Contáctenos</a></li>
                     <li><a href="index.jsp#contenedor3">Juegos</a></li>
@@ -61,7 +66,7 @@
             <center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
             <div class="nosotros-general">
                 <div class="columna-nosotros">
-                    <i class="fas fa-map-marker-alt"></i><span>Dirección</span>
+                    <i class="fas fa-map-marker-alt"></i><h5>Dirección</h5>
                     <p>500 Oeste y 75 Sur de la Embajada Americana, Pavas, San José.</p>
                 </div>
                 <div class="columna-nosotros">
@@ -71,9 +76,9 @@
                     <a href="#"><i class="fab fa-instagram rs"></i></a>
                 </div>
                 <div class="columna-nosotros">
-                    <i class="fas fa-envelope"></i><span>Correo</span>
+                    <i class="fas fa-envelope"></i><h5>Correo</h5>
                     <p>info@boxgames.org</p>
-                    <i class="fas fa-phone"></i><span>Teléfono</span>
+                    <i class="fas fa-phone"></i><h5>Teléfono</h5>
                     <p>8547-2209</p>
                 </div>
             </div>
