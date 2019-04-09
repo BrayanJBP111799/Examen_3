@@ -455,6 +455,10 @@ footer h3{
 		font-size: 10px;
 		width: 100%
 	}
+
+	#btn-w{
+		width: 300px!important;
+	}
 }
 
 #Home{

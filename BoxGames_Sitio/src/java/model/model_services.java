@@ -42,14 +42,14 @@ public class model_services {
         String subject = "BoxGames - Registro";
         String to = u.getCorreo();
         String link = "http://localhost:8080/BoxGames_Sitio/registro.jsp";
-        String body = "<div style='background-color: #4caf50; padding:20px'>" +
-                "<div class='logo-right' align='right' id='emb-email-header'><img style = 'display: block;height: auto;width: 100%;border: 0;max-width: 227px;' src='https://i2.createsend1.com/ei/t/32/194/D85/123735/csfinal/logo1-9900000000028a3c.png' alt=''></div>" +
+        String body = "<div style='background-color: #166A8F; padding:20px'>" +
+                "<div class='logo-right' align='right' id='emb-email-header'><img style = 'display: block;height: auto;width: 100%;border: 0;max-width: 227px;' src='https://i1.createsend1.com/resize/ti/t/73/D4E/3AE/temp/logo2_blanco_peq.png' alt=''></div>" +
                 "<div style = 'mso-line-height-rule: exactly;mso-text-raise: 4px;'>" +
                 "<p class='size-40' style='Margin-top: 0;Margin-bottom: 20px;font-family: oswald,avenir next condensed,arial narrow,ms ui gothic,sans-serif;font-size: 32px;line-height: 40px;text-align: center;' lang='x-size-40'><span class='font-oswald'><strong><span style = 'color:#ffffff'> &#161;BIENVENIDO!</span></strong></span></p>" +
                 "</div>" +
                 "<div class='divider' style='display: block;font-size: 2px;line-height: 2px;Margin-left: auto;Margin-right: auto;width: 40px;background-color: #ccc;Margin-bottom: 20px;'>&nbsp;</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' align='center'>" +
-                "<img style = 'border: 0;display: block;height: auto;width: 100%;max-width: 128px;' alt='' width='128' src='https://i1.createsend1.com/ei/t/32/194/D85/122551/csfinal/web-9900000000028a3c.png'>" +
+                "<img style = 'border: 0;display: block;height: auto;width: 100%;max-width: 128px;' alt='' width='128' src='https://i1.createsend1.com/resize/ti/t/73/D4E/3AE/temp/strategy.png'>" +
                 "</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
                 "<p class='size-22' style='Margin-top: 0;Margin-bottom: 0;font-family: montserrat,dejavu sans,verdana,sans-serif;font-size: 18px;line-height: 26px;text-align: center;' lang='x-size-22'><span class='font-montserrat'><span style = 'color:#ffffff' > Hemos recibido una solicitud para un registro.</span></span></p><p class='size-22' style='Margin-top: 20px;Margin-bottom: 20px;font-family: montserrat,dejavu sans,verdana,sans-serif;font-size: 18px;line-height: 26px;text-align: center;' lang='x-size-22'><span class='font-montserrat'><span style = 'color:#ffffff' > Accede al siguiente link para continuar con el proceso</span></span></p>" +
@@ -57,7 +57,7 @@ public class model_services {
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
                 "</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
-                "<h2 style = 'Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #e31212;font-size: 26px;line-height: 34px;font-family: montserrat,dejavu sans,verdana,sans-serif;text-align: center;' ><span> <a style = 'color:#1a237e' href = "+link+">Registrarse</a> </ span ></ span ></ h2 >" +
+                "<h2 style = 'Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #e31212;font-size: 26px;line-height: 34px;font-family: montserrat,dejavu sans,verdana,sans-serif;text-align: center;' ><span> <a style = 'color:#FC3D49' href = "+link+">Registrarse</a> </ span ></ span ></ h2 >" +
                 "</ div >" +
                 "</ div > ";
         try{
@@ -93,14 +93,14 @@ public class model_services {
         String subject = "BoxGames - Cambio de Contraseña";
         String to = u.getCorreo();
         String link = "http://localhost:8080/BoxGames_Sitio/change_password_form.action?idU="+u.getCedula();
-        String body = "<div style='background-color: #4caf50; padding:20px'>" +
-                "<div class='logo-right' align='right' id='emb-email-header'><img style = 'display: block;height: auto;width: 100%;border: 0;max-width: 227px;' src='https://i2.createsend1.com/ei/t/32/194/D85/123735/csfinal/logo1-9900000000028a3c.png' alt=''></div>" +
+        String body = "<div style='background-color: #166A8F; padding:20px'>" +
+                "<div class='logo-right' align='right' id='emb-email-header'><img style = 'display: block;height: auto;width: 100%;border: 0;max-width: 227px;' src='https://i1.createsend1.com/resize/ti/t/73/D4E/3AE/temp/logo2_blanco_peq.png' alt=''></div>" +
                 "<div style = 'mso-line-height-rule: exactly;mso-text-raise: 4px;'>" +
                 "<p class='size-40' style='Margin-top: 0;Margin-bottom: 20px;font-family: oswald,avenir next condensed,arial narrow,ms ui gothic,sans-serif;font-size: 32px;line-height: 40px;text-align: center;' lang='x-size-40'><span class='font-oswald'><strong><span style = 'color:#ffffff'> &#161;HOLA!</span></strong></span></p>" +
                 "</div>" +
                 "<div class='divider' style='display: block;font-size: 2px;line-height: 2px;Margin-left: auto;Margin-right: auto;width: 40px;background-color: #ccc;Margin-bottom: 20px;'>&nbsp;</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' align='center'>" +
-                "<img style = 'border: 0;display: block;height: auto;width: 100%;max-width: 128px;' alt='' width='128' src='https://i1.createsend1.com/ei/t/32/194/D85/122551/csfinal/web-9900000000028a3c.png'>" +
+                "<img style = 'border: 0;display: block;height: auto;width: 100%;max-width: 128px;' alt='' width='128' src='https://i1.createsend1.com/resize/ti/t/73/D4E/3AE/temp/strategy.png'>" +
                 "</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
                 "<p class='size-22' style='Margin-top: 0;Margin-bottom: 0;font-family: montserrat,dejavu sans,verdana,sans-serif;font-size: 18px;line-height: 26px;text-align: center;' lang='x-size-22'><span class='font-montserrat'><span style = 'color:#ffffff' > Hemos recibido una solicitud para restablecer tu contraseña.</span></span></p><p class='size-22' style='Margin-top: 20px;Margin-bottom: 20px;font-family: montserrat,dejavu sans,verdana,sans-serif;font-size: 18px;line-height: 26px;text-align: center;' lang='x-size-22'><span class='font-montserrat'><span style = 'color:#ffffff' > Accede al siguiente link para continuar con el proceso</span></span></p>" +
@@ -108,7 +108,7 @@ public class model_services {
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
                 "</div>" +
                 "<div style = 'Margin-left: 20px;Margin-right: 20px;' >" +
-                "<h2 style = 'Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #e31212;font-size: 26px;line-height: 34px;font-family: montserrat,dejavu sans,verdana,sans-serif;text-align: center;' ><span> <a style = 'color:#1a237e' href = "+link+">Cambiar Contraseña</a> </ span ></ span ></ h2 >" +
+                "<h2 style = 'Margin-top: 0;Margin-bottom: 16px;font-style: normal;font-weight: normal;color: #e31212;font-size: 26px;line-height: 34px;font-family: montserrat,dejavu sans,verdana,sans-serif;text-align: center;' ><span> <a style = 'color:#FC3D49' href = "+link+">Cambiar Contraseña</a> </ span ></ span ></ h2 >" +
                 "</ div >" +
                 "</ div > ";
         try{

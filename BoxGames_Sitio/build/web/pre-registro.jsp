@@ -53,7 +53,6 @@
                             </div>
                             
                             <div class="card-body">
-<!--                                <div class="row">-->
                                     <center><div class="col-md-9">
                                         <div class="form-group">
                                             <s:form  theme="simple" cssClass="" action = "pre_register" id="pre_register" method = "post">
@@ -70,23 +69,7 @@
                                             </s:form>
                                             
                                         </div>
-                                    <!--</div>-->
-                                    </div></center>
-                                
-<!--                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="correo">Correo electrónico</label>
-                                                <input type="text" name="correo" class="form-control" placeholder="boxgames@correo.com">
-                                            </div>
-                                        </div>
-                                    </div>                              
-
-                                    <div class="row mt-5">
-                                        <div class="col-md-6">
-                                            <button type="submit" name="registrar" class="btn btn-fill btn-primary">Registrar</button>
-                                        </div>
-                                    </div>-->
+                                    </div></center>                                
                             </div>
                         </div>
                     </div>
