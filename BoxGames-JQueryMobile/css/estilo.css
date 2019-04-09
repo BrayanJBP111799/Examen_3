@@ -11,7 +11,7 @@ h1, span{
 }
 
 span{
-	font-size: 40px;
+	font-size: 25px;
 	padding: 0 30px;
 	color: #000;
 }
@@ -69,6 +69,12 @@ footer h3{
 	text-align: center;
 	font-size: 20px;
 	margin-bottom: 50px; 
+}
+
+.btn-formato{
+	margin: 20px auto; 
+	color:#fff!important; 
+	text-decoration: none!important;
 }
 
 /*---------------------------------------IR ARRIBA-----------------------------------------*/

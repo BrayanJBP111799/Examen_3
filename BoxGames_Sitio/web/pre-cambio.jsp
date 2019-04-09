@@ -47,7 +47,7 @@
         
         <section class="contenedor-reg" id="contenedorRegistro">
             <div class="titulo">
-                <h1 class="pt-4 pb-3">Registro de usuarios</h1>
+                <h1 class="pt-4 pb-3">Restablecer Contraseña</h1>
             </div>
             <div class="container">
                 <div class="row">
@@ -60,15 +60,18 @@
                             <div class="card-body">
                                     <center><div class="col-md-9">
                                         <div class="form-group">
-                                            <s:form  theme="simple" cssClass="" action = "pre_register" id="pre_register" method = "post">
+                                            <s:form  theme="simple" cssClass="" action = "pre_forgot" id="pre_register" method = "post">
                                                 <div><img src="img/logos/logo2_negro_peq.png"></div>
                                                 <br/>
                                                 <br/>                                                
-                                                <h5> Antes de continuar con tu registro necesitamos confimar tu dirección de Correo Electrónico </h5><br/>
+                                                <h5> Antes de poder recuperar tu contraseña necesitamos confimar tu dirección de Correo Electrónico </h5><br/>
                                                 <div class="col-md-5">
                                                     <label for="inputEmail" class="sr-only">Correo Electronico</label>
                                                     <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.correo" placeholder="boxgames@correo.com" required="required"></s:textfield>                                                    
-                                                        <br/>                                                
+                                                        <br/>     
+                                                    <label for="inputEmail" class="sr-only">Cédula</label>
+                                                    <s:textfield type = "cedula" cssClass="form-control" id="inputEmail" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+                                                    <br/>
                                                     <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Enviar"></s:submit>
                                                 </div>
                                             </s:form>
@@ -81,14 +84,6 @@
                 </div>
             </div>
         </section>     
-        
-        <script type="text/javascript">
-            $('input[name="fechanac"]').daterangepicker({
-                singleDatePicker: true,
-                showDropdowns: true,
-                opens: 'center'
-            });
-        </script>
 
         <br>
         <footer class="mt-3">
@@ -103,5 +98,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
+
 
 
