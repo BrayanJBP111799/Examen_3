@@ -120,7 +120,11 @@ footer h3{
 }
 
 .bgc-blue{
-	background-color: #328BC3;
+	background-color: #328BC3!important;
+}
+
+.c-blue{
+	color: #328BC3!important;
 }
 
 /*---------------------------------DIVS DE ESPACIOS----------------------------------------*/
