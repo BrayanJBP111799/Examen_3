@@ -7,7 +7,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import java.sql.SQLException;
 import model.data_queries;
 
-public class contact_controller extends ActionSupport {
+public class controller_contact extends ActionSupport {
 
     private contact ct = new contact();
 
