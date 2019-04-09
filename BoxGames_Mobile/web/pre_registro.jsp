@@ -11,7 +11,6 @@
 	<link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
 	<link rel="icon" href="img/logos/dice.png">
-	<link rel="stylesheet" href="css/estilo.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -27,36 +26,17 @@
 
 		<!------------------------------------------------- HEADER ------------------------------------------------------>
 		<div data-role="header" data-theme="b">
-			<img src="img/logos/logo2_blanco_peq.png" alt="Logo" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
+			<img src="img/logos/logo2_blanco_peq.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:175px;"><br>
 			<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menú</a>
 			<a href="#" rel="external" data-icon="action" data-iconpos="notext">Cerrar Sesión</a>
 		</div>
 
-		<!------------------------------------------------- BODY ------------------------------------------------------>
+                <!------------------------------------------------- BODY ------------------------------------------------------>
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-			<h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Iniciar Sesión</h2>
 
-			<div class="ui-body ui-body-a">
-				<form class="mb-3">
-					<img class="mb-4" src="img/logos/logo2.png" width="300" alt="Logo" >
-					<label for="inputEmail" class="sr-only">Correo Electrónico</label>
-					<input type="email" id="email" placeholder="Correo Electrónico" required><br>
-					<label for="inputPassword" class="sr-only">Contraseña</label>
-					<input type="password" id="pass" placeholder="Contraseña" required><br>
-					<button type="submit" style="color:#fff;" name="registrar" class="bgc-blue">Ingresar</button>
-				</form>
-				<div class="checkbox mb-2 text-center">
-					<label>
-						<a href="#">¿Olvidó su contraseña?</a>
-					</label><br>
-					<label>
-						<a href="registro.jsp">Registrarse</a>
-					</label>
-				</div>
-			</div>
 		</div>
 
-		<!------------------------------------------------- MENU ------------------------------------------------------>
+                <!------------------------------------------------- MENU ------------------------------------------------------>
 		<div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
 			<ul data-role="listview">
 				<li data-icon="delete">
@@ -81,7 +61,7 @@
 			</ul>
 		</div>
 
-		<!------------------------------------------------- FOOTER ------------------------------------------------------>
+                <!------------------------------------------------- FOOTER ------------------------------------------------------>
 		<div data-role="footer" data-theme="b" class="ui-footer ui-bar-a" role="contentinfo">
 			<center>
 				<img src="img/logos/logo2_negro_peq.png" alt="rss" style="display: block; margin: 0 auto;  padding-top:1%; width:150px;"><br>
