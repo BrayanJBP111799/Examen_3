@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 public class model_services {
     
 //////////////////////////////////////////////////////////PARTE LOCAL
-    private String insertsql = "INSERT INTO Register_Usuario(ID_Cliente, NombreCompleto, Telefono, Correo, FechaNacimiento, Password) VALUES (?, ?, ?, ?, ?, ?, ?);";
+    private String insertsql = "INSERT INTO Register_Usuario(ID_Cliente, Nombre_Completo, Telefono, Correo, FechaNacimiento, Password) VALUES (?, ?, ?, ?, ?, ?);";
     public boolean insertU(usuarios u) throws SQLException{
         boolean resultado = false;
         
