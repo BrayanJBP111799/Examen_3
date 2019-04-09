@@ -53,7 +53,7 @@
         <section class="contenedor-contacto" id="contenedor4">
             <center><h2 style="color:#FFF; text-align: center">Envíanos un mensaje</h2></center>
             <div class="borde"></div>
-            <s:head/>
+            <s:fielderror cssClass="error_form"/>
             <s:form cssClass="contact-form" action="contactar" method="post">
                 <s:textfield name="ct.name" type="text" maxlength="45" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Nombre"></s:textfield>
                 <s:textfield name="ct.phone" type="number" maxlength="45" style="font-family: 'Montserrat', sans-serif;" cssClass="contact-form-text" placeholder="Teléfono"></s:textfield>
