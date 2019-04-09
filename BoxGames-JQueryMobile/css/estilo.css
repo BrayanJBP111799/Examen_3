@@ -274,12 +274,13 @@ footer h3{
 
 .slider{
 	width: 100%;
-	height: 500px;
+	height: 250px;
 	background-image: url("../img/background-img/bgmonopoly.jpg");
 	background-repeat: no-repeat; 
 	background-position: center;
 	background-size: cover;
 	animation: slide 20s infinite;
+	padding: 0px!important;
 }
 
 @keyframes slide{
@@ -547,6 +548,10 @@ footer h3{
 
 .img-busca{
 	background-image: url("../img/pasos/find.png")
+}
+
+.img-compra{
+    background-image: url("../img/pasos/cart.png")
 }
 
 @media screen and (max-width: 1150px){
