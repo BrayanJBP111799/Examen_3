@@ -40,25 +40,50 @@
             </div>
         </header>
         
-        <div class="container">
-            <div class="sign-in-body" style="background-color: transparent;">
-                <form class="form-redirect">
-                    <h1 class="text-green">BoxGames</h1>
-                    <h3 class="mb-3 font-weight-normal text-green">¡Se ha enviado un correo electrónico a tu cuenta!</h3>
-                    <center><img src="https://image.flaticon.com/icons/svg/204/204322.svg" width="224" height="224" alt="mail"></center>
-                    <br><br>   
-                    <h5 class="font-weight-normal">En caso de no recibir el correo, verifica que esté escrito correctamente e intenta de nuevo.</h5>
-                    <div class="checkbox mb-3">
-                        <center>
-                            <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_registro.jsp'">Regresar</a>    
-                            <a href="index.jsp" class="btn btn-success">Volver al inicio</a>
-                        </center>
-                    </div>
-                    
-                </form>
-            </div>                
-        </div>
-                
+        <section class="contenedor-reg" id="contenedorRegistro">
+            <div class="titulo">
+                <h1 class="pt-4 pb-3">Envio de Correo</h1>
+            </div>
+            <div class="container">
+                <div class="sign-in-body">
+                    <center><form class="form-redirect" style="border:solid 3px #328BC3; border-radius:10px;">
+                        <div><img src="img/logos/logo2_negro_peq.png"></div>
+                        <h3 class="mb-3 font-weight-normal text-green">¡Se ha enviado un correo electrónico a tu cuenta!</h3>
+                        <div class="col-md-5">
+                        <center><img src="https://image.flaticon.com/icons/svg/204/204322.svg" width="128" height="128" alt="mail"></center>
+                        <br><br>   
+                        <h5 class="font-weight-normal">En caso de no recibir el correo, verifica que esté escrito correctamente e intenta de nuevo.</h5>
+                        <div class="checkbox mb-3">
+                            <center>
+                                <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_registro.jsp'">Regresar</a>    
+                                <a href="index.jsp" class="btn btn-success">Volver al inicio</a>
+                            </center>
+                        </div>  
+                        </div>
+                    </form></center>
+                </div>                
+            </div>
+        </section>
+        
+         <script type="text/javascript">
+            $('input[name="fechanac"]').daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                opens: 'center'
+            });
+        </script>
+
+        <br>
+        <footer class="mt-3">
+            <center>
+                <br><p >Proyecto Final - Programación V</p>
+                <h2 class="text-muted small">&copy; JBS 2019. All Rights Reserved.</h2>
+            </center>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
 
