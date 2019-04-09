@@ -42,28 +42,43 @@
         
         <section class="contenedor-reg" id="contenedorRegistro">
             <div class="titulo">
-                <h1 class="pt-4 pb-3">Envio de Correo</h1>
+                <h1 class="pt-4 pb-3">Restablecer Contraseña</h1>
             </div>
             <div class="container">
-                <div class="sign-in-body">
-                    <center><form class="form-redirect" style="border:solid 3px #328BC3; border-radius:10px;">
-                        <div><img src="img/logos/logo2_negro_peq.png"></div>
-                        <h3 class="mb-3 font-weight-normal text-green">¡Se ha enviado un correo electrónico a tu cuenta!</h3>
-                        <div class="col-md-5">
-                        <center><img src="https://image.flaticon.com/icons/svg/204/204322.svg" width="128" height="128" alt="mail"></center>
-                        <br><br>   
-                        <h5 class="font-weight-normal">En caso de no recibir el correo, verifica que esté escrito correctamente e intenta de nuevo.</h5>
-                        <div class="checkbox mb-3">
-                            <center>
-                                <a class="btn btn-success" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre_registro.jsp'">Regresar</a>    
-                                <a href="index.jsp" class="btn btn-success">Volver al inicio</a>
-                            </center>
-                        </div>  
+                <div class="row">
+                    <div class="col-md-12">                        
+                        <div class="card">
+                            <div class="card-header bgc-blue text-white">
+                                <h5>Ingrese la información solicitada</h5>
+                            </div>
+                            
+                            <div class="card-body">
+                                    <center><div class="col-md-9">
+                                        <div class="form-group">
+                                            <s:form  theme="simple" cssClass="" action = "pre_forgot" id="pre_register" method = "post">
+                                                <div><img src="img/logos/logo2_negro_peq.png"></div>
+                                                <br/>
+                                                <br/>                                                
+                                                <h5> Antes de poder recuperar tu contraseña necesitamos confimar tu dirección de Correo Electrónico </h5><br/>
+                                                <div class="col-md-5">
+                                                    <label for="inputEmail" class="sr-only">Correo Electronico</label>
+                                                    <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.correo" placeholder="boxgames@correo.com" required="required"></s:textfield>                                                    
+                                                        <br/>     
+                                                    <label for="inputEmail" class="sr-only">Cédula</label>
+                                                    <s:textfield type = "cedula" cssClass="form-control" id="inputEmail" name = "u.cedula" placeholder="Cédula" required="required"></s:textfield>
+                                                    <br/>
+                                                    <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Enviar"></s:submit>
+                                                </div>
+                                            </s:form>
+                                            
+                                        </div>
+                                    </div></center>                                
+                            </div>
                         </div>
-                    </form></center>
-                </div>                
+                    </div>
+                </div>
             </div>
-        </section>
+        </section>     
 
         <br>
         <footer class="mt-3">

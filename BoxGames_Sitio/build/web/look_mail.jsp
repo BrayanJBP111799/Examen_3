@@ -64,14 +64,6 @@
                 </div>                
             </div>
         </section>
-        
-         <script type="text/javascript">
-            $('input[name="fechanac"]').daterangepicker({
-                singleDatePicker: true,
-                showDropdowns: true,
-                opens: 'center'
-            });
-        </script>
 
         <br>
         <footer class="mt-3">

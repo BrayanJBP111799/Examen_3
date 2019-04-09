@@ -51,7 +51,7 @@
                 <input type="password" id="pass" class="form-control" placeholder="Contraseña" required><br>
                 <div class="checkbox mb-3">
                     <label>
-                        <a href="#">¿Olvidó su contraseña?</a>
+                        <a href="pre-cambio.jsp">¿Olvidó su contraseña?</a>
                     </label><br>
                     <label>
                         <a href="pre-registro.jsp">Registrarse</a>

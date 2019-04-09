@@ -10,15 +10,15 @@
         <action name="logout" class="controller.controller_logout">
             <result name="success" type="redirect">login.jsp</result>
         </action>
-<!--        <action name="change_password" class="controller.controller_services" method="updateUsuario">
+        <action name="change_password" class="controller.controller_services" method="updateUsuario">
             <result name="success">success.jsp</result>
-        </action>-->
-<!--        <action name="change_password_form" class="controller.controller_services" method="returnToPage">
-            <result name="success">change_password.jsp</result>
-        </action>-->
-<!--        <action name="pre_forgot" class="controller.controller_services" method="proccessChangeP">
+        </action>
+        <action name="change_password_form" class="controller.controller_services" method="returnToPage">
+            <result name="success">cambio_contraseña.jsp</result>
+        </action>
+        <action name="pre_forgot" class="controller.controller_services" method="proccessChangeP">
             <result name="success">look_mail.jsp</result>
-        </action>        -->
+        </action>        
         <action name="pre_register" class="controller.controller_services" method="proccessRegister">
             <result name="success">look_mail.jsp</result>
         </action> 
