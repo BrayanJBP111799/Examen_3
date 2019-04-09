@@ -28,7 +28,7 @@
             <result name="sinregistro">login.jsp</result>          
         </action>
         <action name="contactar" class="controller.controller_contact">
-            <result name="success">contacto.jsp</result>
+            <result name="success">msg_sent.jsp</result>
             <result name="input">contacto.jsp</result>
         </action>
     </package>
