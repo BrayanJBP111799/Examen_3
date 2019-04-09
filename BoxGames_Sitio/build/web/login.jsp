@@ -54,7 +54,7 @@
                         <a href="#">¿Olvidó su contraseña?</a>
                     </label><br>
                     <label>
-                        <a href="registro.jsp">Registrarse</a>
+                        <a href="pre-registro.jsp">Registrarse</a>
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
