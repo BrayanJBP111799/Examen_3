@@ -3,6 +3,7 @@ package controller;
 import bean.juegos;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import gamesWS.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +86,7 @@ public class controller_services {
     //----------------Select de Juegos
     private juegos j = new juegos();
     
-    private List<juegos> juegos_list = new ArrayList<>();
+    private List<JuegosMesa> juegos_list = new ArrayList<>();
 
     public juegos getJ() {
         return j;
@@ -95,17 +96,23 @@ public class controller_services {
         this.j = j;
     }
 
-    public List<juegos> getJuegos_list() {
+    public List<JuegosMesa> getJuegos_list() {
         return juegos_list;
     }
 
-    public void setJuegos_list(List<juegos> juegos_list) {
+    public void setJuegos_list(List<JuegosMesa> juegos_list) {
         this.juegos_list = juegos_list;
     }
 
+
     public String selectJuegos(){
         model_services ms = new model_services();
-        //juegos_list = .selectJuegos().getHotel();
+        juegos_list = ms.selectJuegos().getJuegosMesa();
+        
+        for (int i = 0; i < juegos_list.size(); i++) {
+           System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
+        }
+        
         
         return SUCCESS;
     }
