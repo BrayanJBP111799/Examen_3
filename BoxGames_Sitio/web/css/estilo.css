@@ -929,8 +929,8 @@ textarea .contact-form-text{
 
 .img-mini-juego{
     margin: 0 auto;
-    width: 150px;
-    height: 100px;
+    width: 150px!important;
+    height: 100px!important;
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover;

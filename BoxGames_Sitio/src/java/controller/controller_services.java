@@ -107,11 +107,12 @@ public class controller_services {
 
     public String selectJuegos(){
         model_services ms = new model_services();
-        juegos_list = ms.selectJuegos().getJuegosMesa();
-        
+        juegos_list = ms.selectJuegos().getJuegosMesa();       
+
 //        for (int i = 0; i < juegos_list.size(); i++) {
 //           System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
-//        }
+//        }       
+
         return SUCCESS;
     }
     
