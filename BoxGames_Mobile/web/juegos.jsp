@@ -67,7 +67,7 @@
                                 <div class="space15"></div>
                                 <h4>₡<s:property value="precioJuego"></s:property></h4>
 
-                                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Comprar</a>
+                                <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Comprar</a>
                                 <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Cerrar</a>
                             </div>
                         </div>
@@ -86,7 +86,7 @@
                                         <!--                                <button id="modalBtncolon">Descripción</button>-->
                                         <a href="#<s:property value="nombreJuego.getValue()"></s:property>" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Descripción</a>
                                         <!--                                <button>Comprar</button>-->
-                                        <a class="btn btn-blueBG" style="margin: 0 auto; color:#fff;">Comprar</a>
+                                        <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Comprar</a>
                                     </div>
                                 </li>
                         </s:iterator>
