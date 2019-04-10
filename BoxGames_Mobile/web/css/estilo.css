@@ -4,17 +4,17 @@
 	font-family: 'Montserrat', sans-serif; 
 }
 
-h1, span{
+h1{
 	font-family: 'Montserrat', sans-serif;
 	color: #fff;
 	text-align: center; 
 }
 
-span{
+/*span{
 	font-size: 25px;
 	padding: 0 30px;
 	color: #000;
-}
+}*/
 
 footer{
 	/*	margin-top: 20px;*/
