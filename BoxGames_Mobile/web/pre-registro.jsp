@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
 	<link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
 	<link rel="icon" href="img/logos/dice.png">
+        <link rel="stylesheet" href="css/estilo.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -33,7 +34,16 @@
 
                 <!------------------------------------------------- BODY ------------------------------------------------------>
 		<div data-role="main" class="ui-content jqm-content jqm-fullwidth">
+                    <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Comprobación de Registro</h2>
 
+                                    <div class="sign-in-body" >
+                    <s:form  theme="simple" cssClass="form-signin" action = "pre_register" method = "post">
+                        <p> Antes de poder completar tu registro necesitamos confimar tu dirección de <b>correo electrónico</b>. </p><br/>
+                        <label for="inputEmail" class="sr-only">Correo Electrónico</label>
+                        <s:textfield type = "email" cssClass="form-control" id="inputEmail" name = "u.correo" placeholder="boxgames@correo.com" required="required"></s:textfield>
+                        <br/><s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Enviar"></s:submit>
+                    </s:form>
+                </div>
 		</div>
 
                 <!------------------------------------------------- MENU ------------------------------------------------------>

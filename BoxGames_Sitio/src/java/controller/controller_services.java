@@ -107,14 +107,42 @@ public class controller_services {
 
     public String selectJuegos(){
         model_services ms = new model_services();
-        juegos_list = ms.selectJuegos().getJuegosMesa();
-        
-        for (int i = 0; i < juegos_list.size(); i++) {
-           System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
-        }      
-        
+        juegos_list = ms.selectJuegos().getJuegosMesa();       
+
+//        for (int i = 0; i < juegos_list.size(); i++) {
+//           System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
+//        }       
+
         return SUCCESS;
     }
+    
+    //----------------Select de un Hotel
+    private int id;
+    
+    private List<JuegosMesa> game_info = new ArrayList<>();
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public List<JuegosMesa> getGame_info() {
+        return game_info;
+    }
+
+    public void setGame_info(List<JuegosMesa> game_info) {
+        this.game_info = game_info;
+    }
+
+         
+    public String selectUnHotel(){        
+        model_services da = new model_services();
+        game_info = da.selectOneGame(id).getJuegosMesa();        
+        return SUCCESS;
+    }    
     
 }
 
