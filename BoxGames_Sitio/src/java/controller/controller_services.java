@@ -3,7 +3,7 @@ package controller;
 import bean.juegos;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
-import gamesWS.*;
+import gameWS.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;

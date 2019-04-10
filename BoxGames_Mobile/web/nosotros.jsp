@@ -71,8 +71,8 @@
                             </div>
                             <p class="mision-des">Mantener las costumbres y tradiciones pasadas por medio de una fuerte relación con tus seres queridos (familia, amigos o gente de confianza), mediante la incorporación de juegos de mesa para la promoción de nuevas experiencias y recuerdos.</p>
                         </div>
-                        <div class="columna-obj img-obj4"></div>
-                        <div class="columna-obj img-obj3"></div>
+                        <div class="columna-obj img-obj4 mx-auto"></div>
+                        <div class="columna-obj img-obj3 mx-auto"></div>
                         <div class="columna-obj obj-text">
                             <div class="ui-bar ui-bar-a text-center mb-3">
                                 <h3 class="vision">Nuestra Visión</h3>
