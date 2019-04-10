@@ -56,7 +56,7 @@
 					<a rel="external" href="index.jsp">Inicio</a>
 				</li>
 				<li>
-					<a rel="external" href="juegos.jsp">Juegos</a>
+					<a rel="external" href="index.jsp#juegos">Juegos</a>
 				</li>
 				<li>
 					<a href="contacto.jsp" rel="external">Contáctenos</a>

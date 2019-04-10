@@ -54,6 +54,12 @@
                     <button class="btn" onclick="filterSelection('Agilidad')">Agilidad</button>
                 </div>
 
+                <s:if test="%{#session.session_correo == null}">
+                    <div class="alert alert-info">
+                        <strong>¿Te interesa algún juego?</strong><p>Puedes <a href="login.jsp">iniciar sesión</a> para comprar los juegos que quieras.</p>
+                    </div>
+                </s:if>
+
                 <s:iterator  value="juegos_list">
                     <div data-role="popup" id="<s:property value="nombreJuego.getValue()"/>" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
                         <div data-role="header" data-theme="a">
@@ -66,11 +72,12 @@
                                 <p><s:property value="descripcionJuego.getValue()"></s:property></p>
                                 <div class="space15"></div>
                                 <h4>₡<s:property value="precioJuego"></s:property></h4>
-
-                                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Comprar</a>
-                                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Cerrar</a>
-                            </div>
+                            <s:if test="%{#session.session_correo != null}">
+                                <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Comprar</a>
+                            </s:if>
+                            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Cerrar</a>
                         </div>
+                    </div>
                 </s:iterator>
 
 
@@ -86,9 +93,11 @@
                                         <!--                                <button id="modalBtncolon">Descripción</button>-->
                                         <a href="#<s:property value="nombreJuego.getValue()"></s:property>" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Descripción</a>
                                         <!--                                <button>Comprar</button>-->
-                                        <a class="btn btn-blueBG" style="margin: 0 auto; color:#fff;">Comprar</a>
-                                    </div>
-                                </li>
+                                    <s:if test="%{#session.session_correo != null}">
+                                        <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Comprar</a>
+                                    </s:if>
+                                </div>
+                            </li>
                         </s:iterator>
                     </div>
                 </div>
@@ -176,7 +185,7 @@
                         <a rel="external" href="index.jsp">Inicio</a>
                     </li>
                     <li>
-                        <a rel="external" href="juegos.jsp">Juegos</a>
+                        <a rel="external" href="index.jsp#juegos">Juegos</a>
                     </li>
                     <li>
                         <a href="contacto.jsp" rel="external">Contáctenos</a>

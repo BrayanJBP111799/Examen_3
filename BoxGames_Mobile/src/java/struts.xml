@@ -35,6 +35,12 @@
         <action name="viewrecords" class="controller.controller_services" method="selectJuegos">  
             <result name="success">juegos.jsp</result>  
         </action>
+<!--        <action name="game_detail" class="controller.controller_services" method="selectUnJuego">  
+            <result name="success">place_detail.jsp</result>  
+        </action> -->
+        <action name="addtocar" class="controller.controller_services" method="insertCarrito">  
+            <result name="success" type="chain">viewrecords</result>  
+        </action> 
     </package>
 </struts>
 
