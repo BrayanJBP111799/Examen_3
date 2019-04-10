@@ -88,7 +88,7 @@
                     <div class="row-masjuegos">
                         <div class="masjuegos">
                             <h3>Busca y conoce más juegos.</h3>
-                            <a href="juegos.jsp" class="btn-formato"><span class="c-gray">Juegos</span></a>
+                            <a href="viewrecords" rel="external" class="btn-formato"><span class="c-gray">Juegos</span></a>
                         </div>
                     </div>
                     <br>

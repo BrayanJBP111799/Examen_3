@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="icon" href="img/logos/dice.png">
+        <link rel="stylesheet" href="css/estilo.css">
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -35,147 +36,135 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-
-                <div class="topjuegos">
-                    <div class="space15"></div>
-                    <div class="fondotopjuegos">
-                        <h2 class="text-white" style="font-weight: 700">Juegos disponibles</h2>
-                    </div>
-                </div>
-
+                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Juegos Disponibles</h2>
                 <center>
-                    <h2 class="c-red"><i class="fas fa-dice-d20"></i> Juegos <i class="fas fa-dice-d20"></i></h2>
                     <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">Busca y elige algún juego que te guste.</p>
                 </center>
 
-                <div class="ui-input-search ui-body-inherit ui-corner-all ui-shadow-inset ui-input-has-clear"><input type="text" data-type="search" name="password" id="myInput" class="txtfiltro" onkeyup="myFunction()" placeholder="Introduce el nombre del juego"><a href="#" tabindex="-1" aria-hidden="true" class="ui-input-clear ui-btn ui-icon-delete ui-btn-icon-notext ui-corner-all ui-input-clear-hidden" title="Clear text">Clear text</a></div>
+                <input type="search" name="password" id="myInput" class="txtfiltro" onkeyup="myFunction()" placeholder="Nombre del juego">
                 <br>
                 <p class="c-green" style="margin-bottom: 0;">O selecciona alguna de las siguientes categorías.</p>
-                <div id="myBtnContainer" class="botonesfiltro ui-controlgroup ui-controlgroup-horizontal ui-corner-all ui-mini" data-role="controlgroup" data-type="horizontal" data-mini="true"><div class="ui-controlgroup-controls ">
-                        <button class="active ui-btn ui-first-child" onclick="filterSelection('all')">Todos</button>
-                        <button class="ui-btn" onclick="filterSelection('cartas')"> Cartas</button>
-                        <button class="ui-btn" onclick="filterSelection('rol')">Rol</button>
-                        <button class="ui-btn" onclick="filterSelection('dosj')">2 jugadores</button>
-                        <button class="ui-btn" onclick="filterSelection('cuatroj')">4 o más jugadores</button>
-                        <button class="ui-btn ui-last-child" onclick="filterSelection('estrategia')">Estrategía</button>
-                    </div></div>
+                <div id="myBtnContainer" class="botonesfiltro" data-role="controlgroup" data-type="horizontal" data-mini="true">
+                    <button class="btn active" onclick="filterSelection('all')">Todos</button>
+                    <button class="btn" onclick="filterSelection('Cartas')"> Cartas</button>
+                    <button class="btn" onclick="filterSelection('Rol')">Rol</button>
+                    <button class="btn" onclick="filterSelection('Tactica')">Táctica</button>
+                    <button class="btn" onclick="filterSelection('Competencia')">Competencia</button>
+                    <button class="btn" onclick="filterSelection('Astucia')">Astucia</button>
+                    <button class="btn" onclick="filterSelection('Agilidad')">Agilidad</button>
+                </div>
+
+                <s:iterator  value="juegos_list">
+                    <div data-role="popup" id="<s:property value="nombreJuego.getValue()"/>" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+                        <div data-role="header" data-theme="a">
+                            <h1><s:property value="nombreJuego.getValue()"></s:property></h1>
+                            </div>
+                            <div role="main" class="ui-content">
+                                <span class="badge badge-primary">Tipo: <s:property value="tipoJuego.getValue()"></s:property></span>
+                            <span class="badge badge-danger">Jugadores: <s:property value="cantidadJuego"></s:property></span>
+                                <br><br>
+                                <p><s:property value="descripcionJuego.getValue()"></s:property></p>
+                                <div class="space15"></div>
+                                <h4>₡<s:property value="precioJuego"></s:property></h4>
+
+                                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Comprar</a>
+                                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Cerrar</a>
+                            </div>
+                        </div>
+                </s:iterator>
+
 
                 <hr>
                 <div id="myUL">
                     <div class="juegos-general">
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv dados cuatroj show">
-                                <h4>Colones de Catán</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgcolones"></div>
-                                <button id="modalBtncolon" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj show">
-                                <h4>Escaleras y serpientes</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imges"></div>
-                                <button id="modalBtnes" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia rol cuatroj show">
-                                <h4>Risk</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgrisk"></div>
-                                <button id="modalBtnrisk" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj show">
-                                <h4>Scrabble</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgscrabble"></div>
-                                <button id="modalBtnscrabble" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj show">
-                                <h4>Ajedrez</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgajedrez"></div>
-                                <button id="modalBtnajedrez" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj show">
-                                <h4>Monopoly</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgmonopoly"></div>
-                                <button id="modalBtnmono" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj show">
-                                <h4>Dominó</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgdomino"></div>
-                                <button id="modalBtndomino" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj show">
-                                <h4>Jenga</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgjenga"></div>
-                                <button id="modalBtnjenga" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas rol cuatroj show">
-                                <h4>Clue</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgclue"></div>
-                                <button id="modalBtnclue" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv dosj show">
-                                <h4>Damas</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgdamas"></div>
-                                <button id="modalBtndamas" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Usar</button>
-                            </div>
-                        </li>
-                        <li>	
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj show">
-                                <h4>Naipes</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgnaipes"></div>
-                                <button id="modalBtnnaipes" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj show">
-                                <h4>Batalla naval</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgbn"></div>
-                                <button id="modalBtnbn" class=" ui-btn ui-shadow ui-corner-all">Descripción</button>
-                                <button class=" ui-btn ui-shadow ui-corner-all">Comprar</button>
-                            </div>
-                        </li>
+                        <s:iterator  value="juegos_list">
+                            <li>
+                                <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
+                                    <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
+                                        <div class="border-alljuegos"></div>
+                                        <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
+                                        <!--                                <button id="modalBtncolon">Descripción</button>-->
+                                        <a href="#<s:property value="nombreJuego.getValue()"></s:property>" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Descripción</a>
+                                        <!--                                <button>Comprar</button>-->
+                                        <a class="btn btn-blueBG" style="margin: 0 auto; color:#fff;">Comprar</a>
+                                    </div>
+                                </li>
+                        </s:iterator>
                     </div>
                 </div>
             </div>
+
+            <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("filterDiv");
+                    if (c == "all")
+                        c = "";
+                    // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1)
+                            w3AddClass(x[i], "show");
+                    }
+                }
+
+                // Show filtered elements
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) {
+                            element.className += " " + arr2[i];
+                        }
+                    }
+                }
+
+                // Hide elements that are not selected
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current control button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+
+                function myFunction() {
+                    // Declare variables
+                    var input, filter, ul, li, a, i, txtValue;
+                    input = document.getElementById('myInput');
+                    filter = input.value.toUpperCase();
+                    ul = document.getElementById("myUL");
+                    li = ul.getElementsByTagName('li');
+
+                    // Loop through all list items, and hide those who don't match the search query
+                    for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("div")[0];
+                        txtValue = a.textContent || a.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            li[i].style.display = "";
+                        } else {
+                            li[i].style.display = "none";
+                        }
+                    }
+                }
+            </script>
 
             <!------------------------------------------------- MENU ------------------------------------------------------>
             <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
