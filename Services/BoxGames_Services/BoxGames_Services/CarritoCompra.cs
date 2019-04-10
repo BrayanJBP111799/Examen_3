@@ -17,5 +17,6 @@ namespace BoxGames_Services
         public int ID_CarritoCompra { get; set; }
         public int ID_Cliente { get; set; }
         public string ID_JuegoMesa { get; set; }
+        public Nullable<int> Precio { get; set; }
     }
 }

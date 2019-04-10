@@ -229,17 +229,25 @@ public class model_services {
         return WebService.getBasicHttpBindingIGameService().searchGame(id);
     }
     
-    public boolean insertCarrito(int id, String game) {
+    public boolean insertCarrito(int id, String game, int price) {
         boolean resultado = false;
         
         int id_cliente = id;
         String id_juego = game;
+        int precio = price;
         
         GameService WebService = new GameService();
         
-        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego);
+        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego, precio);
         
         return resultado;
+    }
+    
+    public ArrayOfCarritoCompra selectCarrito(int id){
+        
+        GameService WebService = new GameService();
+        
+        return WebService.getBasicHttpBindingIGameService().searchCarrito(id);
     }
 }
 

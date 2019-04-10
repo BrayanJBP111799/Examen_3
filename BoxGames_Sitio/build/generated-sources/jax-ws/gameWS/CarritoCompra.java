@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for CarritoCompra complex type.
+ * <p>Clase Java para CarritoCompra complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType name="CarritoCompra"&gt;
@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="ID_CarritoCompra" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="ID_Cliente" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="ID_JuegoMesa" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="Precio" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -34,7 +35,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "CarritoCompra", namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", propOrder = {
     "idCarritoCompra",
     "idCliente",
-    "idJuegoMesa"
+    "idJuegoMesa",
+    "precio"
 })
 public class CarritoCompra {
 
@@ -44,9 +46,11 @@ public class CarritoCompra {
     protected Integer idCliente;
     @XmlElementRef(name = "ID_JuegoMesa", namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", type = JAXBElement.class, required = false)
     protected JAXBElement<String> idJuegoMesa;
+    @XmlElementRef(name = "Precio", namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", type = JAXBElement.class, required = false)
+    protected JAXBElement<Integer> precio;
 
     /**
-     * Gets the value of the idCarritoCompra property.
+     * Obtiene el valor de la propiedad idCarritoCompra.
      * 
      * @return
      *     possible object is
@@ -58,7 +62,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Sets the value of the idCarritoCompra property.
+     * Define el valor de la propiedad idCarritoCompra.
      * 
      * @param value
      *     allowed object is
@@ -70,7 +74,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Gets the value of the idCliente property.
+     * Obtiene el valor de la propiedad idCliente.
      * 
      * @return
      *     possible object is
@@ -82,7 +86,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Sets the value of the idCliente property.
+     * Define el valor de la propiedad idCliente.
      * 
      * @param value
      *     allowed object is
@@ -94,7 +98,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Gets the value of the idJuegoMesa property.
+     * Obtiene el valor de la propiedad idJuegoMesa.
      * 
      * @return
      *     possible object is
@@ -106,7 +110,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Sets the value of the idJuegoMesa property.
+     * Define el valor de la propiedad idJuegoMesa.
      * 
      * @param value
      *     allowed object is
@@ -115,6 +119,30 @@ public class CarritoCompra {
      */
     public void setIDJuegoMesa(JAXBElement<String> value) {
         this.idJuegoMesa = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad precio.
+     * 
+     * @return
+     *     possible object is
+     *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
+     *     
+     */
+    public JAXBElement<Integer> getPrecio() {
+        return precio;
+    }
+
+    /**
+     * Define el valor de la propiedad precio.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
+     *     
+     */
+    public void setPrecio(JAXBElement<Integer> value) {
+        this.precio = value;
     }
 
 }

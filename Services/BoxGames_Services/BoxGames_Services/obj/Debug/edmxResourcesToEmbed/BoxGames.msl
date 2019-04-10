@@ -4,6 +4,7 @@
     <EntitySetMapping Name="CarritoCompra">
       <EntityTypeMapping TypeName="BoxGamesModel.CarritoCompra">
         <MappingFragment StoreEntitySet="CarritoCompra">
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
           <ScalarProperty Name="ID_CarritoCompra" ColumnName="ID_CarritoCompra" />
           <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
           <ScalarProperty Name="ID_JuegoMesa" ColumnName="ID_JuegoMesa" />

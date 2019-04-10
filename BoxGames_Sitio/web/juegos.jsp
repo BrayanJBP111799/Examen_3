@@ -51,8 +51,12 @@
                 </div>
             </div>
         </header>
-
-        <button id="topBtn"><i class="fas fa-chevron-circle-up"></i></button>
+        <button id="topBtnC">
+            <a href='viewcarrito?idC=<s:property value="#session.session_cedula"/>' rel="external" style="text-decoration:none; color:black;">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </button>
+                
         <section class="contenedor-allgames">
             <center>
                 <h2 class="c-red"><i class="fas fa-dice-d20"></i> Juegos <i class="fas fa-dice-d20"></i></h2>
@@ -90,7 +94,7 @@
                                         <div class="border-alljuegos"></div>
                                         <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
                                         <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
-                                        <button><a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" style="text-decoration:none; color:black;">Comprar</a></button>
+                                        <button><a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>&price=<s:property value="precioJuego"></s:property>' rel="external" style="text-decoration:none; color:black;">Comprar</a></button>
                                     </div>
                                 </li>
                             <%--</s:form>--%>
@@ -98,7 +102,8 @@
                         
                     </div>
                 </div>
-            </div>
+            </div>           
+            
             <hr><br>
             <script>
                 filterSelection("all")
@@ -170,7 +175,7 @@
                         }
                     }
                 }
-            </script>
+            </script>            <
         </section>
 
         <s:iterator  value="juegos_list"> 
@@ -197,8 +202,7 @@
                 </div>
             </div>
         </div>
-        </s:iterator>
-
+        </s:iterator>       
         
         <footer>
             <center>
@@ -209,7 +213,7 @@
 
         <script type="text/javascript" src="js/script.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>
+        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  crossorigin="anonymous"></script>-->
         <!--        <script type="text/javascript" src="js/main.js"></script>-->
     </body>
 </html>

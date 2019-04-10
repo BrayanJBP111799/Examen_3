@@ -150,6 +150,8 @@ public class controller_services {
     
     private String game;
     
+    private int price;
+    
     private carrito c = new carrito();
 
     public int getId_cliente() {
@@ -168,6 +170,14 @@ public class controller_services {
         this.game = game;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }    
+
     public carrito getC() {
         return c;
     }
@@ -185,7 +195,7 @@ public class controller_services {
 //                result = "reservation";
 //            } else {
                 model_services da = new model_services();
-                da.insertCarrito(id_cliente, game);
+                da.insertCarrito(id_cliente, game, price);
                 System.out.println(" ");
                 result = "success";
 //            }
@@ -198,6 +208,36 @@ public class controller_services {
         return result;
     }
     
+    //----------------Ver el carrito
+    private int idC;
+    
+    private List<CarritoCompra> carrito_info = new ArrayList<>();
+
+    public int getIdC() {
+        return idC;
+    }
+
+    public void setIdC(int idC) {
+        this.idC = idC;
+    }
+
+    public List<CarritoCompra> getCarrito_info() {
+        return carrito_info;
+    }
+
+    public void setCarrito_info(List<CarritoCompra> carrito_info) {
+        this.carrito_info = carrito_info;
+    }
+    
+    public String selectCarrito(){        
+        model_services da = new model_services();
+        carrito_info = da.selectCarrito(idC).getCarritoCompra();
+        
+        System.out.println(" >>>> " + carrito_info.get(1).getIDJuegoMesa().getValue());
+        System.out.println(" >>>> " + carrito_info.get(1).getPrecio().getValue());
+        
+        return SUCCESS;
+    }    
 }
 
 

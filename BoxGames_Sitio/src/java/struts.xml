@@ -42,6 +42,9 @@
         <action name="addtocar" class="controller.controller_services" method="insertCarrito">  
             <result name="success" type="chain">viewrecords</result>  
         </action> 
+        <action name="viewcarrito" class="controller.controller_services" method="selectCarrito">  
+            <result name="success">carrito.jsp</result>  
+        </action>
         
     </package>
 </struts>

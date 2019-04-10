@@ -58,7 +58,7 @@ namespace BoxGames_Services
         }
 
         //INSERTAR JUEGO AL CARRO DE COMPRA
-        public CarritoCompra InsertGame(int id_cliente, string id_juego)
+        public CarritoCompra InsertGame(int id_cliente, string id_juego, int precio)
         {
             CarritoCompra tabla_carrito = new CarritoCompra();
 
@@ -66,6 +66,7 @@ namespace BoxGames_Services
             {
                 tabla_carrito.ID_Cliente = id_cliente;
                 tabla_carrito.ID_JuegoMesa = id_juego;
+                tabla_carrito.Precio = precio;
 
                 dc.Configuration.ValidateOnSaveEnabled = false;
                 dc.CarritoCompra.Add(tabla_carrito);
@@ -101,6 +102,30 @@ namespace BoxGames_Services
             }
 
             return res;
+        }
+
+        //SELECCIONAR LOS ELEMENTOS DEL CARRITO
+        public List<CarritoCompra> SearchCarrito(int id_cliente)
+        {
+            List<CarritoCompra> list = new List<CarritoCompra>();
+
+            using (BoxGamesEntities dc = new BoxGamesEntities())
+            {
+                var v = dc.CarritoCompra.Where(a => a.ID_Cliente == id_cliente).ToList();
+                if (v != null)
+                {
+                    foreach (var item in v)
+                    {
+                        list.Add(item);
+                    }
+                }
+                else
+                {
+                    throw new Exception("Error en intentar filtrar el registro");
+                }
+
+            }
+            return list;
         }
     }
 }

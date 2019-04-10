@@ -31,6 +31,7 @@ public class ObjectFactory {
     private final static QName _ArrayOfJuegosMesa_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "ArrayOfJuegosMesa");
     private final static QName _JuegosMesa_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "JuegosMesa");
     private final static QName _CarritoCompra_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "CarritoCompra");
+    private final static QName _ArrayOfCarritoCompra_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "ArrayOfCarritoCompra");
     private final static QName _AnyType_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyType");
     private final static QName _AnyURI_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "anyURI");
     private final static QName _Base64Binary_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "base64Binary");
@@ -57,11 +58,13 @@ public class ObjectFactory {
     private final static QName _InsertGameIdJuego_QNAME = new QName("http://tempuri.org/", "id_juego");
     private final static QName _InsertGameResponseInsertGameResult_QNAME = new QName("http://tempuri.org/", "InsertGameResult");
     private final static QName _DeleteGamesEstado_QNAME = new QName("http://tempuri.org/", "estado");
+    private final static QName _SearchCarritoResponseSearchCarritoResult_QNAME = new QName("http://tempuri.org/", "SearchCarritoResult");
     private final static QName _JuegosMesaDescripcionJuego_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "DescripcionJuego");
     private final static QName _JuegosMesaImagenJuego_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "ImagenJuego");
     private final static QName _JuegosMesaNombreJuego_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "NombreJuego");
     private final static QName _JuegosMesaTipoJuego_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "TipoJuego");
     private final static QName _CarritoCompraIDJuegoMesa_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "ID_JuegoMesa");
+    private final static QName _CarritoCompraPrecio_QNAME = new QName("http://schemas.datacontract.org/2004/07/BoxGames_Services", "Precio");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: gameWS
@@ -151,6 +154,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link SearchCarrito }
+     * 
+     */
+    public SearchCarrito createSearchCarrito() {
+        return new SearchCarrito();
+    }
+
+    /**
+     * Create an instance of {@link SearchCarritoResponse }
+     * 
+     */
+    public SearchCarritoResponse createSearchCarritoResponse() {
+        return new SearchCarritoResponse();
+    }
+
+    /**
+     * Create an instance of {@link ArrayOfCarritoCompra }
+     * 
+     */
+    public ArrayOfCarritoCompra createArrayOfCarritoCompra() {
+        return new ArrayOfCarritoCompra();
+    }
+
+    /**
      * Create an instance of {@link JuegosMesa }
      * 
      */
@@ -183,6 +210,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", name = "CarritoCompra")
     public JAXBElement<CarritoCompra> createCarritoCompra(CarritoCompra value) {
         return new JAXBElement<CarritoCompra>(_CarritoCompra_QNAME, CarritoCompra.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfCarritoCompra }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", name = "ArrayOfCarritoCompra")
+    public JAXBElement<ArrayOfCarritoCompra> createArrayOfCarritoCompra(ArrayOfCarritoCompra value) {
+        return new JAXBElement<ArrayOfCarritoCompra>(_ArrayOfCarritoCompra_QNAME, ArrayOfCarritoCompra.class, null, value);
     }
 
     /**
@@ -420,6 +456,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfCarritoCompra }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "SearchCarritoResult", scope = SearchCarritoResponse.class)
+    public JAXBElement<ArrayOfCarritoCompra> createSearchCarritoResponseSearchCarritoResult(ArrayOfCarritoCompra value) {
+        return new JAXBElement<ArrayOfCarritoCompra>(_SearchCarritoResponseSearchCarritoResult_QNAME, ArrayOfCarritoCompra.class, SearchCarritoResponse.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
@@ -462,6 +507,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", name = "ID_JuegoMesa", scope = CarritoCompra.class)
     public JAXBElement<String> createCarritoCompraIDJuegoMesa(String value) {
         return new JAXBElement<String>(_CarritoCompraIDJuegoMesa_QNAME, String.class, CarritoCompra.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Integer }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/BoxGames_Services", name = "Precio", scope = CarritoCompra.class)
+    public JAXBElement<Integer> createCarritoCompraPrecio(Integer value) {
+        return new JAXBElement<Integer>(_CarritoCompraPrecio_QNAME, Integer.class, CarritoCompra.class, value);
     }
 
 }

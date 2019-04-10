@@ -50,6 +50,7 @@ public interface IGameService {
 
     /**
      * 
+     * @param precio
      * @param idCliente
      * @param idJuego
      * @return
@@ -63,7 +64,9 @@ public interface IGameService {
         @WebParam(name = "id_cliente", targetNamespace = "http://tempuri.org/")
         Integer idCliente,
         @WebParam(name = "id_juego", targetNamespace = "http://tempuri.org/")
-        String idJuego);
+        String idJuego,
+        @WebParam(name = "precio", targetNamespace = "http://tempuri.org/")
+        Integer precio);
 
     /**
      * 
@@ -81,5 +84,19 @@ public interface IGameService {
         Integer idCliente,
         @WebParam(name = "estado", targetNamespace = "http://tempuri.org/")
         String estado);
+
+    /**
+     * 
+     * @param idCliente
+     * @return
+     *     returns gameWS.ArrayOfCarritoCompra
+     */
+    @WebMethod(operationName = "SearchCarrito", action = "http://tempuri.org/IGameService/SearchCarrito")
+    @WebResult(name = "SearchCarritoResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "SearchCarrito", targetNamespace = "http://tempuri.org/", className = "gameWS.SearchCarrito")
+    @ResponseWrapper(localName = "SearchCarritoResponse", targetNamespace = "http://tempuri.org/", className = "gameWS.SearchCarritoResponse")
+    public ArrayOfCarritoCompra searchCarrito(
+        @WebParam(name = "id_cliente", targetNamespace = "http://tempuri.org/")
+        Integer idCliente);
 
 }

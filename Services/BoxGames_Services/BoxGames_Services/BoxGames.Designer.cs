@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Steven\Documents\CUC\6to Cuatrimestre\Programación V\Examenes\Examen - 3\Examen_3\Services\BoxGames_Services\BoxGames_Services\BoxGames.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\Steven\Favorites\Desktop\Examen_3\Services\BoxGames_Services\BoxGames_Services\BoxGames.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

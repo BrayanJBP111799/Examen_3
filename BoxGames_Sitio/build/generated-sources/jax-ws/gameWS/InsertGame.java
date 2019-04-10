@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -22,6 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element name="id_cliente" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="id_juego" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="precio" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -33,7 +34,8 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "idCliente",
-    "idJuego"
+    "idJuego",
+    "precio"
 })
 @XmlRootElement(name = "InsertGame")
 public class InsertGame {
@@ -42,9 +44,10 @@ public class InsertGame {
     protected Integer idCliente;
     @XmlElementRef(name = "id_juego", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> idJuego;
+    protected Integer precio;
 
     /**
-     * Gets the value of the idCliente property.
+     * Obtiene el valor de la propiedad idCliente.
      * 
      * @return
      *     possible object is
@@ -56,7 +59,7 @@ public class InsertGame {
     }
 
     /**
-     * Sets the value of the idCliente property.
+     * Define el valor de la propiedad idCliente.
      * 
      * @param value
      *     allowed object is
@@ -68,7 +71,7 @@ public class InsertGame {
     }
 
     /**
-     * Gets the value of the idJuego property.
+     * Obtiene el valor de la propiedad idJuego.
      * 
      * @return
      *     possible object is
@@ -80,7 +83,7 @@ public class InsertGame {
     }
 
     /**
-     * Sets the value of the idJuego property.
+     * Define el valor de la propiedad idJuego.
      * 
      * @param value
      *     allowed object is
@@ -89,6 +92,30 @@ public class InsertGame {
      */
     public void setIdJuego(JAXBElement<String> value) {
         this.idJuego = value;
+    }
+
+    /**
+     * Obtiene el valor de la propiedad precio.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getPrecio() {
+        return precio;
+    }
+
+    /**
+     * Define el valor de la propiedad precio.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setPrecio(Integer value) {
+        this.precio = value;
     }
 
 }

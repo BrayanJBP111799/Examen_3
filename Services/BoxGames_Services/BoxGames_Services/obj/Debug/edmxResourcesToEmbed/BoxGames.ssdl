@@ -7,6 +7,7 @@
     <Property Name="ID_CarritoCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ID_Cliente" Type="int" Nullable="false" />
     <Property Name="ID_JuegoMesa" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Precio" Type="int" />
   </EntityType>
   <EntityType Name="JuegosMesa">
     <Key>
