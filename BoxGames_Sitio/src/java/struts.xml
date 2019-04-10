@@ -31,5 +31,14 @@
             <result name="success">msg_sent.jsp</result>
             <result name="input">contacto.jsp</result>
         </action>
+        
+        
+        <action name="viewrecords" class="controller.controller_services" method="selectJuegos">  
+            <result name="success">list.jsp</result>  
+        </action>  
+        <action name="game_detail" class="controller.controller_services" method="selectUnJuego">  
+            <result name="success">place_detail.jsp</result>  
+        </action> 
+        
     </package>
 </struts>

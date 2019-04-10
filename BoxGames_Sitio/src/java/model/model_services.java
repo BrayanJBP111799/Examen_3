@@ -2,6 +2,7 @@
 package model;
 
 import bean.usuarios;
+import gamesWS.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -212,5 +213,18 @@ public class model_services {
         return "exito";
     }
     
+    public ArrayOfJuegosMesa selectJuegos(){
+        
+        GameService WebService = new GameService();
+        
+        return WebService.getBasicHttpBindingIGameService().selectGames();
+    }
+    
+    public ArrayOfJuegosMesa selectOneGame(int id){
+        
+        GameService WebService = new GameService();
+        
+        return WebService.getBasicHttpBindingIGameService().searchGame(id);
+    }
 }
 
