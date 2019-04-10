@@ -133,23 +133,23 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Box_Games_.Context.cs">
+    <Compile Include="BoxGames.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Box_Games_.Context.tt</DependentUpon>
+      <DependentUpon>BoxGames.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Box_Games_.cs">
+    <Compile Include="BoxGames.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Box_Games_.tt</DependentUpon>
+      <DependentUpon>BoxGames.tt</DependentUpon>
     </Compile>
-    <Compile Include="Box_Games_.Designer.cs">
+    <Compile Include="BoxGames.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Box_Games_.edmx</DependentUpon>
+      <DependentUpon>BoxGames.edmx</DependentUpon>
     </Compile>
     <Compile Include="CarritoCompra.cs">
-      <DependentUpon>Box_Games_.tt</DependentUpon>
+      <DependentUpon>BoxGames.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="GameService.svc.cs">
@@ -160,7 +160,7 @@
     </Compile>
     <Compile Include="IGameService.cs" />
     <Compile Include="JuegosMesa.cs">
-      <DependentUpon>Box_Games_.tt</DependentUpon>
+      <DependentUpon>BoxGames.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,15 +169,15 @@
     <Content Include="App_Data\BoxGames_log.ldf">
       <DependentUpon>BoxGames.mdf</DependentUpon>
     </Content>
-    <Content Include="Box_Games_.Context.tt">
+    <Content Include="BoxGames.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Box_Games_.Context.cs</LastGenOutput>
-      <DependentUpon>Box_Games_.edmx</DependentUpon>
+      <DependentUpon>BoxGames.edmx</DependentUpon>
+      <LastGenOutput>BoxGames.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Box_Games_.tt">
+    <Content Include="BoxGames.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Box_Games_.edmx</DependentUpon>
-      <LastGenOutput>Box_Games_.cs</LastGenOutput>
+      <DependentUpon>BoxGames.edmx</DependentUpon>
+      <LastGenOutput>BoxGames.cs</LastGenOutput>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -190,12 +190,12 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Box_Games_.edmx">
+    <EntityDeploy Include="BoxGames.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Box_Games_.Designer.cs</LastGenOutput>
+      <LastGenOutput>BoxGames.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Box_Games_.edmx.diagram">
-      <DependentUpon>Box_Games_.edmx</DependentUpon>
+    <Content Include="BoxGames.edmx.diagram">
+      <DependentUpon>BoxGames.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

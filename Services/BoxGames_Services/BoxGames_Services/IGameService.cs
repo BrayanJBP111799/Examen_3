@@ -18,7 +18,7 @@ namespace BoxGames_Services
         List<JuegosMesa> SearchGame(int id_juego);
 
         [OperationContract]        
-        CarritoCompra InsertGame(int id_cliente, int id_juego);
+        CarritoCompra InsertGame(int id_cliente, string id_juego);
 
         [OperationContract]
         int DeleteGames(int id_cliente, string estado);

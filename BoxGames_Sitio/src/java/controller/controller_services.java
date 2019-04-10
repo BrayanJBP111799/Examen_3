@@ -1,5 +1,6 @@
 package controller;
 
+import bean.carrito;
 import bean.juegos;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
@@ -116,7 +117,7 @@ public class controller_services {
         return SUCCESS;
     }
     
-    //----------------Select de un Hotel
+    //----------------Select de un Game
     private int id;
     
     private List<JuegosMesa> game_info = new ArrayList<>();
@@ -138,11 +139,64 @@ public class controller_services {
     }
 
          
-    public String selectUnHotel(){        
+    public String selectUnJuego(){        
         model_services da = new model_services();
         game_info = da.selectOneGame(id).getJuegosMesa();        
         return SUCCESS;
     }    
+    
+    //----------------Insert al CARRITO
+    private int id_cliente;
+    
+    private String game;
+    
+    private carrito c = new carrito();
+
+    public int getId_cliente() {
+        return id_cliente;
+    }
+
+    public void setId_cliente(int id_cliente) {
+        this.id_cliente = id_cliente;
+    }
+
+    public String getGame() {
+        return game;
+    }
+
+    public void setGame(String game) {
+        this.game = game;
+    }
+
+    public carrito getC() {
+        return c;
+    }
+
+    public void setC(carrito c) {
+        this.c = c;
+    }
+    
+    public String insertCarrito() {  
+        String result="";
+        try {
+//            if (submitType.equals("updatedata")) {
+//                model_services de = new model_services();
+//                car_info = de.selectOneCar(id_vehiculo).getCar();
+//                result = "reservation";
+//            } else {
+                model_services da = new model_services();
+                da.insertCarrito(id_cliente, game);
+                System.out.println(" ");
+                result = "success";
+//            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = "error";
+        }
+
+        return result;
+    }
     
 }
 

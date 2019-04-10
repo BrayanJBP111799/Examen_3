@@ -30,7 +30,12 @@
                             <i class="fas fa-times"></i>
                         </label>
                     </li>                    
-                    <li><a href="login.jsp">Ingresar</a></li>
+                    <s:if test="%{#session.session_correo == null}">
+                        <li><a href="login.jsp">Ingresar</a></li>
+                    </s:if>
+                    <s:elseif test="%{#session.session_correo != null}">
+                        <li><a href="logout">Salir</a></li>
+                    </s:elseif>
                     <li><a href="nosotros.jsp">Nosotros</a></li>
                     <li><a href="contacto.jsp">Contáctenos</a></li>
                     <li><a href="index.jsp#contenedor3">Juegos</a></li>
@@ -74,15 +79,21 @@
                 <div id="myUL">
                     <div class="juegos-general">
                         <s:iterator  value="juegos_list">
-                            <li>
-                                <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
-                                    <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
-                                    <div class="border-alljuegos"></div>
-                                    <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
-                                    <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
-                                    <button>Comprar</button>
-                                </div>
-                            </li>
+                            <%--<s:form theme="simple" action="addtocar" method = "post">--%>
+                                <li>
+<!--                                    <div style="display:none;">
+                                        <input name = "c.IDCliente" value='<s:property value="#session.session_cedula" />'>
+                                        <input name = "c.IDJuego" value='<s:property value="IDJuego" />'>
+                                    </div>-->
+                                    <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
+                                        <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
+                                        <div class="border-alljuegos"></div>
+                                        <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
+                                        <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
+                                        <button><a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" style="text-decoration:none; color:black;">Comprar</a></button>
+                                    </div>
+                                </li>
+                            <%--</s:form>--%>
                         </s:iterator>
                         
                     </div>

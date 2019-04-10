@@ -1,6 +1,7 @@
 
 package model;
 
+import bean.carrito;
 import bean.usuarios;
 import gamesWS.*;
 import java.sql.Connection;
@@ -213,6 +214,7 @@ public class model_services {
         return "exito";
     }
     
+//////////////////////////////////////////////////////////WEB SERVICE #1
     public ArrayOfJuegosMesa selectJuegos(){
         
         GameService WebService = new GameService();
@@ -225,6 +227,19 @@ public class model_services {
         GameService WebService = new GameService();
         
         return WebService.getBasicHttpBindingIGameService().searchGame(id);
+    }
+    
+    public boolean insertCarrito(int id, String game) {
+        boolean resultado = false;
+        
+        int id_cliente = id;
+        String id_juego = game;
+        
+        GameService WebService = new GameService();
+        
+        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego);
+        
+        return resultado;
     }
 }
 

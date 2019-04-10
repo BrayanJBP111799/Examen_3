@@ -58,7 +58,7 @@ namespace BoxGames_Services
         }
 
         //INSERTAR JUEGO AL CARRO DE COMPRA
-        public CarritoCompra InsertGame(int id_cliente, int id_juego)
+        public CarritoCompra InsertGame(int id_cliente, string id_juego)
         {
             CarritoCompra tabla_carrito = new CarritoCompra();
 

@@ -28,7 +28,7 @@
     </target>
     <target name="wsimport-client-GameService" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/GameService"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GameService" destdir="${build.generated.dir}/jax-wsCache/GameService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GameService/wsdl/localhost_51138/GameService.svc.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:51138/GameService.svc?wsdl" xnocompile="true" xendorsed="true" package="gameWS">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/GameService" destdir="${build.generated.dir}/jax-wsCache/GameService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/GameService/wsdl/localhost_51138/GameService.svc.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:51138/GameService.svc?wsdl" xnocompile="true" xendorsed="true" package="gamesWS">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/GameService/wsdl/localhost_51138/GameService.svc.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/GameService"/>
         </wsimport>
@@ -39,7 +39,7 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-GameService" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/gameWS"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/gamesWS"/>
         <delete dir="${build.generated.dir}/jax-wsCache/GameService"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-GameService"/>

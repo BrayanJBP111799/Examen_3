@@ -5,7 +5,7 @@
     <client name="GameService">
       <wsdl-url>http://localhost:51138/GameService.svc?wsdl</wsdl-url>
       <local-wsdl-file>localhost_51138/GameService.svc.wsdl</local-wsdl-file>
-      <package-name forceReplace="true">gameWS</package-name>
+      <package-name forceReplace="true">gamesWS</package-name>
       <catalog-file>catalog.xml</catalog-file>
       <wsimport-options>
         <wsimport-option>
@@ -34,7 +34,7 @@
         </wsimport-option>
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
-          <wsimport-option-value>gameWS</wsimport-option-value>
+          <wsimport-option-value>gamesWS</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>
