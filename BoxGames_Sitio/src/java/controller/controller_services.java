@@ -117,7 +117,7 @@ public class controller_services {
         return SUCCESS;
     }
     
-    //----------------Select de un Game
+    //----------------Select de un Juego
     private int id;
     
     private List<JuegosMesa> game_info = new ArrayList<>();
