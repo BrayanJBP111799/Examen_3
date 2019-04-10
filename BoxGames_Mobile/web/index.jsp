@@ -44,8 +44,8 @@
                     <div class="columna-obj obj-text">
                         <p>Nuestro negocio se especializa en la obtención, búsqueda y entrega de juegos de mesa. Todos aquellos interesados en tener alguna experiencia tradicional de entrenimiento en familia o amigos, han llegado al lugar correcto.</p>
                     </div>
-                    <div class="columna-obj img-obj1"></div>
-                    <div class="columna-obj img-obj2"></div>
+                    <div class="columna-obj mx-auto mg-obj2"></div>
+                    <div class="columna-obj mx-auto img-obj1"></div>
                     <div class="columna-obj obj-text">
                         <p>Queremos mantener tu felicidad creando nuevas amistades, pasando el tiempo con tus seres más queridos. Anímate y busca algo que te guste de los distintos juegos de mesa, luego continua con la diversión.</p>
                     </div>
@@ -88,7 +88,7 @@
                     <div class="row-masjuegos">
                         <div class="masjuegos">
                             <h3>Busca y conoce más juegos.</h3>
-                            <a href="juegos.jsp" class="btn-formato"><span class="c-gray">Juegos</span></a>
+                            <a href="viewrecords" rel="external" class="btn-formato"><span class="c-gray">Juegos</span></a>
                         </div>
                     </div>
                     <br>

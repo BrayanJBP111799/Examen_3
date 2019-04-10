@@ -21,7 +21,13 @@
         <script src="jqmobile/demos/_assets/js/index.js"></script>
         <script src="jqmobile/demos/js/jquery.mobile-1.4.5.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
-
+        <style>
+            span{
+                font-size: 25px;
+                padding: 0 30px;
+                color: #000;
+            }
+        </style>
     </head>
     <body>
         <div data-role="page" class="jqm-demos ui-responsive-panel" id="panel-responsive-page1" data-title="Box-Games">
@@ -44,26 +50,27 @@
                         <h3>Envíanos tu mensaje.</h3>
                     </div>
                     <div class="ui-body ui-body-a">
-                        <form>
+                        <s:form theme="simple" action="contactar" method="post">
+                            <s:fielderror cssClass="error_form"/>
                             <div class="mt-3">
                                 <label for="nombre">Nombre Completo</label>
-                                <input type="text" name="nombre" class="form-control" required>
-                            </div>
-                            <div class="mt-3">
-                                <label for="telefono">Teléfono</label>
-                                <input type="text" name="telefono" class="form-control" required>
-                            </div>
-                            <div class="mt-3">
-                                <label for="correo">Correo electrónico</label>
-                                <input type="text" name="correo" class="form-control" placeholder="boxgames@correo.com">
-                            </div>
-                            <div class="mt-3">
-                                <label for="correo">Mensaje</label>
-                                <textarea class="contact-form-text"></textarea>
-                            </div>
-
-                            <a class="float-right bgc-blue ui-btn ui-btn-inline btn-formato" value="Enviar" type="submit" href="#">Enviar</a>
-                        </form>
+                                <s:textfield name="ct.name" type="text" id="nombre" cssClass="form-control" style="font-family: 'Montserrat', sans-serif;" placeholder="Nombre"></s:textfield>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="telefono">Teléfono</label>
+                                <s:textfield name="ct.phone" type="number" style="font-family: 'Montserrat', sans-serif;" cssClass="form-control" placeholder="Teléfono"></s:textfield>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="correo">Correo electrónico</label>
+                                <s:textfield name="ct.email" type="text" style="font-family: 'Montserrat', sans-serif;" cssClass="form-control" placeholder="Correo electónico"></s:textfield>
+                                </div>
+                                <div class="mt-3">
+                                    <label for="correo">Mensaje</label>
+                                <s:textarea name="ct.msj" style="font-family: 'Montserrat', sans-serif;" cssClass="form-control" placeholder="Mensaje"></s:textarea>
+                                </div>
+                                <br>
+                            <s:submit cssClass="contact-form-btn" value="Enviar"></s:submit>
+                        </s:form>
                     </div>
 
                     <center><div class="logoimg_blk" style="margin: 0 auto; float: none;"></div></center>
@@ -79,9 +86,9 @@
                             <a href="#"><i class="fab fa-instagram rs"></i></a>
                         </div>
                         <div class="columna-nosotros">
-                            <i class="fas fa-envelope"></i><h4>Correo</h4>
+                            <h4 class="text-white">Correo<i class="fas fa-envelope ml-2" style="font-size:15px;"></i></h4>
                             <p>info@boxgames.org</p>
-                            <i class="fas fa-phone"></i><h4>Teléfono</h4>
+                            <h4 class="text-white">Teléfono<i class="fas fa-phone ml-2" style="font-size:15px;"></i></h4>
                             <p>8547-2209</p>
                         </div>
                     </div>

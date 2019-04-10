@@ -31,6 +31,10 @@
             <result name="success">contacto.jsp</result>
             <result name="input">contacto.jsp</result>
         </action>
+        
+        <action name="viewrecords" class="controller.controller_services" method="selectJuegos">  
+            <result name="success">juegos.jsp</result>  
+        </action>
     </package>
 </struts>
 
