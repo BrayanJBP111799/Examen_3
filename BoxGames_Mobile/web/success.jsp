@@ -50,7 +50,7 @@
                             <div class="checkbox mb-3">
                                 <center>
                                     <a class="btn btn-blueBG" style="margin: 20px auto; color:#fff;" onclick="location.href = 'index.jsp'">Volver al inicio</a>
-                                    <a class="btn btn-blueBG" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre-registro.jsp'">Regresar</a>
+<!--                                    <a class="btn btn-blueBG" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre-registro.jsp'">Regresar</a>-->
                                 </center>
                             </div>
                         </form>
