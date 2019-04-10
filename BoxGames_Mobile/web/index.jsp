@@ -86,9 +86,9 @@
                         <h3 class="c-red" style="padding: 5px 0;">Observa los juegos de mesa más buscados.</h3>
                     </center>
                     <div class="row-masjuegos">
-                        <div class="masjuegos">
+                        <div class="masjuegos" id="juegos">
                             <h3>Busca y conoce más juegos.</h3>
-                            <a href="viewrecords" rel="external" class="btn-formato"><span class="c-gray">Juegos</span></a>
+                            <a href="viewrecords" rel="external" class="btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none; padding: 6px 12px;">Juegos</a>
                         </div>
                     </div>
                     <br>
@@ -143,7 +143,7 @@
                         <a rel="external" href="index.jsp">Inicio</a>
                     </li>
                     <li>
-                        <a rel="external" href="juegos.jsp">Juegos</a>
+                        <a rel="external" href="index.jsp#juegos">Juegos</a>
                     </li>
                     <li>
                         <a href="contacto.jsp" rel="external">Contáctenos</a>

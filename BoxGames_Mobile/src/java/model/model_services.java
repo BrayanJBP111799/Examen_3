@@ -228,5 +228,20 @@ public class model_services {
 
         return WebService.getBasicHttpBindingIGameService().searchGame(id);
     }
+    
+    /*-------------------------------------------WEB SERVICES: CARRITO----------------------------------------------------------*/
+
+    public boolean insertCarrito(int id, String game) {
+        boolean resultado = false;
+
+        int id_cliente = id;
+        String id_juego = game;
+
+        GameService WebService = new GameService();
+
+        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego);
+
+        return resultado;
+    }
 
 }
