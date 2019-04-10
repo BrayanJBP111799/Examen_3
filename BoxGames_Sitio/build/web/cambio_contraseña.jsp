@@ -181,7 +181,7 @@
                                                     }
                                                 </script>  
                                                 
-                                                </br>
+                                                <br/>
                                                 
                                                 <label for="form_password2">Confirmar Contraseña</label><br>
                                                 <s:textfield type = "password" cssClass="form-control" id="form_password2" placeholder="Confirmar Contraseña" required="required"></s:textfield>                                                
@@ -189,7 +189,7 @@
                                                     Este campo es requerido.
                                                 </div>
                                                 
-                                                </br>
+                                                <br/>
                                                     
                                                 <s:submit cssClass="btn btn-success btn-lg btn-block" type="submit" value="Guardar"></s:submit>
                                         </s:form>                                                
