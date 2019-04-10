@@ -62,26 +62,27 @@
                     <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">O selecciona alguna de las siguientes categorías.</p>
                     <div id="myBtnContainer" class="botonesfiltro">
                         <button class="btn active" onclick="filterSelection('all')">Todos</button>
-                        <button class="btn" onclick="filterSelection('cartas')"> Cartas</button>
-                        <button class="btn" onclick="filterSelection('rol')">Rol</button>
-                        <button class="btn" onclick="filterSelection('dosj')">2 jugadores</button>
-                        <button class="btn" onclick="filterSelection('cuatroj')">4 o más jugadores</button>
-                        <button class="btn" onclick="filterSelection('estrategia')">Estrategía</button>
+                        <button class="btn" onclick="filterSelection('Cartas')"> Cartas</button>
+                        <button class="btn" onclick="filterSelection('Rol')">Rol</button>
+                        <button class="btn" onclick="filterSelection('Tactica')">Táctica</button>
+                        <button class="btn" onclick="filterSelection('Competencia')">Competencia</button>
+                        <button class="btn" onclick="filterSelection('Astucia')">Astucia</button>
+                        <button class="btn" onclick="filterSelection('Agilidad')">Agilidad</button>
                     </div>
                 </center>
                 <hr>
                 <div id="myUL">
                     <div class="juegos-general">
                         <s:iterator  value="juegos_list">
-                            <!--<li>-->
-                                <div class="columnas-juegos tablaj bgc-red filterDiv dados cuatroj">
+                            <li>
+                                <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
                                     <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
                                     <div class="border-alljuegos"></div>
                                     <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
                                     <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
                                     <button>Comprar</button>
                                 </div>
-                            <!--</li>-->
+                            </li>
                         </s:iterator>
                         
                     </div>
