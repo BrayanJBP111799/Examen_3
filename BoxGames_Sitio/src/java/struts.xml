@@ -33,7 +33,7 @@
         </action>
         
         <action name="viewrecords" class="controller.controller_services" method="selectJuegos">  
-            <result name="success">list.jsp</result>  
+            <result name="success">juegos.jsp</result>  
         </action>  
     </package>
 </struts>

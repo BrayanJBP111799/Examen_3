@@ -100,10 +100,11 @@
             <div class="row-masjuegos">
                 <div class="masjuegos">
                     <h3>Busca y conoce más juegos.</h3>
-                    <a href="juegos.jsp"><span class="c-gray">Juegos</span></a>
-                    <s:form action="viewrecords" method="post">
-                        <s:submit value="Cargar Juegos"></s:submit>
-                    </s:form>
+                    <!--<a href="juegos.jsp"><span class="c-gray">Juegos</span></a>-->
+                    <%--<s:form action="viewrecords" method="post">--%>
+                        <a href="viewrecords" rel="external"><span class="c-gray">Juegos</span></a>  
+                        <%--<s:submit cssClass="c-gray" value="Cargar Juegos"></s:submit>--%>
+                    <%--</s:form>--%>
                 </div>
             </div>
             <br>

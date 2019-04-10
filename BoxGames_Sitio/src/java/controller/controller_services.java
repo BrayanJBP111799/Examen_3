@@ -111,8 +111,7 @@ public class controller_services {
         
         for (int i = 0; i < juegos_list.size(); i++) {
            System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
-        }
-        
+        }      
         
         return SUCCESS;
     }

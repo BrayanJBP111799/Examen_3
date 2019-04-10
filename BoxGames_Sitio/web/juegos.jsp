@@ -72,118 +72,18 @@
                 <hr>
                 <div id="myUL">
                     <div class="juegos-general">
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv dados cuatroj">
-                                <h4>Colones de Catán</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgcolones"></div>
-                                <button id="modalBtncolon" type="button" data-toggle="modal" data-target="#coloncatan">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h4>Escaleras y serpientes</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imges"></div>
-                                <button id="modalBtnes" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia rol cuatroj">
-                                <h4>Risk</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgrisk"></div>
-                                <button id="modalBtnrisk" type="button" data-toggle="modal" data-target="#risk">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h4>Scrabble</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgscrabble"></div>
-                                <button id="modalBtnscrabble" type="button" data-toggle="modal" data-target="#scrabble">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <!--                    </div>
-                                            <div class="juegos-general">-->
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj">
-                                <h4>Ajedrez</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgajedrez"></div>
-                                <button id="modalBtnajedrez" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj">
-                                <h4>Monopoly</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgmonopoly"></div>
-                                <button id="modalBtnmono" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h4>Dominó</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgdomino"></div>
-                                <button id="modalBtndomino" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cuatroj">
-                                <h4>Jenga</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgjenga"></div>
-                                <button id="modalBtnjenga" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <!--                    </div>
-                                            <div class="juegos-general">-->
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas rol cuatroj">
-                                <h4>Clue</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgclue"></div>
-                                <button id="modalBtnclue" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv dosj">
-                                <h4>Damas</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgdamas"></div>
-                                <button id="modalBtndamas" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Usar</button>
-                            </div>
-                        </li>
-                        <li>	
-                            <div class="columnas-juegos tablaj bgc-red filterDiv cartas cuatroj">
-                                <h4>Naipes</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgnaipes"></div>
-                                <button id="modalBtnnaipes" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="columnas-juegos tablaj bgc-red filterDiv estrategia dosj">
-                                <h4>Batalla naval</h4>
-                                <div class="border-alljuegos"></div>
-                                <div class="img-mini-juego imgbn"></div>
-                                <button id="modalBtnbn" type="button" data-toggle="modal" data-target="#escaser">Descripción</button>
-                                <button>Comprar</button>
-                            </div>
-                        </li>
+                        <s:iterator  value="juegos_list">
+                            <!--<li>-->
+                                <div class="columnas-juegos tablaj bgc-red filterDiv dados cuatroj">
+                                    <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
+                                    <div class="border-alljuegos"></div>
+                                    <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
+                                    <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
+                                    <button>Comprar</button>
+                                </div>
+                            <!--</li>-->
+                        </s:iterator>
+                        
                     </div>
                 </div>
             </div>
@@ -261,19 +161,23 @@
             </script>
         </section>
 
-        <div class="modal fade" id="coloncatan" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <s:iterator  value="juegos_list"> 
+        <div class="modal fade" id='<s:property value="nombreJuego.getValue()"/>' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="false">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Colones de Catán</h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle"><s:property value="nombreJuego.getValue()"></s:property></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Los colonos de Catán, un juego de estrategia que, de manera silenciosa y constante, ha ido multiplicando seguidores y que hoy acumula más de 20 millones de unidades vendidas en todo el mundo. </p>
+                        <span class="badge badge-primary">Tipo: <s:property value="tipoJuego.getValue()"></s:property></span>
+                        <span class="badge badge-danger">Jugadores: <s:property value="cantidadJuego"></s:property></span>
+                        <br><br>
+                        <p><s:property value="descripcionJuego.getValue()"></s:property></p>
                         <div class="space15"></div>
-                        <p>El juego trata sobre explorar una isla sin colonizar, y todo el mundo tiene la oportunidad de convertirse en lo que quiera. Hay competición por el terreno y los recursos desde el inicio de la partida.</p>
+                        <h4>₡<s:property value="precioJuego"></s:property></h4>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -281,69 +185,8 @@
                 </div>
             </div>
         </div>
-        
-        <div class="modal fade" id="escaser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Escaleras y serpientes</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>La dinámica de este juego es simple: se comienza en la parte baja del tablero y, mediante las sucesivas tiradas del dado, el jugador intentará ir evolucionando, subiendo hasta la parte superior tratando que las múltiples serpientes no lo muerdan y de encontrar escaleras que lo ayuden en su ascenso.</p>
-                        <div class="space15"></div>
-                        <p>En otras palabras, las escaleras representan las virtudes que nos impulsan a lo alto (referencia a lo bueno y lo correcto) mientras que las serpientes son los vicios que atrasan nuestro avance (referencia a lo malo e injusto).</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade" id="risk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Risk</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Los jugadores tienen que conquistar territorios enemigos creando un ejército, moviendo sus tropas y luchando en batallas. Este emocionante juego está lleno de traiciones, alianzas y ataques sorpresa. </p>
-                        <div class="space15"></div>
-                        <p>Conquista todo un nuevo mundo donde solo puede existir un dueño de todas las tierras. ¿Quién será el ganador?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade" id="risk" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Scrabble</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <p>El objetivo del juego es acumular la mayor puntuación posible formando palabras en un tablero de 15×15, algunas de ellas bonificadas, utilizando fichas individuales que se cogen aleatoriamente de un saquito o bolsa. </p>
-                        <div class="space15"></div>
-                        <p>El tablero tiene algunas casillas bonificadas, que permiten multiplicar los puntos obtenidos: donde te permiten aumentar considerablemente el puntaje de la ficha colocada en esa casilla. El jugador con mayor puntuación total acumulada se convierte en el ganador de la partida.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </s:iterator>
+
         
         <footer>
             <center>
