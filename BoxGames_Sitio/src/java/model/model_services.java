@@ -2,7 +2,7 @@
 package model;
 
 import bean.usuarios;
-import gamesWS.*;
+import gameWS.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

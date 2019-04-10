@@ -357,7 +357,7 @@ footer h3{
 
 .obj-general{
 	margin: 25px auto;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -365,23 +365,23 @@ footer h3{
 }
 
 .columna-obj{
-	width: 50%;
+	width: 90%;
 }
 
 .obj-text{
 	text-align: center;
 	padding: 100px 20px 0px 20px;
 	margin: 0 auto;
-	font-size: 20px;
+	font-size: 8px;
 	line-height: 50px;
 }
 
 .img-obj1, .img-obj2, .img-obj3, .img-obj4{
-	width: 50%;
-	height: 500px;
+	width: 90%;
+	height: 300px;
 	background-repeat: no-repeat; 
 	background-position: center;
-	border-radius: 50%;
+        border-radius: 10%;
 }
 
 .img-obj1{
@@ -403,7 +403,7 @@ footer h3{
 
 @media screen and (max-width: 1150px){
 	.obj-text,.img-obj1, .img-obj3{
-		width: 100%;
+		width: 80%;
 		padding-top: 10px;
 	}
 
@@ -417,7 +417,7 @@ footer h3{
 		background-position: right;
 	}
 	.obj-text{
-		font-size: 16px;
+		font-size: 12px;
 		line-height: 35px;
 	}
 }
