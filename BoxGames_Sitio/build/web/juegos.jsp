@@ -94,7 +94,9 @@
                                         <div class="border-alljuegos"></div>
                                         <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
                                         <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
+                                        <s:if test="%{#session.session_correo != null}">
                                         <button><a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>&price=<s:property value="precioJuego"></s:property>' rel="external" style="text-decoration:none; color:black;">Comprar</a></button>
+                                        </s:if>
                                     </div>
                                 </li>
                             <%--</s:form>--%>
