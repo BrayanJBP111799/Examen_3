@@ -101,9 +101,6 @@
                 <div class="masjuegos">
                     <h3>Busca y conoce más juegos.</h3>
                     <a href="juegos.jsp"><span class="c-gray">Juegos</span></a>
-                    <s:form action="viewrecords" method="post">
-                        <s:submit value="Cargar Juegos"></s:submit>
-                    </s:form>
                 </div>
             </div>
             <br>

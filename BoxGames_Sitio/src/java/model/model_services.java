@@ -220,5 +220,11 @@ public class model_services {
         return WebService.getBasicHttpBindingIGameService().selectGames();
     }
     
+    public ArrayOfJuegosMesa selectOneGame(int id){
+        
+        GameService WebService = new GameService();
+        
+        return WebService.getBasicHttpBindingIGameService().searchGame(id);
+    }
 }
 
