@@ -42,7 +42,7 @@
                 <li><a href="index.jsp">Inicio</a></li>
             </ul>
         </div>
-        
+        <%int Total = 0;%>
         <div class="container">
             <div class="card shopping-cart">
                      <div class="card-header bg-dark text-light">
@@ -66,8 +66,12 @@
                                  </div>
                                  <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
                                      <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                         <h6><strong>₡<s:property value="Precio.getValue()"></s:property><span class="text-muted"></span></strong></h6>
-                                     </div>
+                                         <h6><strong>₡<s:property value="Precio.getValue()"/><span class="text-muted"></span></strong></h6>
+                                     </div>                                 
+                                     <%                                        
+                                        Total += 10000;
+                                     %>
+                                     
 <!--                                     <div class="col-4 col-sm-4 col-md-4">
                                          <div class="quantity">
                                              <input type="button" value="+" class="plus">
@@ -106,7 +110,7 @@
                          <div class="pull-right" style="margin: 10px">
                              <a href="" class="btn btn-success pull-right">Pagar</a>
                              <div class="pull-right" style="margin: 5px">
-                                 Total: <b>₡50.00</b>
+                                 Total: <b>₡<s:property value="total"/></b>
                              </div>
                          </div>
                      </div>
