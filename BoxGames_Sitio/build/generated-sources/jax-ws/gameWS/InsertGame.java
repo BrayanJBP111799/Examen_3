@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -47,7 +47,7 @@ public class InsertGame {
     protected Integer precio;
 
     /**
-     * Obtiene el valor de la propiedad idCliente.
+     * Gets the value of the idCliente property.
      * 
      * @return
      *     possible object is
@@ -59,7 +59,7 @@ public class InsertGame {
     }
 
     /**
-     * Define el valor de la propiedad idCliente.
+     * Sets the value of the idCliente property.
      * 
      * @param value
      *     allowed object is
@@ -71,7 +71,7 @@ public class InsertGame {
     }
 
     /**
-     * Obtiene el valor de la propiedad idJuego.
+     * Gets the value of the idJuego property.
      * 
      * @return
      *     possible object is
@@ -83,7 +83,7 @@ public class InsertGame {
     }
 
     /**
-     * Define el valor de la propiedad idJuego.
+     * Sets the value of the idJuego property.
      * 
      * @param value
      *     allowed object is
@@ -95,7 +95,7 @@ public class InsertGame {
     }
 
     /**
-     * Obtiene el valor de la propiedad precio.
+     * Gets the value of the precio property.
      * 
      * @return
      *     possible object is
@@ -107,7 +107,7 @@ public class InsertGame {
     }
 
     /**
-     * Define el valor de la propiedad precio.
+     * Sets the value of the precio property.
      * 
      * @param value
      *     allowed object is

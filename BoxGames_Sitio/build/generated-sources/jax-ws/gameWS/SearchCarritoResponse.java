@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>Java class for anonymous complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -39,7 +39,7 @@ public class SearchCarritoResponse {
     protected JAXBElement<ArrayOfCarritoCompra> searchCarritoResult;
 
     /**
-     * Obtiene el valor de la propiedad searchCarritoResult.
+     * Gets the value of the searchCarritoResult property.
      * 
      * @return
      *     possible object is
@@ -51,7 +51,7 @@ public class SearchCarritoResponse {
     }
 
     /**
-     * Define el valor de la propiedad searchCarritoResult.
+     * Sets the value of the searchCarritoResult property.
      * 
      * @param value
      *     allowed object is

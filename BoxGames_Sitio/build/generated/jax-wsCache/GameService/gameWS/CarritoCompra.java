@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para CarritoCompra complex type.
+ * <p>Java class for CarritoCompra complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="CarritoCompra"&gt;
@@ -50,7 +50,7 @@ public class CarritoCompra {
     protected JAXBElement<Integer> precio;
 
     /**
-     * Obtiene el valor de la propiedad idCarritoCompra.
+     * Gets the value of the idCarritoCompra property.
      * 
      * @return
      *     possible object is
@@ -62,7 +62,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Define el valor de la propiedad idCarritoCompra.
+     * Sets the value of the idCarritoCompra property.
      * 
      * @param value
      *     allowed object is
@@ -74,7 +74,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Obtiene el valor de la propiedad idCliente.
+     * Gets the value of the idCliente property.
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Define el valor de la propiedad idCliente.
+     * Sets the value of the idCliente property.
      * 
      * @param value
      *     allowed object is
@@ -98,7 +98,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Obtiene el valor de la propiedad idJuegoMesa.
+     * Gets the value of the idJuegoMesa property.
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Define el valor de la propiedad idJuegoMesa.
+     * Sets the value of the idJuegoMesa property.
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Obtiene el valor de la propiedad precio.
+     * Gets the value of the precio property.
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class CarritoCompra {
     }
 
     /**
-     * Define el valor de la propiedad precio.
+     * Sets the value of the precio property.
      * 
      * @param value
      *     allowed object is

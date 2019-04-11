@@ -11,15 +11,7 @@ namespace Payment_Services
     public interface IPaymet_Services
     {
         [OperationContract]
-        Pagos InsertPayment(int id_cliente, float total, string estado);
+        Pagos InsertPayment(int id_cliente, float total, string nombre, int numero, string fecha, int codigo);
 
-        [OperationContract]
-        Pagos UpdateStatus(int id_cliente);
-
-        [OperationContract]
-        List<Pagos> SearchPaymets_byStatus(int id_cliente);
-
-        [OperationContract]
-        List<Pagos> SearchPaymets_All(int id_cliente);
     }
 }

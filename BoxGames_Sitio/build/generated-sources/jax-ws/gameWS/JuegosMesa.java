@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para JuegosMesa complex type.
+ * <p>Java class for JuegosMesa complex type.
  * 
- * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
+ * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
  * &lt;complexType name="JuegosMesa"&gt;
@@ -62,7 +62,7 @@ public class JuegosMesa {
     protected JAXBElement<String> tipoJuego;
 
     /**
-     * Obtiene el valor de la propiedad cantidadJuego.
+     * Gets the value of the cantidadJuego property.
      * 
      * @return
      *     possible object is
@@ -74,7 +74,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad cantidadJuego.
+     * Sets the value of the cantidadJuego property.
      * 
      * @param value
      *     allowed object is
@@ -86,7 +86,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad descripcionJuego.
+     * Gets the value of the descripcionJuego property.
      * 
      * @return
      *     possible object is
@@ -98,7 +98,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad descripcionJuego.
+     * Sets the value of the descripcionJuego property.
      * 
      * @param value
      *     allowed object is
@@ -110,7 +110,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad idJuegoMesa.
+     * Gets the value of the idJuegoMesa property.
      * 
      * @return
      *     possible object is
@@ -122,7 +122,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad idJuegoMesa.
+     * Sets the value of the idJuegoMesa property.
      * 
      * @param value
      *     allowed object is
@@ -134,7 +134,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad imagenJuego.
+     * Gets the value of the imagenJuego property.
      * 
      * @return
      *     possible object is
@@ -146,7 +146,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad imagenJuego.
+     * Sets the value of the imagenJuego property.
      * 
      * @param value
      *     allowed object is
@@ -158,7 +158,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad nombreJuego.
+     * Gets the value of the nombreJuego property.
      * 
      * @return
      *     possible object is
@@ -170,7 +170,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad nombreJuego.
+     * Sets the value of the nombreJuego property.
      * 
      * @param value
      *     allowed object is
@@ -182,7 +182,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad precioJuego.
+     * Gets the value of the precioJuego property.
      * 
      * @return
      *     possible object is
@@ -194,7 +194,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad precioJuego.
+     * Sets the value of the precioJuego property.
      * 
      * @param value
      *     allowed object is
@@ -206,7 +206,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Obtiene el valor de la propiedad tipoJuego.
+     * Gets the value of the tipoJuego property.
      * 
      * @return
      *     possible object is
@@ -218,7 +218,7 @@ public class JuegosMesa {
     }
 
     /**
-     * Define el valor de la propiedad tipoJuego.
+     * Sets the value of the tipoJuego property.
      * 
      * @param value
      *     allowed object is

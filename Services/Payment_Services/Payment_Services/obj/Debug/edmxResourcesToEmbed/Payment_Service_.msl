@@ -4,10 +4,13 @@
     <EntitySetMapping Name="Pagos">
       <EntityTypeMapping TypeName="PaymentsModel.Pagos">
         <MappingFragment StoreEntitySet="Pagos">
-          <ScalarProperty Name="ID_Pago" ColumnName="ID_Pago" />
-          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
-          <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Fecha_Ven" ColumnName="Fecha_Ven" />
+          <ScalarProperty Name="Num_Tarjeta" ColumnName="Num_Tarjeta" />
+          <ScalarProperty Name="Nom_Tarjeta" ColumnName="Nom_Tarjeta" />
           <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+          <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+          <ScalarProperty Name="ID_Pago" ColumnName="ID_Pago" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
