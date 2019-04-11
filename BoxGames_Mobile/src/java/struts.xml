@@ -23,19 +23,23 @@
             <result name="success">look_mail.jsp</result>
         </action> 
         <action name="login" class="controller.controller_login"> 
+            <result name="onboarding">pre-onboarding.jsp</result>  
             <result name="correcto">index.jsp</result> 
             <result name="incorrecto">login.jsp</result>
-            <result name="sinregistro">login.jsp</result>          
+            <result name="sinregistro">login.jsp</result>     
         </action>
         <action name="contactar" class="controller.controller_contact">
             <result name="success">contacto.jsp</result>
             <result name="input">contacto.jsp</result>
         </action>
+        <action name="finish_onboarding" class="controller.controller_login" method="updateOnboarding">
+            <result name="success">index.jsp</result>
+        </action>
         
         <action name="viewrecords" class="controller.controller_services" method="selectJuegos">  
             <result name="success">juegos.jsp</result>  
         </action>
-<!--        <action name="game_detail" class="controller.controller_services" method="selectUnJuego">  
+        <!--        <action name="game_detail" class="controller.controller_services" method="selectUnJuego">  
             <result name="success">place_detail.jsp</result>  
         </action> -->
         <action name="addtocar" class="controller.controller_services" method="insertCarrito">  

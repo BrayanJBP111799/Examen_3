@@ -4,14 +4,14 @@ import bean.carrito;
 import bean.juegos;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
-import gameWS.JuegosMesa;
+import gameWS.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.model_services;
 
 public class controller_services {
-    
+
     //----------------Insert de Usuarios
     private usuarios u = new usuarios();
 
@@ -22,30 +22,30 @@ public class controller_services {
     public void setU(usuarios u) {
         this.u = u;
     }
-    
-    public String insertUsuario() throws SQLException{
+
+    public String insertUsuario() throws SQLException {
         model_services da = new model_services();
         da.insertU(getU());
 
         return SUCCESS;
     }
-    
+
     //----------------Enviar email registro    
-    public String proccessRegister(){
+    public String proccessRegister() {
         model_services da = new model_services();
         da.sendEmail(getU());
 
         return SUCCESS;
     }
-    
+
     //----------------Enviar email contraseña  
-    public String proccessChangeP(){
+    public String proccessChangeP() {
         model_services da = new model_services();
         da.sendEmailPassword(getU());
 
         return SUCCESS;
     }
-    
+
     //---------------Actualizar usuario
     private int idU;
 
@@ -56,37 +56,37 @@ public class controller_services {
     public void setIdU(int idU) {
         this.idU = idU;
     }
-    
-    public String updateUsuario() throws SQLException{
-        model_services da = new model_services(); 
+
+    public String updateUsuario() throws SQLException {
+        model_services da = new model_services();
         da.updateU(getU(), idU);
 
         return SUCCESS;
     }
-    
-    public String returnToPage(){
+
+    public String returnToPage() {
         return SUCCESS;
     }
-    
+
     //---------------Buscar el login
-    public String Login() throws SQLException{
+    public String Login() throws SQLException {
         String result = "";
         model_services da = new model_services();
-        
-        if("sinregistro".equals(da.consulta_inicio(getU()))){
+
+        if ("sinregistro".equals(da.consulta_inicio(getU()))) {
             result = "sinregistro";
-        }else if("correcto".equals(da.consulta_inicio(getU()))){
+        } else if ("correcto".equals(da.consulta_inicio(getU()))) {
             result = "correcto";
-        }else if("incorrecto".equals(da.consulta_inicio(getU()))){
+        } else if ("incorrecto".equals(da.consulta_inicio(getU()))) {
             result = "incorrecto";
         }
-        
+
         return result;
-    }    
-    
-        //----------------Select de Juegos
+    }
+
+    //----------------Select de Juegos
     private juegos j = new juegos();
-    
+
     private List<JuegosMesa> juegos_list = new ArrayList<>();
 
     public juegos getJ() {
@@ -105,21 +105,19 @@ public class controller_services {
         this.juegos_list = juegos_list;
     }
 
-
-    public String selectJuegos(){
+    public String selectJuegos() {
         model_services ms = new model_services();
-        juegos_list = ms.selectJuegos().getJuegosMesa();       
+        juegos_list = ms.selectJuegos().getJuegosMesa();
 
 //        for (int i = 0; i < juegos_list.size(); i++) {
 //           System.out.println(juegos_list.get(i).getNombreJuego().getValue()); 
 //        }       
-
         return SUCCESS;
     }
-    
+
     //----------------Select de un Hotel
     private int id;
-    
+
     private List<JuegosMesa> game_info = new ArrayList<>();
 
     public int getId() {
@@ -138,18 +136,19 @@ public class controller_services {
         this.game_info = game_info;
     }
 
-         
-    public String selectUnJuego(){        
+    public String selectUnJuego() {
         model_services da = new model_services();
-        game_info = da.selectOneGame(id).getJuegosMesa();        
+        game_info = da.selectOneGame(id).getJuegosMesa();
         return SUCCESS;
     }
 
     //----------------Insert al CARRITO
     private int id_cliente;
-    
+
     private String game;
-    
+
+    private int price;
+
     private carrito c = new carrito();
 
     public int getId_cliente() {
@@ -168,6 +167,14 @@ public class controller_services {
         this.game = game;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
     public carrito getC() {
         return c;
     }
@@ -175,19 +182,19 @@ public class controller_services {
     public void setC(carrito c) {
         this.c = c;
     }
-    
-    public String insertCarrito() {  
-        String result="";
+
+    public String insertCarrito() {
+        String result = "";
         try {
 //            if (submitType.equals("updatedata")) {
 //                model_services de = new model_services();
 //                car_info = de.selectOneCar(id_vehiculo).getCar();
 //                result = "reservation";
 //            } else {
-                model_services da = new model_services();
-                da.insertCarrito(id_cliente, game);
-                System.out.println(" ");
-                result = "success";
+            model_services da = new model_services();
+            da.insertCarrito(id_cliente, game, price);
+            System.out.println(" ");
+            result = "success";
 //            }
 
         } catch (Exception e) {
@@ -196,5 +203,36 @@ public class controller_services {
         }
 
         return result;
+    }
+    
+    /*------------------------------------------- CARRITO ----------------------------------------------------------*/
+    private int idC;
+    
+    private List<CarritoCompra> carrito_info = new ArrayList<>();
+
+    public int getIdC() {
+        return idC;
+    }
+
+    public void setIdC(int idC) {
+        this.idC = idC;
+    }
+
+    public List<CarritoCompra> getCarrito_info() {
+        return carrito_info;
+    }
+
+    public void setCarrito_info(List<CarritoCompra> carrito_info) {
+        this.carrito_info = carrito_info;
+    }
+    
+    public String selectCarrito(){        
+        model_services da = new model_services();
+        carrito_info = da.selectCarrito(idC).getCarritoCompra();
+        
+        System.out.println(" >>>> " + carrito_info.get(1).getIDJuegoMesa().getValue());
+        System.out.println(" >>>> " + carrito_info.get(1).getPrecio().getValue());
+        
+        return SUCCESS;
     }    
 }

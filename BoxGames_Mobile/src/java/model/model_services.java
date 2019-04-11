@@ -16,7 +16,7 @@ import javax.mail.internet.MimeMessage;
 public class model_services {
 
 //////////////////////////////////////////////////////////PARTE LOCAL
-    private String insertsql = "INSERT INTO Register_Usuario(ID_Cliente, Nombre_Completo, Telefono, Correo, FechaNacimiento, Password) VALUES (?, ?, ?, ?, ?, ?);";
+    private String insertsql = "INSERT INTO Register_Usuario(ID_Cliente, Nombre_Completo, Telefono, Correo, FechaNacimiento, Password, Onboarding) VALUES (?, ?, ?, ?, ?, ?, ?);";
 
     public boolean insertU(usuarios u) throws SQLException {
         boolean resultado = false;
@@ -29,6 +29,7 @@ public class model_services {
         ps.setString(4, u.getCorreo());
         ps.setString(5, u.getFechanacimiento());
         ps.setString(6, u.getPassword());
+        ps.setString(7, "activo");
 
         if (ps.executeUpdate() == 1) {
             resultado = true;
@@ -194,6 +195,70 @@ public class model_services {
 
         return result;
     }
+     /*------------------------------------------- ONBOARDING ----------------------------------------------------------*/
+
+    private String sql4 = "UPDATE Register_Usuario SET Onboarding = 'inactivo' WHERE Correo = ?;";
+
+    public boolean updateOnboarding(String correoU) throws SQLException {
+        boolean resultado = false;
+
+        Connection con = conexionBD.getConnection();
+
+        PreparedStatement p = con.prepareStatement(sql4);
+        p.setString(1, correoU);
+
+        if (p.executeUpdate() == 1) {
+            resultado = true;
+            p.close();
+            con.close();
+        }
+
+        System.out.println("Estado de Onboarding actualizado con exito.");
+
+        return resultado;
+    }
+
+    private String sql3 = "SELECT Onboarding FROM Register_Usuario WHERE Correo = ?;";
+
+    public String consulta_onboarding(usuarios u) throws SQLException {
+        String result = "";
+        String onboarding = "";
+
+        int cont = 0;
+        Connection con = conexionBD.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql3);
+        ps.setString(1, u.getCorreo());
+
+        ResultSet res = ps.executeQuery();
+
+        while (res.next()) {
+            onboarding = res.getString(1);
+            cont++;
+        }
+
+        if (cont != 0) {
+            if (onboarding.equals("inactivo")) {
+                result = "inactivo";
+
+                System.out.println("Estado de Onboarding inactivo");
+
+            } else if (onboarding.equals("activo")) {
+                result = "activo";
+                System.out.println("Estado de Onboarding activo");
+
+            }
+        } else if (cont == 0) {
+            result = "sinonboarding";
+
+            System.out.println("Estado de Onboarding no especificado");
+        }
+
+        ps.close();
+        res.close();
+        con.close();
+
+        return result;
+    }
 
     private String sql2 = "SELECT ID_Cliente, Nombre_Completo, Telefono, Correo FROM Register_Usuario WHERE Correo = ?;";
 
@@ -228,20 +293,28 @@ public class model_services {
 
         return WebService.getBasicHttpBindingIGameService().searchGame(id);
     }
-    
-    /*-------------------------------------------WEB SERVICES: CARRITO----------------------------------------------------------*/
 
-    public boolean insertCarrito(int id, String game) {
+    /*-------------------------------------------WEB SERVICES: CARRITO----------------------------------------------------------*/
+    public boolean insertCarrito(int id, String game, int price) {
+
         boolean resultado = false;
 
         int id_cliente = id;
         String id_juego = game;
+        int precio = price;
 
         GameService WebService = new GameService();
 
-        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego);
+        WebService.getBasicHttpBindingIGameService().insertGame(id_cliente, id_juego, precio);
 
         return resultado;
+    }
+
+    public ArrayOfCarritoCompra selectCarrito(int id) {
+
+        GameService WebService = new GameService();
+
+        return WebService.getBasicHttpBindingIGameService().searchCarrito(id);
     }
 
 }
