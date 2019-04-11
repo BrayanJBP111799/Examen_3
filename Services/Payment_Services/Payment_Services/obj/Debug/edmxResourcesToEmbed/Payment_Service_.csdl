@@ -11,7 +11,7 @@
     <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
     <Property Name="TotalPagar" Type="Double" Nullable="false" />
     <Property Name="Nom_Tarjeta" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="Num_Tarjeta" Type="Int32" Nullable="false" />
+    <Property Name="Num_Tarjeta" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Fecha_Ven" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Codigo" Type="Int32" Nullable="false" />
   </EntityType>

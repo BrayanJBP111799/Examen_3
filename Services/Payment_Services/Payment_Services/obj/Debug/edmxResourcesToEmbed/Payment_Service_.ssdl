@@ -8,7 +8,7 @@
     <Property Name="ID_Cliente" Type="int" Nullable="false" />
     <Property Name="TotalPagar" Type="float" Nullable="false" />
     <Property Name="Nom_Tarjeta" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Num_Tarjeta" Type="int" Nullable="false" />
+    <Property Name="Num_Tarjeta" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Fecha_Ven" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Codigo" Type="int" Nullable="false" />
   </EntityType>

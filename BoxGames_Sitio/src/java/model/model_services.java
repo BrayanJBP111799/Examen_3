@@ -331,14 +331,14 @@ public class model_services {
 
     //////////////////////////////////////////////////////////WEB SERVICE #2
     
-    public boolean insertPago(int id, int price, pago p) {
+    public boolean insertPago(pago p) {
 
         boolean resultado = false;
 
-        int id_cliente = id;
-        float precio = price;
+        int id_cliente = p.IDCliente;
+        float precio = p.TotalPagar;
         String nom = p.NomTarjeta;
-        int num = p.NumTarjeta;
+        String num = p.NumTarjeta;
         String fec = p.FechaVen;
         int cod = p.Codigo;  
                 

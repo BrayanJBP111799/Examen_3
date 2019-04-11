@@ -46,7 +46,7 @@ public interface IPaymetServices {
         @WebParam(name = "nombre", targetNamespace = "http://tempuri.org/")
         String nombre,
         @WebParam(name = "numero", targetNamespace = "http://tempuri.org/")
-        Integer numero,
+        String numero,
         @WebParam(name = "fecha", targetNamespace = "http://tempuri.org/")
         String fecha,
         @WebParam(name = "codigo", targetNamespace = "http://tempuri.org/")

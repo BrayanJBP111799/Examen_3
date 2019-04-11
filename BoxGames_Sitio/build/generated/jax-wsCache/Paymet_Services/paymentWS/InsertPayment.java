@@ -23,7 +23,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="id_cliente" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="total" type="{http://www.w3.org/2001/XMLSchema}float" minOccurs="0"/&gt;
  *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="numero" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="fecha" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="codigo" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
@@ -51,7 +51,8 @@ public class InsertPayment {
     protected Float total;
     @XmlElementRef(name = "nombre", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> nombre;
-    protected Integer numero;
+    @XmlElementRef(name = "numero", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> numero;
     @XmlElementRef(name = "fecha", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> fecha;
     protected Integer codigo;
@@ -133,10 +134,10 @@ public class InsertPayment {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public Integer getNumero() {
+    public JAXBElement<String> getNumero() {
         return numero;
     }
 
@@ -145,10 +146,10 @@ public class InsertPayment {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setNumero(Integer value) {
+    public void setNumero(JAXBElement<String> value) {
         this.numero = value;
     }
 
