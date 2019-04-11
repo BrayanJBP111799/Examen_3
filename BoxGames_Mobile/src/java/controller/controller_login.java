@@ -37,7 +37,6 @@ public class controller_login extends ActionSupport implements SessionAware {
             da.consulta_session(getU());
             session.put("session_cedula", u.getCedula());
             session.put("session_nombre", u.getNombre_completo());
-            
             String estado = da.consulta_onboarding(getU());
 
             if ("sinonboarding".equals(estado)) {

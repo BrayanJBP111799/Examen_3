@@ -7,7 +7,7 @@ public class pago implements Serializable{
     
     public int IDPago;
     public int IDCliente;
-    public int TotalPagar;
+    public float TotalPagar;
     public String NomTarjeta;
     public int NumTarjeta;
     public String FechaVen;
@@ -16,7 +16,7 @@ public class pago implements Serializable{
     public pago() {
     }
 
-    public pago(int IDPago, int IDCliente, int TotalPagar, String NomTarjeta, int NumTarjeta, String FechaVen, int Codigo) {
+    public pago(int IDPago, int IDCliente, float TotalPagar, String NomTarjeta, int NumTarjeta, String FechaVen, int Codigo) {
         this.IDPago = IDPago;
         this.IDCliente = IDCliente;
         this.TotalPagar = TotalPagar;
@@ -42,11 +42,11 @@ public class pago implements Serializable{
         this.IDCliente = IDCliente;
     }
 
-    public int getTotalPagar() {
+    public float getTotalPagar() {
         return TotalPagar;
     }
 
-    public void setTotalPagar(int TotalPagar) {
+    public void setTotalPagar(float TotalPagar) {
         this.TotalPagar = TotalPagar;
     }
 

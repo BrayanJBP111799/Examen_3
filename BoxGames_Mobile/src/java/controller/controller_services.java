@@ -5,13 +5,17 @@ import bean.juegos;
 import bean.pago;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionSupport;
+import static com.sun.org.apache.xml.internal.serializer.utils.Utils.messages;
 import gameWS.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.model_services;
+import org.apache.struts2.components.ActionMessage;
+import org.jboss.weld.servlet.SessionHolder;
 
-public class controller_services {
+public class controller_services extends ActionSupport{
 
     //----------------Insert de Usuarios
     private usuarios u = new usuarios();
@@ -147,7 +151,7 @@ public class controller_services {
     private int id_cliente;
 
     private String game;
-
+    private String insercion="";
     private int price;
 
     private carrito c = new carrito();
@@ -195,6 +199,7 @@ public class controller_services {
             model_services da = new model_services();
             da.insertCarrito(id_cliente, game, price);
             System.out.println(" ");
+            insercion="correcto";
             result = "success";
 //            }
 
@@ -202,8 +207,17 @@ public class controller_services {
             e.printStackTrace();
             result = "error";
         }
-
         return result;
+    }
+    
+    public void validate(){
+        if(getGame() == null || getGame().equals("")){
+            //addActionMessage("Error con el carrito");
+            addActionMessage("¡Ingresa, agrega y compra juegos desde el carrito!");
+        }else{
+            addActionMessage("¡El producto se ha guardado correctamente en el carrito!");
+        }
+        
     }
 
     /*------------------------------------------- CARRITO ----------------------------------------------------------*/

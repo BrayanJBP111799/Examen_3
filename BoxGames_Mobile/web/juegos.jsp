@@ -68,6 +68,11 @@
                         <strong>¿Te interesa algún juego?</strong><p>Puedes <a href="login.jsp">iniciar sesión</a> para comprar los juegos que quieras.</p>
                     </div>
                 </s:if>
+                <s:if test="hasActionMessages()">
+                    <div class="welcome mx-auto">
+                        <s:actionmessage/>
+                    </div>
+                </s:if>
 
                 <s:iterator  value="juegos_list">
                     <div data-role="popup" id="<s:property value="nombreJuego.getValue()"/>" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">

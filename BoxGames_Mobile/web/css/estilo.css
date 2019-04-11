@@ -77,6 +77,17 @@ footer h3{
     text-decoration: none!important;
 }
 
+.welcome {
+    background-color:#DDFFDD;
+    border:1px solid #009900;
+    width:250px;
+    height: 60px;
+    text-align: center;
+}
+.welcome li{ 
+    list-style: none; 
+}
+
 /*---------------------------------------IR ARRIBA-----------------------------------------*/
 
 #topBtn{
