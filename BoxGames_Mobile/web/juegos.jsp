@@ -37,11 +37,14 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <button id="topBtnC">
-                    <a href='viewcarrito?idC=<s:property value="#session.session_cedula"/>' rel="external" style="text-decoration:none; color:black; margin: 0 auto;">
-                        <i class="fas fa-shopping-cart"></i>
-                    </a>
-                </button>
+
+                <s:if test="%{#session.session_correo != null}">
+                    <button id="topBtnC">
+                        <a href='viewcarrito?idC=<s:property value="#session.session_cedula"/>' rel="external" style="text-decoration:none; color:black; margin: 0 auto;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </button>
+                </s:if>
                 <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Juegos Disponibles</h2>
                 <center>
                     <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">Busca y elige algún juego que te guste.</p>
@@ -216,7 +219,7 @@
                 </center>
             </div>
         </div>
-                        
+
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
