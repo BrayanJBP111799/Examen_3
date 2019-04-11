@@ -53,7 +53,7 @@
         </action>
         
         <action name="pay" class="controller.controller_services" method="insertPago">  
-            <result name="success">success.jsp</result>  
+            <result name="success">payment_complete.jsp</result>  
             <result name="load">pago.jsp</result> 
         </action>  
         
