@@ -195,7 +195,7 @@ public class model_services {
 
         return result;
     }
-     /*------------------------------------------- ONBOARDING ----------------------------------------------------------*/
+    /*------------------------------------------- ONBOARDING ----------------------------------------------------------*/
 
     private String sql4 = "UPDATE Register_Usuario SET Onboarding = 'inactivo' WHERE Correo = ?;";
 
@@ -315,6 +315,17 @@ public class model_services {
         GameService WebService = new GameService();
 
         return WebService.getBasicHttpBindingIGameService().searchCarrito(id);
+    }
+
+    public boolean deleteGame_fromCarrito(int id_carrito) {
+        boolean resultado = false;
+
+        GameService WebService = new GameService();
+
+        WebService.getBasicHttpBindingIGameService().deleteGamesFromCarrito(id_carrito);
+
+        return resultado;
+
     }
 
 }
