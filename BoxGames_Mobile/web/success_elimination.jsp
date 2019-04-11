@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib uri="/struts-tags" prefix="s"%>
+<%@taglib uri="/struts-tags" prefix="s"%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -11,11 +11,9 @@
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="icon" href="img/logos/dice.png">
-        <link rel="stylesheet" href="css/estilo.css">
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://use.fontawesome.com/c560c025cf.js"></script>
 
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
@@ -37,33 +35,26 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Carrito de Compras</h2>
-                <a href="viewrecords" class="btn btn-blueBG" style="text-decoration:none; color:#fff;">Continua comprando</a>
-                <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke" data-column-btn-theme="b" data-column-btn-text="Columnas" data-column-popup-theme="a">
-                    <thead>
-                        <tr>
-                            <th data-priority="1">Nombre</th>
-                            <th data-priority="1">Precio</th>
-                            <th data-priority="1">Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <s:iterator value="carrito_info">
-                            <tr>
-                                <th><s:property value="getIDJuegoMesa().getValue()"></s:property></th>
-                                <td>₡<s:property value="Precio.getValue()"></s:property></td>
-                                <td><a href='deletegame?id_carrito=<s:property value="getIDCarritoCompra()"/>' class="btn btn-blueBG" rel="external" style="text-decoration:none; color:#fff;">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </a></td>
-                            </tr>
-                        </s:iterator>
-                    </tbody>
-                </table>
-                <div class="alert alert-info">
-                    <p class="float-left"><strong>Precio total:</strong> ₡<s:property value="total"/></p>
-                    <a href="" style="text-decoration:none; color:#fff;" class="btn btn-success float-right">Pagar</a>
-                    <br>
-                    <br>
+                <div class="pt-menu">
+                    <div class="sign-in-body" style="background-color: transparent;">
+                        <form class="form-redirect">
+                            <div class="mx-auto text-center">
+                                <img src="img/logos/dice.png" width="70" alt="Logo" >
+                            </div>
+                            <h3 class="mb-3 text-center">¡El juego se ha eliminado exitosamente!</h3>
+                            <center><svg id="successAnimation" class="animated" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
+                                <path id="successAnimationResult" fill="#D8D8D8" d="M35,60 C21.1928813,60 10,48.8071187 10,35 C10,21.1928813 21.1928813,10 35,10 C48.8071187,10 60,21.1928813 60,35 C60,48.8071187 48.8071187,60 35,60 Z M23.6332378,33.2260427 L22.3667622,34.7739573 L34.1433655,44.40936 L47.776114,27.6305926 L46.223886,26.3694074 L33.8566345,41.59064 L23.6332378,33.2260427 Z"/>
+                                <circle id="successAnimationCircle" cx="35" cy="35" r="24" stroke="#979797" stroke-width="2" stroke-linecap="round" fill="transparent"/>
+                                <polyline id="successAnimationCheck" stroke="#979797" stroke-width="2" points="23 34 34 43 47 27" fill="transparent"/>
+                                </svg></center>
+                            <div class="checkbox mb-3">
+                                <center>
+                                    <a class="btn btn-blueBG" href='viewcarrito?idC=<s:property value="#session.session_cedula"/>' rel="external" style="text-decoration:none; color:#fff;">Volver al Carrito</a>
+<!--                                    <a class="btn btn-blueBG" style="margin: 20px auto; color:#fff;" onclick="location.href = 'pre-registro.jsp'">Regresar</a>-->
+                                </center>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -104,4 +95,3 @@
         </div>
     </body>
 </html>
-
