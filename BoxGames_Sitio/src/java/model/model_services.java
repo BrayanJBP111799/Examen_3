@@ -336,15 +336,15 @@ public class model_services {
         boolean resultado = false;
 
         int id_cliente = id;
-        int precio = price;
+        float precio = price;
         String nom = p.NomTarjeta;
         int num = p.NumTarjeta;
         String fec = p.FechaVen;
         int cod = p.Codigo;  
                 
-        Paymet_Services WebService = new Paymet_Services();
+        PaymetServices WebService = new PaymetServices();
         
-        WebService.getBasicHttpBindingIPaymet_Services().insertPayment(id_cliente, precio, nom, num, fec, cod);
+        WebService.getBasicHttpBindingIPaymetServices().insertPayment(id_cliente, precio, nom, num, fec, cod);
         
         return resultado;
     }
