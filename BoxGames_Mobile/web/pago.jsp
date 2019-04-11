@@ -43,16 +43,22 @@
                 </div><br>
                 <div class='card-wrapper'></div>
                 <script src="js/card/card.js"></script>
-                <form>
+                <s:form validation="false" theme="simple" action = "pay" id="payment_form" method = "post">
                     <input type="text" name="number" placeholder="Número de tarjeta"/>
                     <input type="text" name="name" placeholder="Nombre"/>
                     <input type="text" name="expiry" placeholder="Fecha de expiración"/>
                     <input type="text" name="cvc" placeholder="Código de seguridad"/>
-                    <div style="display:none;">
-                        <input type="text" name="total" placeholder="Total"/>
+                    <hr><br>
+                    <div style="">
+                        <input id="cardnumber" name="p.NumTarjeta" class="inputpagos" type="text" inputmode="numeric" >
+                        <input id="name" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" >
+                        <input id="expirationdate" name="p.FechaVen"  class="inputpagos" type="text" inputmode="numeric" placeholder="mm/aa">
+                        <input id="securitycode" name="p.Codigo" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric">
+                        <input type="text" name="p.IDCliente" value="<s:property value='IDCliente'/>" >
+                        <input type="text" name="p.TotalPagar" value="<s:property value='precio'/>" >
                     </div>
                     <a href="#">Completar Pago</a>
-                </form>
+                </s:form> 
                 <script>
 
                     var card = new Card({

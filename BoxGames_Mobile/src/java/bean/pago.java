@@ -7,16 +7,16 @@ public class pago implements Serializable{
     
     public int IDPago;
     public int IDCliente;
-    public float TotalPagar;
+    public int TotalPagar;
     public String NomTarjeta;
-    public int NumTarjeta;
+    public String NumTarjeta;
     public String FechaVen;
     public int Codigo;
 
     public pago() {
     }
 
-    public pago(int IDPago, int IDCliente, float TotalPagar, String NomTarjeta, int NumTarjeta, String FechaVen, int Codigo) {
+    public pago(int IDPago, int IDCliente, int TotalPagar, String NomTarjeta, String NumTarjeta, String FechaVen, int Codigo) {
         this.IDPago = IDPago;
         this.IDCliente = IDCliente;
         this.TotalPagar = TotalPagar;
@@ -42,11 +42,11 @@ public class pago implements Serializable{
         this.IDCliente = IDCliente;
     }
 
-    public float getTotalPagar() {
+    public int getTotalPagar() {
         return TotalPagar;
     }
 
-    public void setTotalPagar(float TotalPagar) {
+    public void setTotalPagar(int TotalPagar) {
         this.TotalPagar = TotalPagar;
     }
 
@@ -58,13 +58,15 @@ public class pago implements Serializable{
         this.NomTarjeta = NomTarjeta;
     }
 
-    public int getNumTarjeta() {
+    public String getNumTarjeta() {
         return NumTarjeta;
     }
 
-    public void setNumTarjeta(int NumTarjeta) {
+    public void setNumTarjeta(String NumTarjeta) {
         this.NumTarjeta = NumTarjeta;
     }
+
+
 
     public String getFechaVen() {
         return FechaVen;
@@ -80,5 +82,5 @@ public class pago implements Serializable{
 
     public void setCodigo(int Codigo) {
         this.Codigo = Codigo;
-    }  
+    }   
 }

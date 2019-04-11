@@ -61,7 +61,7 @@
                 </table>
                 <div class="alert alert-info">
                     <p class="float-left"><strong>Precio total:</strong> ₡<s:property value="total"/></p>
-                    <a href='pay?id_cliente=<s:property value="#session.session_cedula"/>&total=<s:property value="total"></s:property>' rel="external" style="text-decoration:none; color:#fff;" class="btn btn-success float-right">Pagar</a>
+                    <a href='pay.action?submitType=loaddata&idCliente=<s:property value="#session.session_cedula"/>&precio=<s:property value="total"></s:property>' rel="external" style="text-decoration:none; color:#fff;" class="btn btn-success float-right">Pagar</a>
                     <br>
                     <br>
                 </div>
