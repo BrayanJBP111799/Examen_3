@@ -37,34 +37,8 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Carrito de Compras</h2>
-                <a href="viewrecords" class="btn btn-blueBG" style="text-decoration:none; color:#fff;">Continua comprando</a>
-                <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke" data-column-btn-theme="b" data-column-btn-text="Columnas" data-column-popup-theme="a">
-                    <thead>
-                        <tr>
-                            <th data-priority="1">Nombre</th>
-                            <th data-priority="1">Precio</th>
-                            <th data-priority="1">Acción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <s:iterator value="carrito_info">
-                            <tr>
-                                <th><s:property value="getIDJuegoMesa().getValue()"></s:property></th>
-                                <td>₡<s:property value="Precio.getValue()"></s:property></td>
-                                <td><a href='deletegame?id_carrito=<s:property value="getIDCarritoCompra()"/>' class="btn btn-blueBG" rel="external" style="text-decoration:none; color:#fff;">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </a></td>
-                            </tr>
-                        </s:iterator>
-                    </tbody>
-                </table>
-                <div class="alert alert-info">
-                    <p class="float-left"><strong>Precio total:</strong> ₡<s:property value="total"/></p>
-                    <a href='pay?id_cliente=<s:property value="#session.session_cedula"/>&total=<s:property value="total"></s:property>' rel="external" style="text-decoration:none; color:#fff;" class="btn btn-success float-right">Pagar</a>
-                    <br>
-                    <br>
-                </div>
+                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Información de pago</h2>
+
             </div>
 
             <!------------------------------------------------- MENU ------------------------------------------------------>

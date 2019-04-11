@@ -51,7 +51,11 @@
         
         <action name="deletegame" class="controller.controller_services" method="deleteGame_fromCarrito">  
             <result name="success">success_elimination.jsp</result>  
-        </action> 
+        </action>
+        
+        <action name="pay" class="controller.controller_services" method="insertPago">  
+            <result name="success">success.jsp</result>  
+        </action>   
     </package>
 </struts>
 

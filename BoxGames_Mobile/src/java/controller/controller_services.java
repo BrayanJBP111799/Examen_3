@@ -2,6 +2,7 @@ package controller;
 
 import bean.carrito;
 import bean.juegos;
+import bean.pago;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import gameWS.*;
@@ -207,7 +208,7 @@ public class controller_services {
 
     /*------------------------------------------- CARRITO ----------------------------------------------------------*/
     private int idC;
-    
+
     private int total;
 
     private List<CarritoCompra> carrito_info = new ArrayList<>();
@@ -219,7 +220,7 @@ public class controller_services {
     public void setIdC(int idC) {
         this.idC = idC;
     }
-    
+
     public int getTotal() {
         return total;
     }
@@ -263,5 +264,52 @@ public class controller_services {
         da.deleteGame_fromCarrito(id_carrito);
 
         return SUCCESS;
+    }
+
+    //----------------Insert PAgo
+    private int idCliente;
+
+    private int precio;
+
+    private pago p = new pago();
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public pago getP() {
+        return p;
+    }
+
+    public void setP(pago p) {
+        this.p = p;
+    }
+
+    public String insertPago() {
+        String result = "";
+        try {
+            model_services da = new model_services();
+            da.insertPago(idCliente, precio, p);
+
+            result = "success";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            result = "error";
+        }
+
+        return result;
     }
 }

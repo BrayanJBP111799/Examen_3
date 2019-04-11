@@ -1,5 +1,6 @@
 package model;
 
+import bean.pago;
 import bean.usuarios;
 import gameWS.*;
 import java.sql.Connection;
@@ -12,6 +13,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import paymentWS.PaymetServices;
 
 public class model_services {
 
@@ -327,5 +329,26 @@ public class model_services {
         return resultado;
 
     }
+    
+        /*-------------------------------------------WEB SERVICES: PAGOS----------------------------------------------------------*/
+    
+    public boolean insertPago(int id, int price, pago p) {
+
+        boolean resultado = false;
+
+        int id_cliente = id;
+        float precio = price;
+        String nom = p.NomTarjeta;
+        int num = p.NumTarjeta;
+        String fec = p.FechaVen;
+        int cod = p.Codigo;
+                
+        PaymetServices WebService = new PaymetServices();
+        
+        WebService.getBasicHttpBindingIPaymetServices().insertPayment(id_cliente, precio, nom, num, fec, cod);
+        
+        return resultado;
+    }
+    
 
 }
