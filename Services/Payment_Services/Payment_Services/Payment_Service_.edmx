@@ -4,36 +4,41 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PaymentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PaymentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Pagos">
           <Key>
             <PropertyRef Name="ID_Pago" />
           </Key>
           <Property Name="ID_Pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_Cliente" Type="int" Nullable="false" />
-          <Property Name="EstadoPago" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="TotalPagar" Type="float" Nullable="false" />
+          <Property Name="Nom_Tarjeta" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Num_Tarjeta" Type="int" Nullable="false" />
+          <Property Name="Fecha_Ven" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Codigo" Type="int" Nullable="false" />
         </EntityType>
         <EntityContainer Name="PaymentsModelStoreContainer">
           <EntitySet Name="Pagos" EntityType="Self.Pagos" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PaymentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PaymentsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pagos" EntityType="PaymentsModel.Pagos" />
+        </EntityContainer>
         <EntityType Name="Pagos">
           <Key>
             <PropertyRef Name="ID_Pago" />
           </Key>
           <Property Name="ID_Pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_Cliente" Type="Int32" Nullable="false" />
-          <Property Name="EstadoPago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TotalPagar" Type="Double" Nullable="false" />
+          <Property Name="Nom_Tarjeta" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Num_Tarjeta" Type="Int32" Nullable="false" />
+          <Property Name="Fecha_Ven" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Codigo" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="PaymentsEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Pagos" EntityType="Self.Pagos" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -43,10 +48,13 @@
           <EntitySetMapping Name="Pagos">
             <EntityTypeMapping TypeName="PaymentsModel.Pagos">
               <MappingFragment StoreEntitySet="Pagos">
-                <ScalarProperty Name="ID_Pago" ColumnName="ID_Pago" />
-                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
-                <ScalarProperty Name="EstadoPago" ColumnName="EstadoPago" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="Fecha_Ven" ColumnName="Fecha_Ven" />
+                <ScalarProperty Name="Num_Tarjeta" ColumnName="Num_Tarjeta" />
+                <ScalarProperty Name="Nom_Tarjeta" ColumnName="Nom_Tarjeta" />
                 <ScalarProperty Name="TotalPagar" ColumnName="TotalPagar" />
+                <ScalarProperty Name="ID_Cliente" ColumnName="ID_Cliente" />
+                <ScalarProperty Name="ID_Pago" ColumnName="ID_Pago" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
