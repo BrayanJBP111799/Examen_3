@@ -6,12 +6,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Box-Games</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/theme/customAB.css" />
         <link rel="stylesheet" href="css/theme/jquery.mobile.icons.min.css" />
         <link rel="stylesheet" href="jqmobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css">
         <link rel="stylesheet" href="jqmobile/demos/_assets/css/jqm-demos.css">
         <link rel="icon" href="img/logos/dice.png">
-        <link rel="stylesheet" href="css/estilo.css">
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -37,8 +37,36 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Información de pago</h2>
+                <h2 class="ui-title c-blue" role="heading" style="font-weight: 700; color: #328BC3;">Información de pago</h2>
+                <div class="ui-bar ui-bar-a">
+                    <h3>Llena los espacios que se solicitan abajo para completar el pago.</h3>
+                </div><br>
+                <div class='card-wrapper'></div>
+                <script src="js/card/card.js"></script>
+                <form>
+                    <input type="text" name="number" placeholder="Número de tarjeta"/>
+                    <input type="text" name="name" placeholder="Nombre"/>
+                    <input type="text" name="expiry" placeholder="Fecha de expiración"/>
+                    <input type="text" name="cvc" placeholder="Código de seguridad"/>
+                    <div style="display:none;">
+                        <input type="text" name="total" placeholder="Total"/>
+                    </div>
+                    <a href="#">Completar Pago</a>
+                </form>
+                <script>
 
+                    var card = new Card({
+                        form: 'form',
+                        container: '.card-wrapper',
+
+                        placeholders: {
+                            number: '**** **** **** ****',
+                            name: 'Arya Stark',
+                            expiry: '**/****',
+                            cvc: '***'
+                        }
+                    });
+                </script>
             </div>
 
             <!------------------------------------------------- MENU ------------------------------------------------------>
@@ -76,6 +104,7 @@
                 </center>
             </div>
         </div>
+
     </body>
 </html>
 
