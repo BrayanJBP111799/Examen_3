@@ -14,3 +14,20 @@ $(document).ready(function(){
 		}
 	});
 });
+
+$(document).ready(function(){
+
+//	$('#topBtnC').click(function(){
+//		$('body, html').animate({
+//			scrollTop :'0px'
+//		},800);
+//	});
+
+	$(window).scroll(function(){
+		if($(this).scrollTop() > 40){
+			$('#topBtnC').slideDown(200);
+		}else{
+			$('#topBtnC').slideUp(200);
+		}
+	});
+});

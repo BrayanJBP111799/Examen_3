@@ -35,7 +35,11 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
-
+                <s:iterator value="carrito_info">
+                            <h4 class="product-name"><strong>-<s:property value="getIDJuegoMesa().getValue()"></s:property></strong></h4>
+                                    <h6><strong>₡<s:property value="Precio.getValue()"></s:property><span class="text-muted"></span></strong></h6>                                        
+                                    <a href='deletegame?id_carrito=<s:property value="getIDCarritoCompra()"/>' rel="external" style="text-decoration:none; color:black;"></a>
+                </s:iterator>
             </div>
 
             <!------------------------------------------------- MENU ------------------------------------------------------>

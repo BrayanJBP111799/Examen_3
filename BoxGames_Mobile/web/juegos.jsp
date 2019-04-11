@@ -15,6 +15,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
 
         <script src="jqmobile/demos/js/jquery.js"></script>
         <script src="jqmobile/demos/_assets/js/index.js"></script>
@@ -36,6 +37,11 @@
 
             <!------------------------------------------------- BODY ------------------------------------------------------>
             <div data-role="main" class="ui-content jqm-content jqm-fullwidth">
+                <button id="topBtnC">
+                    <a href='viewcarrito?idC=<s:property value="#session.session_cedula"/>' rel="external" style="text-decoration:none; color:black; margin: 0 auto;">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                </button>
                 <h2 class="ui-title c-blue" role="heading" style="font-weight: 700;">Juegos Disponibles</h2>
                 <center>
                     <p class="c-green" style="padding: 20px 0; margin-bottom: 0;">Busca y elige algún juego que te guste.</p>
@@ -73,7 +79,7 @@
                                 <div class="space15"></div>
                                 <h4>₡<s:property value="precioJuego"></s:property></h4>
                             <s:if test="%{#session.session_correo != null}">
-                                <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Comprar</a>
+                                <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>&price=<s:property value="precioJuego"></s:property>' rel="external" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b">Comprar</a>
                             </s:if>
                             <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Cerrar</a>
                         </div>
@@ -94,7 +100,7 @@
                                         <a href="#<s:property value="nombreJuego.getValue()"></s:property>" data-rel="popup" data-position-to="window" data-transition="pop" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Descripción</a>
                                         <!--                                <button>Comprar</button>-->
                                     <s:if test="%{#session.session_correo != null}">
-                                        <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>' rel="external" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Comprar</a>
+                                        <a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>&price=<s:property value="precioJuego"></s:property>' rel="external" class="btn btn-blueBG" style="margin: 0 auto; color:#fff; text-decoration: none;">Comprar</a>
                                     </s:if>
                                 </div>
                             </li>
@@ -210,5 +216,7 @@
                 </center>
             </div>
         </div>
+                        
+        <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>
