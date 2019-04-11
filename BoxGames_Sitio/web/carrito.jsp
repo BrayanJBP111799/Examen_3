@@ -108,7 +108,7 @@
                              </div>
                          </div>
                          <div class="pull-right" style="margin: 10px">
-                             <a href='pay?id_cliente=<s:property value="#session.session_cedula"/>&total=<s:property value="total"></s:property>' rel="external" class="btn btn-success pull-right">Pagar</a>
+                             <a href='pay.action?submitType=updatedata&idCliente=<s:property value="#session.session_cedula"/>&total=<s:property value="total"></s:property>' rel="external" class="btn btn-success pull-right">Pagar</a>
                              <div class="pull-right" style="margin: 5px">
                                  Total: <b>₡<s:property value="total"/></b>
                              </div>

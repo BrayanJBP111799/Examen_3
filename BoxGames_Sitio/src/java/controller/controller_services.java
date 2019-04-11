@@ -266,13 +266,15 @@ public class controller_services {
         return SUCCESS;
     }
 
-    //----------------Insert PAgo
+    //----------------Insert Pago
     private int idCliente;
-
+    
     private int precio;
 
     private pago p = new pago();
-
+         
+    String submitType;
+      
     public int getIdCliente() {
         return idCliente;
     }
@@ -296,18 +298,30 @@ public class controller_services {
     public void setP(pago p) {
         this.p = p;
     }
+    
+    public String getSubmitType() {
+        return submitType;
+    }
+
+    public void setSubmitType(String submitType) {
+        this.submitType = submitType;
+    }
 
     public String insertPago() {
         String result = "";
+        
         try {
-            model_services da = new model_services();
-            da.insertPago(idCliente, precio, p);
+            if (submitType.equals("loaddata")) {
+                return "load";
+            } else {
+                model_services da = new model_services();
+                da.insertPago(idCliente, p);
 
-            result = "success";
+                result = "success";
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
-            result = "error";
         }
 
         return result;
