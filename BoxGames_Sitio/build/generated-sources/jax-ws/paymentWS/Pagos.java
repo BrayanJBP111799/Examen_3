@@ -24,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="ID_Cliente" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="ID_Pago" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
  *         &lt;element name="Nom_Tarjeta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *         &lt;element name="Num_Tarjeta" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *         &lt;element name="Num_Tarjeta" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *         &lt;element name="TotalPagar" type="{http://www.w3.org/2001/XMLSchema}double" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
@@ -56,8 +56,8 @@ public class Pagos {
     protected Integer idPago;
     @XmlElementRef(name = "Nom_Tarjeta", namespace = "http://schemas.datacontract.org/2004/07/Payment_Services", type = JAXBElement.class, required = false)
     protected JAXBElement<String> nomTarjeta;
-    @XmlElement(name = "Num_Tarjeta")
-    protected Integer numTarjeta;
+    @XmlElementRef(name = "Num_Tarjeta", namespace = "http://schemas.datacontract.org/2004/07/Payment_Services", type = JAXBElement.class, required = false)
+    protected JAXBElement<String> numTarjeta;
     @XmlElement(name = "TotalPagar")
     protected Double totalPagar;
 
@@ -186,10 +186,10 @@ public class Pagos {
      * 
      * @return
      *     possible object is
-     *     {@link Integer }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public Integer getNumTarjeta() {
+    public JAXBElement<String> getNumTarjeta() {
         return numTarjeta;
     }
 
@@ -198,10 +198,10 @@ public class Pagos {
      * 
      * @param value
      *     allowed object is
-     *     {@link Integer }
+     *     {@link JAXBElement }{@code <}{@link String }{@code >}
      *     
      */
-    public void setNumTarjeta(Integer value) {
+    public void setNumTarjeta(JAXBElement<String> value) {
         this.numTarjeta = value;
     }
 

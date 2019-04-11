@@ -10,7 +10,7 @@ namespace Payment_Services
     public class Paymet_Services : IPaymet_Services
     {
         //INSERTAR PAGOS DE UN CLIENTE
-        public Pagos InsertPayment(int id_cliente, float total, string nombre, int numero, string fecha, int codigo)
+        public Pagos InsertPayment(int id_cliente, float total, string nombre, string numero, string fecha, int codigo)
         {
             Pagos tabla_pagos = new Pagos();  
 

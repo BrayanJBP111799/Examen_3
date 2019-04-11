@@ -149,15 +149,15 @@
                 </div>
             </div>
         </div>
-        <s:form  theme="simple" action = "pay" id="payment_form" method = "post">
+        <s:form validation="false" theme="simple" action = "pay" id="payment_form" method = "post">
             <div class="form-container">
                 <div class="field-container">
                     <label for="name">Nombre</label>
-                    <input id="name" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" required="required">
+                    <input id="name" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" >
                 </div>
                 <div class="field-container">
                     <label for="cardnumber">Número en la tarjeta</label><span style="display:none;" id="generatecard">generate random</span>
-                    <input id="cardnumber" name="p.NumTarjeta" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric" required="required">
+                    <input id="cardnumber" name="p.NumTarjeta" class="inputpagos" type="text" inputmode="numeric" >
                     <svg id="ccicon" class="ccicon" width="750" height="471" viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -165,16 +165,16 @@
                 </div>
                 <div class="field-container">
                     <label for="expirationdate">Fecha de Vencimiento</label>
-                    <input id="expirationdate" name="p.FechaVen"  class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric" placeholder="mm/aa" required="required">
+                    <input id="expirationdate" name="p.FechaVen"  class="inputpagos" type="text" inputmode="numeric" placeholder="mm/aa">
                 </div>
                 <div class="field-container">
                     <label for="securitycode">Código de Seguridad</label>
-                    <input id="securitycode" name="p.Codigo" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric" required="required">
+                    <input id="securitycode" name="p.Codigo" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric">
                 </div>
             </div>
 
             <div style="display:none">
-                <input type="text" name="p.IDCliente" value="<s:property value='idCliente'/>" >
+                <input type="text" name="p.IDCliente" value="<s:property value='IDCliente'/>" >
                 <input type="text" name="p.TotalPagar" value="<s:property value='precio'/>" >
             </div>
 
@@ -192,6 +192,7 @@
         </center>
     </footer>
 
+   
     <script type="text/javascript" src="js/script.js"></script>
 
     <script type="text/javascript" src="js/payment.js"></script>

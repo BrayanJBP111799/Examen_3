@@ -18,7 +18,7 @@ namespace Payment_Services
         public int ID_Cliente { get; set; }
         public double TotalPagar { get; set; }
         public string Nom_Tarjeta { get; set; }
-        public int Num_Tarjeta { get; set; }
+        public string Num_Tarjeta { get; set; }
         public string Fecha_Ven { get; set; }
         public int Codigo { get; set; }
     }

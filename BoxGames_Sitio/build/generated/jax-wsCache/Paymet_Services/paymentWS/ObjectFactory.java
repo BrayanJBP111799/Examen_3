@@ -51,10 +51,12 @@ public class ObjectFactory {
     private final static QName _Duration_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "duration");
     private final static QName _Guid_QNAME = new QName("http://schemas.microsoft.com/2003/10/Serialization/", "guid");
     private final static QName _InsertPaymentNombre_QNAME = new QName("http://tempuri.org/", "nombre");
+    private final static QName _InsertPaymentNumero_QNAME = new QName("http://tempuri.org/", "numero");
     private final static QName _InsertPaymentFecha_QNAME = new QName("http://tempuri.org/", "fecha");
     private final static QName _InsertPaymentResponseInsertPaymentResult_QNAME = new QName("http://tempuri.org/", "InsertPaymentResult");
     private final static QName _PagosFechaVen_QNAME = new QName("http://schemas.datacontract.org/2004/07/Payment_Services", "Fecha_Ven");
     private final static QName _PagosNomTarjeta_QNAME = new QName("http://schemas.datacontract.org/2004/07/Payment_Services", "Nom_Tarjeta");
+    private final static QName _PagosNumTarjeta_QNAME = new QName("http://schemas.datacontract.org/2004/07/Payment_Services", "Num_Tarjeta");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: paymentWS
@@ -298,6 +300,15 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "numero", scope = InsertPayment.class)
+    public JAXBElement<String> createInsertPaymentNumero(String value) {
+        return new JAXBElement<String>(_InsertPaymentNumero_QNAME, String.class, InsertPayment.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "fecha", scope = InsertPayment.class)
     public JAXBElement<String> createInsertPaymentFecha(String value) {
         return new JAXBElement<String>(_InsertPaymentFecha_QNAME, String.class, InsertPayment.class, value);
@@ -328,6 +339,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Payment_Services", name = "Nom_Tarjeta", scope = Pagos.class)
     public JAXBElement<String> createPagosNomTarjeta(String value) {
         return new JAXBElement<String>(_PagosNomTarjeta_QNAME, String.class, Pagos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://schemas.datacontract.org/2004/07/Payment_Services", name = "Num_Tarjeta", scope = Pagos.class)
+    public JAXBElement<String> createPagosNumTarjeta(String value) {
+        return new JAXBElement<String>(_PagosNumTarjeta_QNAME, String.class, Pagos.class, value);
     }
 
 }

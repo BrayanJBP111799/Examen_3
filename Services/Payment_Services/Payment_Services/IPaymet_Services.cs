@@ -11,7 +11,7 @@ namespace Payment_Services
     public interface IPaymet_Services
     {
         [OperationContract]
-        Pagos InsertPayment(int id_cliente, float total, string nombre, int numero, string fecha, int codigo);
+        Pagos InsertPayment(int id_cliente, float total, string nombre, string numero, string fecha, int codigo);
 
     }
 }

@@ -315,7 +315,7 @@ public class controller_services {
                 return "load";
             } else {
                 model_services da = new model_services();
-                da.insertPago(idCliente, p);
+                da.insertPago(p);
 
                 result = "success";
             }
