@@ -48,7 +48,7 @@
                      <div class="card-header bg-dark text-light">
                          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                          Carrito
-                         <a href="" class="btn btn-outline-info btn-sm pull-right">Continua comprando</a>
+                         <a href="viewrecords" class="btn btn-outline-info btn-sm pull-right">Continua comprando</a>
                          <div class="clearfix"></div>
                      </div>
                      <div class="card-body">
@@ -56,17 +56,17 @@
                              <!-- PRODUCT -->
                              <div class="row">
                                  <div class="col-12 col-sm-12 col-md-2 text-center">
-                                        <img class="img-responsive" src="https://image.flaticon.com/icons/svg/1593/1593937.svg" alt="prewiew" width="120" height="120">
+                                        <img class="img-responsive" src="https://image.flaticon.com/icons/svg/1593/1593937.svg" alt="prewiew" width="100" height="100">
                                  </div>
                                  <div class="col-12 text-sm-center col-sm-12 text-md-left col-md-6">
-                                     <h4 class="product-name"><strong>-<s:property value="idJuegoMesa.getValue()"></s:property></strong></h4>
+                                     <h4 class="product-name"><strong>-<s:property value="getIDJuegoMesa().getValue()"></s:property></strong></h4>
 <!--                                     <h4>
                                          <small>Product description</small>
                                      </h4>-->
                                  </div>
                                  <div class="col-12 col-sm-12 text-sm-center col-md-4 text-md-right row">
                                      <div class="col-3 col-sm-3 col-md-6 text-md-right" style="padding-top: 5px">
-                                         <h6><strong>₡<s:property value="precio.getValue()"></s:property><span class="text-muted"></span></strong></h6>
+                                         <h6><strong>₡<s:property value="Precio.getValue()"></s:property><span class="text-muted"></span></strong></h6>
                                      </div>
 <!--                                     <div class="col-4 col-sm-4 col-md-4">
                                          <div class="quantity">
@@ -77,8 +77,10 @@
                                          </div>
                                      </div>-->
                                      <div class="col-2 col-sm-2 col-md-2 text-right">
-                                         <button type="button" class="btn btn-outline-danger btn-xs">
-                                             <i class="fa fa-trash" aria-hidden="true"></i>
+                                         <button type="button" class="btn btn-outline-danger btn-xs">                                             
+                                            <a href='deletegame?id_carrito=<s:property value="getIDCarritoCompra()"/>' rel="external" style="text-decoration:none; color:black;">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
                                          </button>
                                      </div>
                                  </div>

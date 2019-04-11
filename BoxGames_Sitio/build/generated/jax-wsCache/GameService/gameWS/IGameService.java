@@ -87,6 +87,20 @@ public interface IGameService {
 
     /**
      * 
+     * @param idCarrito
+     * @return
+     *     returns java.lang.Integer
+     */
+    @WebMethod(operationName = "DeleteGames_fromCarrito", action = "http://tempuri.org/IGameService/DeleteGames_fromCarrito")
+    @WebResult(name = "DeleteGames_fromCarritoResult", targetNamespace = "http://tempuri.org/")
+    @RequestWrapper(localName = "DeleteGames_fromCarrito", targetNamespace = "http://tempuri.org/", className = "gameWS.DeleteGamesFromCarrito")
+    @ResponseWrapper(localName = "DeleteGames_fromCarritoResponse", targetNamespace = "http://tempuri.org/", className = "gameWS.DeleteGamesFromCarritoResponse")
+    public Integer deleteGamesFromCarrito(
+        @WebParam(name = "id_carrito", targetNamespace = "http://tempuri.org/")
+        Integer idCarrito);
+
+    /**
+     * 
      * @param idCliente
      * @return
      *     returns gameWS.ArrayOfCarritoCompra

@@ -104,6 +104,34 @@ namespace BoxGames_Services
             return res;
         }
 
+        //ELIMINAR JUEGOS DEL CARRO DE COMPRA ANTES DEL PAGO
+        public int DeleteGames_fromCarrito(int id_carrito)
+        {
+            int res = 0;
+
+            using (BoxGamesEntities dc = new BoxGamesEntities())
+            {
+                var v = dc.CarritoCompra.Where(a => a.ID_CarritoCompra == id_carrito).ToList();
+                if (v != null)
+                {
+                    foreach (var item in v)
+                    {
+                        dc.CarritoCompra.Remove(item);
+                        dc.SaveChanges();
+
+                    }
+
+                    res = 1;
+                }
+                else
+                {
+                    throw new Exception("Error en borrar");
+                }
+            }
+
+            return res;
+        }
+
         //SELECCIONAR LOS ELEMENTOS DEL CARRITO
         public List<CarritoCompra> SearchCarrito(int id_cliente)
         {

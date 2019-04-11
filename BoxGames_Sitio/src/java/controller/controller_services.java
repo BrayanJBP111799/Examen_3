@@ -233,11 +233,26 @@ public class controller_services {
         model_services da = new model_services();
         carrito_info = da.selectCarrito(idC).getCarritoCompra();
         
-        System.out.println(" >>>> " + carrito_info.get(1).getIDJuegoMesa().getValue());
-        System.out.println(" >>>> " + carrito_info.get(1).getPrecio().getValue());
-        
         return SUCCESS;
     }    
+    
+    //----------------Eliminar un articulo del carrito
+    private int id_carrito;
+
+    public int getId_carrito() {
+        return id_carrito;
+    }
+
+    public void setId_carrito(int id_carrito) {
+        this.id_carrito = id_carrito;
+    }
+           
+    public String deleteGame_fromCarrito(){        
+        model_services da = new model_services();
+        da.deleteGame_fromCarrito(id_carrito);
+        
+        return SUCCESS;
+    }
 }
 
 

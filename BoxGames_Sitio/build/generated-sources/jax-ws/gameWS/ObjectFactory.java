@@ -154,6 +154,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DeleteGamesFromCarrito }
+     * 
+     */
+    public DeleteGamesFromCarrito createDeleteGamesFromCarrito() {
+        return new DeleteGamesFromCarrito();
+    }
+
+    /**
+     * Create an instance of {@link DeleteGamesFromCarritoResponse }
+     * 
+     */
+    public DeleteGamesFromCarritoResponse createDeleteGamesFromCarritoResponse() {
+        return new DeleteGamesFromCarritoResponse();
+    }
+
+    /**
      * Create an instance of {@link SearchCarrito }
      * 
      */

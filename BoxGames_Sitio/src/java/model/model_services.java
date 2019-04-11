@@ -315,4 +315,15 @@ public class model_services {
         
         return WebService.getBasicHttpBindingIGameService().searchCarrito(id);
     }
+    
+    public boolean deleteGame_fromCarrito(int id_carrito){
+        boolean resultado = false;
+        
+        GameService WebService = new GameService();
+        
+        WebService.getBasicHttpBindingIGameService().deleteGamesFromCarrito(id_carrito);
+        
+        return resultado;
+        
+    }
 }
