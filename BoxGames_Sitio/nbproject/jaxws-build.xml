@@ -42,5 +42,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/gameWS"/>
         <delete dir="${build.generated.dir}/jax-wsCache/GameService"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-GameService"/>
+    <target name="wsimport-client-Paymet_Services" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/Paymet_Services"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/Paymet_Services" destdir="${build.generated.dir}/jax-wsCache/Paymet_Services" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/Paymet_Services/wsdl/localhost_51598/Paymet_Services.svc.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:51598/Paymet_Services.svc?wsdl" xnocompile="true" xendorsed="true" package="paymentWS">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/Paymet_Services/wsdl/localhost_51598/Paymet_Services.svc.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/Paymet_Services"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/Paymet_Services">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-Paymet_Services" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/paymentWS"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/Paymet_Services"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-GameService, wsimport-client-Paymet_Services"/>
 </project>

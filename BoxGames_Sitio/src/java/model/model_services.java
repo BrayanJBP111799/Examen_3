@@ -1,8 +1,10 @@
 package model;
 
 import bean.carrito;
+import bean.pago;
 import bean.usuarios;
 import gameWS.*;
+import paymentWS.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -326,4 +328,25 @@ public class model_services {
         return resultado;
         
     }
+
+    //////////////////////////////////////////////////////////WEB SERVICE #2
+    
+    public boolean insertPago(int id, int price, pago p) {
+
+        boolean resultado = false;
+
+        int id_cliente = id;
+        int precio = price;
+        String nom = p.NomTarjeta;
+        int num = p.NumTarjeta;
+        String fec = p.FechaVen;
+        int cod = p.Codigo;  
+                
+        Paymet_Services WebService = new Paymet_Services();
+        
+        WebService.getBasicHttpBindingIPaymet_Services().insertPayment(id_cliente, precio, nom, num, fec, cod);
+        
+        return resultado;
+    }
+    
 }

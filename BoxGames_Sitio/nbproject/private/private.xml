@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/model/conexionBD.java</file>
             <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/controller/controller_services.java</file>
-            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/controller/controller_logout.java</file>
-            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/controller/controller_login.java</file>
+            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/struts.xml</file>
+            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/web/carrito.jsp</file>
+            <file>file:/C:/Users/joma2/Desktop/Examen_3/BoxGames_Sitio/src/java/model/model_services.java</file>
         </group>
     </open-files>
 </project-private>
