@@ -207,6 +207,8 @@ public class controller_services {
 
     /*------------------------------------------- CARRITO ----------------------------------------------------------*/
     private int idC;
+    
+    private int total;
 
     private List<CarritoCompra> carrito_info = new ArrayList<>();
 
@@ -216,6 +218,14 @@ public class controller_services {
 
     public void setIdC(int idC) {
         this.idC = idC;
+    }
+    
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
 
     public List<CarritoCompra> getCarrito_info() {
@@ -229,6 +239,10 @@ public class controller_services {
     public String selectCarrito() {
         model_services da = new model_services();
         carrito_info = da.selectCarrito(idC).getCarritoCompra();
+
+        for (int i = 0; i < carrito_info.size(); i++) {
+            total += carrito_info.get(i).getPrecio().getValue();
+        }
 
         return SUCCESS;
     }
