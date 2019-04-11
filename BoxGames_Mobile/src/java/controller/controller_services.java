@@ -15,7 +15,7 @@ import model.model_services;
 import org.apache.struts2.components.ActionMessage;
 import org.jboss.weld.servlet.SessionHolder;
 
-public class controller_services extends ActionSupport{
+public class controller_services extends ActionSupport {
 
     //----------------Insert de Usuarios
     private usuarios u = new usuarios();
@@ -151,7 +151,7 @@ public class controller_services extends ActionSupport{
     private int id_cliente;
 
     private String game;
-    private String insercion="";
+    private String insercion = "";
     private int price;
 
     private carrito c = new carrito();
@@ -199,7 +199,7 @@ public class controller_services extends ActionSupport{
             model_services da = new model_services();
             da.insertCarrito(id_cliente, game, price);
             System.out.println(" ");
-            insercion="correcto";
+            insercion = "correcto";
             result = "success";
 //            }
 
@@ -209,15 +209,15 @@ public class controller_services extends ActionSupport{
         }
         return result;
     }
-    
-    public void validate(){
-        if(getGame() == null || getGame().equals("")){
+
+    public void validate() {
+        if (getGame() == null || getGame().equals("")) {
             //addActionMessage("Error con el carrito");
             addActionMessage("¡Ingresa, agrega y compra juegos desde el carrito!");
-        }else{
+        } else {
             addActionMessage("¡El producto se ha guardado correctamente en el carrito!");
         }
-        
+
     }
 
     /*------------------------------------------- CARRITO ----------------------------------------------------------*/
@@ -287,6 +287,8 @@ public class controller_services extends ActionSupport{
 
     private pago p = new pago();
 
+    String submitType;
+
     public int getIdCliente() {
         return idCliente;
     }
@@ -311,17 +313,29 @@ public class controller_services extends ActionSupport{
         this.p = p;
     }
 
+    public String getSubmitType() {
+        return submitType;
+    }
+
+    public void setSubmitType(String submitType) {
+        this.submitType = submitType;
+    }
+
     public String insertPago() {
         String result = "";
-        try {
-            model_services da = new model_services();
-            da.insertPago(idCliente, precio, p);
 
-            result = "success";
+        try {
+            if (submitType.equals("loaddata")) {
+                return "load";
+            } else {
+                model_services da = new model_services();
+                da.insertPago(p);
+
+                result = "success";
+            }
 
         } catch (Exception e) {
             e.printStackTrace();
-            result = "error";
         }
 
         return result;
