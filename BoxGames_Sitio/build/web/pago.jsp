@@ -174,7 +174,7 @@
             </div>
 
             <div style="display:none">
-                <input type="text" name="p.IDCliente" value="<s:property value='IDCliente'/>" >
+                <input type="text" name="p.IDCliente" value="<s:property value='idc'/>" >
                 <input type="text" name="p.TotalPagar" value="<s:property value='precio'/>" >
             </div>
 

@@ -170,6 +170,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DeleteGamesByCustomer }
+     * 
+     */
+    public DeleteGamesByCustomer createDeleteGamesByCustomer() {
+        return new DeleteGamesByCustomer();
+    }
+
+    /**
+     * Create an instance of {@link DeleteGamesByCustomerResponse }
+     * 
+     */
+    public DeleteGamesByCustomerResponse createDeleteGamesByCustomerResponse() {
+        return new DeleteGamesByCustomerResponse();
+    }
+
+    /**
      * Create an instance of {@link SearchCarrito }
      * 
      */
