@@ -330,6 +330,7 @@ public class controller_services extends ActionSupport {
             } else {
                 model_services da = new model_services();
                 da.insertPago(p);
+                da.CleanCarrito(p);
 
                 result = "success";
             }

@@ -49,7 +49,7 @@
                     <input type="text" name="expiry" onchange="getEx();" id="expiry" placeholder="Fecha de expiración"/>
                     <input type="text" name="cvc" onchange="getCVC();" id="cvc" placeholder="Código de seguridad"/>
                     <hr><br>
-                    <div style="">
+                    <div style="display:none;">
                         <input id="Pcardnumber" name="p.NumTarjeta" class="inputpagos" type="text" inputmode="numeric" >
                         <input id="Pname" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" >
                         <input id="Pexpirationdate" name="p.FechaVen"  class="inputpagos" type="text" inputmode="numeric" placeholder="mm/aa">

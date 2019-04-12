@@ -349,5 +349,17 @@ public class model_services {
         
         return resultado;
     }
+    
+    public boolean CleanCarrito(pago p){
+       boolean resultado = false;
+       
+       int id_cliente = p.IDCliente;
+       
+        GameService WebService = new GameService();
+
+        WebService.getBasicHttpBindingIGameService().deleteGamesByCustomer(id_cliente);
+       
+       return resultado; 
+    }
 
 }
