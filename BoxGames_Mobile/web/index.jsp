@@ -99,7 +99,6 @@
                                 <div class="border-juegos"></div>
                                 <div class="img-juego-des imgmonopoly"></div>
                                 <p class="mt-3">"Para disfrutar en familia."</p>
-                                <a href="#" class="btn-formato text-dark">Comprar</a>
                             </div>
                         </div>
                         <div class="columna-juegos">
@@ -108,7 +107,6 @@
                                 <div class="border-juegos"></div>
                                 <div class="img-juego-des imgajedrez"></div>
                                 <p class="mt-3">"Para pasar el rato."</p>
-                                <a href="#" class="btn-formato text-dark">Comprar</a>
                             </div>
                         </div>
                         <div class="columna-juegos">
@@ -117,7 +115,6 @@
                                 <div class="border-juegos"></div>
                                 <div class="img-juego-des imgjenga"></div>
                                 <p class="mt-3">"Para ganar nuevas experiencias."</p>
-                                <a href="#" class="btn-formato text-dark">Comprar</a>
                             </div>
                         </div>
                         <div class="columna-juegos mt-3">
@@ -126,7 +123,6 @@
                                 <div class="border-juegos"></div>
                                 <div class="img-juego-des imgclue"></div>
                                 <p class="mt-3">"Para pasar largas horas de diversión."</p>
-                                <a href="#" class="btn-formato text-dark">Comprar</a>
                             </div>
                         </div>
                     </div>
