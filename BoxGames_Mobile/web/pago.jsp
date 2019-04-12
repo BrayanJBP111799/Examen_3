@@ -44,20 +44,20 @@
                 <div class='card-wrapper'></div>
                 <script src="js/card/card.js"></script>
                 <s:form validation="false" theme="simple" action = "pay" id="payment_form" method = "post">
-                    <input type="text" name="number" placeholder="Número de tarjeta"/>
-                    <input type="text" name="name" placeholder="Nombre"/>
-                    <input type="text" name="expiry" placeholder="Fecha de expiración"/>
-                    <input type="text" name="cvc" placeholder="Código de seguridad"/>
+                    <input type="text" name="number" onchange="getNum();" id="number" placeholder="Número de tarjeta"/>
+                    <input type="text" name="name" onchange="getName();" id="name" placeholder="Nombre"/>
+                    <input type="text" name="expiry" onchange="getEx();" id="expiry" placeholder="Fecha de expiración"/>
+                    <input type="text" name="cvc" onchange="getCVC();" id="cvc" placeholder="Código de seguridad"/>
                     <hr><br>
-                    <div style="">
-                        <input id="cardnumber" name="p.NumTarjeta" class="inputpagos" type="text" inputmode="numeric" >
-                        <input id="name" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" >
-                        <input id="expirationdate" name="p.FechaVen"  class="inputpagos" type="text" inputmode="numeric" placeholder="mm/aa">
-                        <input id="securitycode" name="p.Codigo" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric">
-                        <input type="text" name="p.IDCliente" value="<s:property value='IDCliente'/>" >
+                    <div style="display:none;">
+                        <input id="Pcardnumber" name="p.NumTarjeta" class="inputpagos" type="text" inputmode="numeric" >
+                        <input id="Pname" name="p.NomTarjeta" class="inputpagos" maxlength="20" type="text" >
+                        <input id="Pexpirationdate" name="p.FechaVen"  class="inputpagos" type="text" inputmode="numeric" placeholder="mm/aa">
+                        <input id="Psecuritycode" name="p.Codigo" class="inputpagos" type="text" pattern="[0-9]*" inputmode="numeric">
+                        <input name="p.IDCliente" value="<s:property value='idc'/>" >
                         <input type="text" name="p.TotalPagar" value="<s:property value='precio'/>" >
                     </div>
-                    <a href="#">Completar Pago</a>
+                    <button type="submit" name="submitType" rel="external" style="text-decoration:none; color:#fff;" class="btn-blueBG">Continuar</button>
                 </s:form> 
                 <script>
 
@@ -111,6 +111,27 @@
             </div>
         </div>
 
+        <script>
+            function getNum() {
+                var num = document.getElementById("number").value;
+                document.getElementById("Pcardnumber").value = num;
+            }
+
+            function getName() {
+                var name = document.getElementById("name").value;
+                document.getElementById("Pname").value = name;
+            }
+
+            function getEx() {
+                var datex = document.getElementById("expiry").value;
+                document.getElementById("Pexpirationdate").value = datex;
+            }
+
+            function getCVC() {
+                var cvc = document.getElementById("cvc").value;
+                document.getElementById("Psecuritycode").value = cvc;
+            }
+        </script>
     </body>
 </html>
 

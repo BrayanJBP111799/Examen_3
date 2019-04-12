@@ -118,6 +118,33 @@ namespace BoxGames_Services
                     {
                         dc.CarritoCompra.Remove(item);
                         dc.SaveChanges();
+                    }
+
+                    res = 1;
+                }
+                else
+                {
+                    throw new Exception("Error en borrar");
+                }
+            }
+
+            return res;
+        }
+
+        //ELIMINAR JUEGOS DEL CARRO DE COMPRA LUEGO DE HACER EL PAGO
+        public int DeleteGames_byCustomer(int id_cliente)
+        {
+            int res = 0;
+
+            using (BoxGamesEntities dc = new BoxGamesEntities())
+            {
+                var v = dc.CarritoCompra.Where(a => a.ID_Cliente == id_cliente).ToList();
+                if (v != null)
+                {
+                    foreach (var item in v)
+                    {
+                        dc.CarritoCompra.Remove(item);
+                        dc.SaveChanges();
 
                     }
 

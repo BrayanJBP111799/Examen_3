@@ -27,6 +27,9 @@ namespace BoxGames_Services
         int DeleteGames_fromCarrito(int id_carrito);
 
         [OperationContract]
+        int DeleteGames_byCustomer(int id_cliente);
+
+        [OperationContract]
         List<CarritoCompra> SearchCarrito(int id_cliente);
     }
 }

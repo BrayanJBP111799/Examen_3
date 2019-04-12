@@ -281,7 +281,7 @@ public class controller_services extends ActionSupport {
     }
 
     //----------------Insert PAgo
-    private int idCliente;
+    private int idc;
 
     private int precio;
 
@@ -289,12 +289,12 @@ public class controller_services extends ActionSupport {
 
     String submitType;
 
-    public int getIdCliente() {
-        return idCliente;
+    public int getIdc() {
+        return idc;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdc(int idc) {
+        this.idc = idc;
     }
 
     public int getPrecio() {
@@ -330,6 +330,7 @@ public class controller_services extends ActionSupport {
             } else {
                 model_services da = new model_services();
                 da.insertPago(p);
+                da.CleanCarrito(p);
 
                 result = "success";
             }
