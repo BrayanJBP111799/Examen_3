@@ -5,13 +5,14 @@ import bean.juegos;
 import bean.pago;
 import bean.usuarios;
 import static com.opensymphony.xwork2.Action.SUCCESS;
+import com.opensymphony.xwork2.ActionSupport;
 import gameWS.*;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import model.model_services;
 
-public class controller_services {
+public class controller_services extends ActionSupport {
 
     //----------------Insert de Usuarios
     private usuarios u = new usuarios();
@@ -206,6 +207,16 @@ public class controller_services {
         return result;
     }
 
+    public void validate() {
+        if (getGame() == null || getGame().equals("")) {
+            //addActionMessage("Error con el carrito");
+            addActionMessage("¡Ingresa, agrega y compra juegos desde el carrito!");
+        } else {
+            addActionMessage("¡El producto se ha guardado correctamente en el carrito!");
+        }
+
+    }
+
     //----------------Ver el carrito
     private int idC;
 
@@ -267,20 +278,20 @@ public class controller_services {
     }
 
     //----------------Insert Pago
-    private int idCliente;
-    
+    private int idc;
+
     private int precio;
 
     private pago p = new pago();
-         
+
     String submitType;
-      
-    public int getIdCliente() {
-        return idCliente;
+
+    public int getIdc() {
+        return idc;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdc(int idc) {
+        this.idc = idc;
     }
 
     public int getPrecio() {
@@ -298,7 +309,7 @@ public class controller_services {
     public void setP(pago p) {
         this.p = p;
     }
-    
+
     public String getSubmitType() {
         return submitType;
     }
@@ -309,14 +320,15 @@ public class controller_services {
 
     public String insertPago() {
         String result = "";
-        
+
         try {
             if (submitType.equals("loaddata")) {
                 return "load";
             } else {
                 model_services da = new model_services();
                 da.insertPago(p);
-
+                da.CleanCarrito(p);
+                
                 result = "success";
             }
 

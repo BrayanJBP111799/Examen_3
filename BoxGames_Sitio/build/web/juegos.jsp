@@ -32,10 +32,10 @@
                     </li>                    
                     <s:if test="%{#session.session_correo == null}">
                         <li><a href="login.jsp">Ingresar</a></li>
-                    </s:if>
-                    <s:elseif test="%{#session.session_correo != null}">
+                        </s:if>
+                        <s:elseif test="%{#session.session_correo != null}">
                         <li><a href="logout">Salir</a></li>
-                    </s:elseif>
+                        </s:elseif>
                     <li><a href="nosotros.jsp">Nosotros</a></li>
                     <li><a href="contacto.jsp">Contáctenos</a></li>
                     <li><a href="index.jsp#contenedor3">Juegos</a></li>
@@ -56,7 +56,7 @@
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </button>
-                
+
         <section class="contenedor-allgames">
             <center>
                 <h2 class="c-red"><i class="fas fa-dice-d20"></i> Juegos <i class="fas fa-dice-d20"></i></h2>
@@ -80,32 +80,39 @@
                     </div>
                 </center>
                 <hr>
+
+                <s:if test="hasActionMessages()">
+                    <div class="topmsg alert alert-success mx-auto">
+                        <s:actionmessage cssClass="topmsg"/>
+                    </div>
+                </s:if>
+
                 <div id="myUL">
                     <div class="juegos-general">
                         <s:iterator  value="juegos_list">
                             <%--<s:form theme="simple" action="addtocar" method = "post">--%>
-                                <li>
-<!--                                    <div style="display:none;">
-                                        <input name = "c.IDCliente" value='<s:property value="#session.session_cedula" />'>
-                                        <input name = "c.IDJuego" value='<s:property value="IDJuego" />'>
-                                    </div>-->
-                                    <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
-                                        <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
+                            <li>
+                                <!--                                    <div style="display:none;">
+                                                                        <input name = "c.IDCliente" value='<s:property value="#session.session_cedula" />'>
+                                                                        <input name = "c.IDJuego" value='<s:property value="IDJuego" />'>
+                                                                    </div>-->
+                                <div class="columnas-juegos tablaj bgc-red filterDiv dados <s:property value="tipoJuego.getValue()"></s:property>">
+                                    <h4><s:property value="nombreJuego.getValue()"></s:property></h4>
                                         <div class="border-alljuegos"></div>
                                         <div class="img-mini-juego"><img class="img-mini-juego" src='<s:property value="imagenJuego.getValue()"></s:property>'></div>
-                                        <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
-                                        <s:if test="%{#session.session_correo != null}">
+                                    <button id="modalBtncolon" type="button" data-toggle="modal" data-target='#<s:property value="nombreJuego.getValue()"></s:property>'>Descripción</button>
+                                    <s:if test="%{#session.session_correo != null}">
                                         <button><a href='addtocar?id_cliente=<s:property value="#session.session_cedula"/>&game=<s:property value="nombreJuego.getValue()"></s:property>&price=<s:property value="precioJuego"></s:property>' rel="external" style="text-decoration:none; color:black;">Comprar</a></button>
-                                        </s:if>
-                                    </div>
-                                </li>
+                                    </s:if>
+                                </div>
+                            </li>
                             <%--</s:form>--%>
                         </s:iterator>
-                        
+
                     </div>
                 </div>
             </div>           
-            
+
             <hr><br>
             <script>
                 filterSelection("all")
@@ -181,31 +188,31 @@
         </section>
 
         <s:iterator  value="juegos_list"> 
-        <div class="modal fade" id='<s:property value="nombreJuego.getValue()"/>' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="false">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle"><s:property value="nombreJuego.getValue()"></s:property></h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <span class="badge badge-primary">Tipo: <s:property value="tipoJuego.getValue()"></s:property></span>
-                        <span class="badge badge-danger">Jugadores: <s:property value="cantidadJuego"></s:property></span>
-                        <br><br>
-                        <p><s:property value="descripcionJuego.getValue()"></s:property></p>
-                        <div class="space15"></div>
-                        <h4>₡<s:property value="precioJuego"></s:property></h4>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <div class="modal fade" id='<s:property value="nombreJuego.getValue()"/>' tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="false">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle"><s:property value="nombreJuego.getValue()"></s:property></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <span class="badge badge-primary">Tipo: <s:property value="tipoJuego.getValue()"></s:property></span>
+                            <span class="badge badge-danger">Jugadores: <s:property value="cantidadJuego"></s:property></span>
+                                <br><br>
+                                <p><s:property value="descripcionJuego.getValue()"></s:property></p>
+                                <div class="space15"></div>
+                                <h4>₡<s:property value="precioJuego"></s:property></h4>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
         </s:iterator>       
-        
+
         <footer>
             <center>
                 <br><p >Proyecto Final - Programación V</p>
