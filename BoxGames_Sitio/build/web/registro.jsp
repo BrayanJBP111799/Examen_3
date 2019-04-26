@@ -21,7 +21,7 @@
         
         <style>            
             /* The message box is shown when the user clicks on the password field */
-            #message {
+            #message, #messagetwo {
                 display:none;
                 background: #f1f1f1;
                 border: solid 2px #26a69a;
@@ -33,7 +33,7 @@
                 margin-top: 2px;
             }
             
-            #message p {
+            #message p, #messagetwo p {
                 padding: 2px 10px;
                 font-size: 13px;
             }
@@ -251,6 +251,36 @@
                                                     <div class="invalid-feedback">
                                                         Este campo es requerido.
                                                     </div>
+                                      		 <div id="messagetwo">
+                                                     <h6>Ambas contraseñas deben coincidir:</h6>
+                                                     <p id="same" class="invalid">Verfique que ambas coincidan</p>
+                                                 </div>
+                                                    <script>
+                                                        var pass = document.getElementById("password");
+                                                        var repass = document.getElementById("form_password2");
+                                                        var same = document.getElementById("same");
+
+                                                        // When the user clicks on the password field, show the message box
+                                                        repass.onfocus = function () {
+                                                            document.getElementById("messagetwo").style.display = "block";
+                                                        }
+
+                                                        // When the user clicks outside of the password field, hide the message box
+                                                        repass.onblur = function () {
+                                                            document.getElementById("messagetwo").style.display = "none";
+                                                        }
+
+                                                        repass.onkeyup = function (){
+                                                            // Validate lowercase letters
+                                                            if (repass.value == pass.value) {
+                                                                same.classList.remove("invalid");
+                                                                same.classList.add("valid");
+                                                            } else {
+                                                                same.classList.remove("valid");
+                                                                same.classList.add("invalid");
+                                                            }
+                                                        }
+                                                    </script>
                                                 </div>
                                             </div>
                                         </div>
