@@ -40,17 +40,6 @@
                 <h2 class="ui-title c-blue text-center">¿Buscas diversión? <br>Tenemos la solución <i class="far fa-thumbs-up"></i></h2>
                 <div class="slider"></div>
 
-                <div class="obj-general">
-                    <div class="columna-obj obj-text">
-                        <p>Nuestro negocio se especializa en la obtención, búsqueda y entrega de juegos de mesa. Todos aquellos interesados en tener alguna experiencia tradicional de entrenimiento en familia o amigos, han llegado al lugar correcto.</p>
-                    </div>
-                    <div class="columna-obj mx-auto mg-obj2"></div>
-                    <div class="columna-obj mx-auto img-obj1"></div>
-                    <div class="columna-obj obj-text">
-                        <p>Queremos mantener tu felicidad creando nuevas amistades, pasando el tiempo con tus seres más queridos. Anímate y busca algo que te guste de los distintos juegos de mesa, luego continua con la diversión.</p>
-                    </div>
-                </div>
-
                 <div>
                     <center>
                         <h2 class="c-red" style="font-size:25px!important"><i class="fas fa-dice-d20"></i> PASOS <i class="fas fa-dice-d20"></i></h2>
@@ -59,6 +48,55 @@
                         </div>	
                     </center>
                 </div>
+                
+                <div class="bd-example">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                      <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                      </ol>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/pasos/find.png" class="d-block img-pasos" alt="find">
+                                <center><div class="card-body">
+                                    <h2>Busca</h2>
+                                    <h3>Tenemos juegos para todos los gustos y edades.</h3>
+                                </div></center>
+                            </div>                                                      
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/pasos/cart.png" class="d-block img-pasos" alt="cart">
+                                <center><div class="card-body">
+                                    <h2>Compra</h2>
+                                    <h3>Elige el juego que quieras, añadelo a tu carrito y realiza tu pago.</h3>
+                                </div></center>
+                            </div>     
+                        </div>
+                        <div class="carousel-item">
+                            <div class="card" style="width: 100%;">
+                                <img src="img/pasos/board-game.png" class="d-block img-pasos" alt="board">
+                                <center><div class="card-body">
+                                    <h2>Juega</h2>
+                                    <h3>Diviertete y pasa el rato en compañía con tus seres queridos.</h3>
+                                </div></center>
+                            </div>    
+                        </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+                
+                <!--AQUI 
                 <div class="ui-corner-all custom-corners">
                     <div class="ui-body ui-body-a">
                         <div class="pasos-general">
@@ -78,7 +116,7 @@
                                 <h3>Diviertete y pasa el rato en compañía con tus seres queridos.</h3>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
 
 
                     <center>
@@ -92,42 +130,7 @@
                         </div>
                     </div>
                     <br>
-                    <div class="juegos-general">
-                        <div class="columna-juegos">
-                            <div class="table-juegos">
-                                <h2>Monopoly</h2>
-                                <div class="border-juegos"></div>
-                                <div class="img-juego-des imgmonopoly"></div>
-                                <p class="mt-3">"Para disfrutar en familia."</p>
-                            </div>
-                        </div>
-                        <div class="columna-juegos">
-                            <div class="table-juegos">
-                                <h2>Ajedrez</h2>
-                                <div class="border-juegos"></div>
-                                <div class="img-juego-des imgajedrez"></div>
-                                <p class="mt-3">"Para pasar el rato."</p>
-                            </div>
-                        </div>
-                        <div class="columna-juegos">
-                            <div class="table-juegos">
-                                <h2>Jenga</h2>
-                                <div class="border-juegos"></div>
-                                <div class="img-juego-des imgjenga"></div>
-                                <p class="mt-3">"Para ganar nuevas experiencias."</p>
-                            </div>
-                        </div>
-                        <div class="columna-juegos mt-3">
-                            <div class="table-juegos">
-                                <h2>Clue</h2>
-                                <div class="border-juegos"></div>
-                                <div class="img-juego-des imgclue"></div>
-                                <p class="mt-3">"Para pasar largas horas de diversión."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                </div>    
 
             <!------------------------------------------------- MENU ------------------------------------------------------>
             <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
@@ -164,5 +167,9 @@
                 </center>
             </div>
         </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
     </body>
 </html>
